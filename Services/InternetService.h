@@ -1,0 +1,28 @@
+//
+//  InternetService.h
+//
+//  Created by renan veloso silva on 29/04/14.
+//  Copyright (c) 2014 renan veloso silva. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "Reachability.h"
+
+#define internetOff @"internetOff"
+#define internetMobile @"internetMobile"
+#define internetWifi @"internetWifi"
+
+@interface InternetService : NSObject{
+    Reachability *reach;
+    BOOL hasInternet;
+    BOOL isMobileNetwork;
+    BOOL isWifiNetwork;
+}
+
+@property (nonatomic, assign) BOOL hasInternet;
+@property (nonatomic, assign) BOOL isMobileNetwork;
+@property (nonatomic, assign) BOOL isWifiNetwork;
+
++(id)sharedInstance;
+
+@end
