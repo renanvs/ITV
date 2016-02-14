@@ -17,6 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
+        ITVCoreData.sharedInstance
+//        
+//        if AlbumEntity.getAll().count == 0{
+//            let entity = AlbumEntity.newEntity()
+//            entity.name = "ola album"
+//            ITVCoreData.saveContext()
+//        }else{
+//            let str = (AlbumEntity.getAll().first?.name)!
+//            print("\(str)")
+//        }
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         

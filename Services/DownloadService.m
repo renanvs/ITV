@@ -50,9 +50,7 @@ SynthensizeSingleTon(DownloadService)
     }
     
     if ([downloadService containsInList:requestModel.remoteUrl]) {
-        if (errorBlock) {
-            errorBlock();
-        }
+        
         return;
     }
     
@@ -195,12 +193,18 @@ SynthensizeSingleTon(DownloadService)
 
 //cria o nome do arquivo com base na url e no tipo
 +(NSString*)getFileNameWithUrl:(NSString*)url{
+    NSDate *date = [NSDate date];
+    NSDateFormatter *formater = [[NSDateFormatter alloc] init];
+    formater.dateFormat = @"yyyyMMdd_hh:mm:ss:sss";
+    
     NSString *fileName = [NSString stringWithFormat:@"%@",url.lastPathComponent];
     NSString *fileExtension = [fileName pathExtension];
     if ([NSString isStringEmpty:fileExtension] || fileExtension.length > 5) {
-        fileName = [fileName stringByReplacingOccurrencesOfString:fileExtension withString:@""];
+        //fileName = [fileName stringByReplacingOccurrencesOfString:fileExtension withString:@""];
         fileExtension = @"";
     }
+    
+    fileName = [formater stringFromDate:date];
     
     if ([NSString isStringEmpty:fileExtension]){
         return [NSString stringWithFormat:@"%@",fileName];

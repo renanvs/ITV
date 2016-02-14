@@ -13,37 +13,33 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKShareKit/FBSDKShareKit.h>
 
+#import "DownloadRequestModel.h"
+#import "DownloadResponseModel.h"
+#import "DownloadService.h"
+
 //#import "InstaTV-swift.h"
 
 #define SHFacebookFailShare    @"SHFacebookFailShare"
 #define SHFacebookSuccessShare @"SHFacebookSuccessShare"
 
-@interface ITVFacebookService : NSObject<FBSDKSharingDelegate, FBSDKDeviceLoginButtonDelegate>{
-    NSArray *permissionsRead;
-    NSArray *permissionsShare;
-    BOOL hasObservers;
+@interface ITVFacebookService : NSObject<FBSDKDeviceLoginButtonDelegate>{
+    NSArray *albuns;
 }
 
 +(id)sharedInstance;
 
-@property (nonatomic) NSDictionary *userLoggedDic;
-
--(void)loginRead;
-
 +(NSObject*)getUser;
 
--(void)loginShare;
++(void)requestAlbuns;
 
-+(BOOL)readyToShare;
-
--(void)shareImage:(UIImage*)image WithText:(NSString*)message;
-
--(void)logout;
-
--(void)shareLink:(NSString*)url WithText:(NSString*)text;
++(NSArray*)getAlbuns;
 
 -(void)requestProfileInfo;
 
 -(UIView*)generateLoginButton;
+
++(void)requestPhotoById:(NSString*)identifier BlockSuccess:(void(^)(DownloadResponseModel *responseModel))successBlock BlockError:(void(^)())errorBlock;
+
++(void)requestPhotoFromAlbumIdentifier:(NSString*)albumIdentifier;
 
 @end

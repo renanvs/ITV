@@ -25,6 +25,10 @@
 #import "DownloadRequestModel.h"
 #import "DownloadResponseModel.h"
 #import "DownloadService.h"
+//#import "ITVFaceAlbum.h"
+//#import "ITVFacePhoto.h"
+
+#import "UIImageViewAligned.h"
 
 
 
