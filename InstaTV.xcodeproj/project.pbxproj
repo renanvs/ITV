@@ -20,6 +20,7 @@
 		DBB8684B1C712B950069B8A8 /* PhotoEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB868471C712B950069B8A8 /* PhotoEntity+CoreDataProperties.swift */; };
 		DBB8684C1C712B950069B8A8 /* PhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB868481C712B950069B8A8 /* PhotoEntity.swift */; };
 		DBB8684E1C71351E0069B8A8 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8684D1C71351E0069B8A8 /* star.png */; };
+		DBB868531C71407C0069B8A8 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB868521C71407C0069B8A8 /* CloudKit.framework */; };
 		DBD078A01C6CCF270007FE46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0789F1C6CCF270007FE46 /* AppDelegate.swift */; };
 		DBD078A21C6CCF270007FE46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD078A11C6CCF270007FE46 /* ViewController.swift */; };
 		DBD078A51C6CCF270007FE46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD078A31C6CCF270007FE46 /* Main.storyboard */; };
@@ -57,6 +58,8 @@
 		DBB868471C712B950069B8A8 /* PhotoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhotoEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DBB868481C712B950069B8A8 /* PhotoEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoEntity.swift; sourceTree = "<group>"; };
 		DBB8684D1C71351E0069B8A8 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		DBB8684F1C713FDB0069B8A8 /* InstaTV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = InstaTV.entitlements; sourceTree = "<group>"; };
+		DBB868521C71407C0069B8A8 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		DBD0789C1C6CCF270007FE46 /* InstaTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD0789F1C6CCF270007FE46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBD078A11C6CCF270007FE46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBB868531C71407C0069B8A8 /* CloudKit.framework in Frameworks */,
 				DBD078D41C6CE8610007FE46 /* FBSDKTVOSKit.framework in Frameworks */,
 				329C4949DEC5E30FD45E3B95 /* Pods.framework in Frameworks */,
 				DBD078D21C6CE8610007FE46 /* FBSDKCoreKit.framework in Frameworks */,
@@ -175,6 +179,7 @@
 		DBD0789E1C6CCF270007FE46 /* InstaTV */ = {
 			isa = PBXGroup;
 			children = (
+				DBB8684F1C713FDB0069B8A8 /* InstaTV.entitlements */,
 				DBD0789F1C6CCF270007FE46 /* AppDelegate.swift */,
 				DBD078A11C6CCF270007FE46 /* ViewController.swift */,
 				DBD078AE1C6CD0EB0007FE46 /* InstaTV-Bridging-Header.h */,
@@ -262,6 +267,7 @@
 		E1E72E3C08DEE67D4C76F679 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DBB868521C71407C0069B8A8 /* CloudKit.framework */,
 				E4CF80D4B23D7F6E6496BD4E /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -302,6 +308,12 @@
 				TargetAttributes = {
 					DBD0789B1C6CCF270007FE46 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 99PGLV2Z48;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -518,6 +530,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = InstaTV/InstaTV.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -525,8 +540,9 @@
 				);
 				INFOPLIST_FILE = InstaTV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.macwingo.instatv;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mwg.itv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "InstaTV/InstaTV-Bridging-Header.h";
 			};
 			name = Debug;
@@ -537,6 +553,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = InstaTV/InstaTV.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -544,8 +563,9 @@
 				);
 				INFOPLIST_FILE = InstaTV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.macwingo.instatv;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mwg.itv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "InstaTV/InstaTV-Bridging-Header.h";
 			};
 			name = Release;

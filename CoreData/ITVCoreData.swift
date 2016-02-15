@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Foundation
 
 class ITVCoreData: NSObject {
     
@@ -25,7 +26,8 @@ class ITVCoreData: NSObject {
     
     lazy var applicationCachesDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "vsc._23" in the application's caches Application Support directory.
-        let urls = NSFileManager.defaultManager().URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask)
+        ////let urls = NSFileManager.defaultManager().URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask)
+        let urls = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: .UserDomainMask)
         return urls[urls.count-1]
     }()
     
@@ -42,9 +44,10 @@ class ITVCoreData: NSObject {
         let url = self.applicationCachesDirectory.URLByAppendingPathComponent("ITVCoreData.sqlite")
         var failureReason = "There was an error creating or loading the application's saved data."
         
-        let option = [NSMigratePersistentStoresAutomaticallyOption:true]
+        //let option = NSDictionary(object: NSPersistentStoreu, forKey: "")
+        
         do {
-            try coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: option)
+            try coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
         } catch {
             // Report any error we got.
             var dict = [String: AnyObject]()
@@ -66,7 +69,7 @@ class ITVCoreData: NSObject {
         // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) This property is optional since there are legitimate error conditions that could cause the creation of the context to fail.
         let coordinator = self.persistentStoreCoordinator
         var managedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
-        managedObjectContext.persistentStoreCoordinator = coordinator
+        managedObjectContext.persistentStoreCoordinator = coordinator			
         return managedObjectContext
     }()
     
