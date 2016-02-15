@@ -50,8 +50,10 @@ class CCCoreData: NSObject {
             do{
                try managedObjectContext.save()
             }catch{
-                managedObjectContext.reset()
+                
             }
+            
+            managedObjectContext.reset()
         }
     }
     
@@ -75,7 +77,7 @@ class CCCoreData: NSObject {
         let url = self.applicationCachesDirectory.URLByAppendingPathComponent("CCCoreData.sqlite")
         var failureReason = "There was an error creating or loading the application's saved data."
         
-        let option = [NSPersistentStoreUbiquitousContentNameKey : "CCCoreData"]
+        let option = [NSPersistentStoreUbiquitousContentNameKey : "iCloud.br.com.macwingo.cccoredata"]
         
         do {
             try coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: option)
@@ -100,6 +102,7 @@ class CCCoreData: NSObject {
         // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) This property is optional since there are legitimate error conditions that could cause the creation of the context to fail.
         let coordinator = self.persistentStoreCoordinator
         var managedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
+        managedObjectContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         managedObjectContext.persistentStoreCoordinator = coordinator			
         return managedObjectContext
     }()
