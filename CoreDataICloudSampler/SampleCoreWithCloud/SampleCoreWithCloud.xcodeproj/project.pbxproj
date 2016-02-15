@@ -19,7 +19,7 @@
 		DB302B9D1C721332007D05EB /* PhotoEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB302B591C721332007D05EB /* PhotoEntity+CoreDataProperties.swift */; };
 		DB302B9E1C721332007D05EB /* PhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB302B5A1C721332007D05EB /* PhotoEntity.swift */; };
 		DB302B9F1C721332007D05EB /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = DB302B5B1C721332007D05EB /* star.png */; };
-		DB302BC81C7219EB007D05EB /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB302BC71C7219EB007D05EB /* CloudKit.framework */; };
+		DB302BCB1C723B9F007D05EB /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB302BCA1C723B9F007D05EB /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +37,8 @@
 		DB302B591C721332007D05EB /* PhotoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhotoEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DB302B5A1C721332007D05EB /* PhotoEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoEntity.swift; sourceTree = "<group>"; };
 		DB302B5B1C721332007D05EB /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
-		DB302BC61C721681007D05EB /* SampleCoreWithCloud.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SampleCoreWithCloud.entitlements; sourceTree = "<group>"; };
-		DB302BC71C7219EB007D05EB /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		DB302BC91C723B98007D05EB /* SampleCoreWithCloud.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SampleCoreWithCloud.entitlements; sourceTree = "<group>"; };
+		DB302BCA1C723B9F007D05EB /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB302BC81C7219EB007D05EB /* CloudKit.framework in Frameworks */,
+				DB302BCB1C723B9F007D05EB /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +56,7 @@
 		DB302B351C7212B3007D05EB = {
 			isa = PBXGroup;
 			children = (
-				DB302BC71C7219EB007D05EB /* CloudKit.framework */,
+				DB302BCA1C723B9F007D05EB /* CloudKit.framework */,
 				DB302B531C721332007D05EB /* CoreData */,
 				DB302B5C1C721332007D05EB /* External */,
 				DB302B981C721332007D05EB /* Utils */,
@@ -76,7 +76,7 @@
 		DB302B401C7212B3007D05EB /* SampleCoreWithCloud */ = {
 			isa = PBXGroup;
 			children = (
-				DB302BC61C721681007D05EB /* SampleCoreWithCloud.entitlements */,
+				DB302BC91C723B98007D05EB /* SampleCoreWithCloud.entitlements */,
 				DB302B411C7212B3007D05EB /* AppDelegate.swift */,
 				DB302B431C7212B3007D05EB /* ViewController.swift */,
 				DB302B451C7212B3007D05EB /* Main.storyboard */,
