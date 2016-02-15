@@ -31,6 +31,7 @@ class CCCoreData: NSObject {
         print("1")
         managedObjectContext.performBlock { () -> Void in
             self.managedObjectContext.mergeChangesFromContextDidSaveNotification(notification)
+            NSNotificationCenter.defaultCenter().postNotificationName("updateList", object: nil)
         }
         
         //NSUbiquitousKeyValueStore.defaultStore().synchronize()

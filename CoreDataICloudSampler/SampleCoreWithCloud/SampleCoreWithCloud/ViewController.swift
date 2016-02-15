@@ -16,7 +16,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBarHidden = true
         print("")
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("update"), name: "updateList", object: nil)
         // Do any additional setup after loading the view, typically from a nib.
@@ -58,7 +58,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let entity = AlbumEntity.newEntity()
         
         let formater = NSDateFormatter()
-        formater.dateFormat = "dd/MM/yyyy hh:mm:ss:sss"
+        formater.dateFormat = "yyyy_MM_dd_hh_mm_ss_sss"
         
         entity.name = "ola album\(formater.stringFromDate(NSDate()))"
         entity.coverPhotoId = "1"

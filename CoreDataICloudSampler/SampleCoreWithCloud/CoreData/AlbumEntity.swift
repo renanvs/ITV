@@ -24,7 +24,9 @@ class AlbumEntity: NSManagedObject {
         
         do{
             let list = try CCCoreData.ctx().executeFetchRequest(fetch)
-            return list as! [AlbumEntity]
+            let l = [NSSortDescriptor(key: "name", ascending: false)] as [NSSortDescriptor]
+            let listSort = (list as NSArray).sortedArrayUsingDescriptors(l)
+            return listSort as! [AlbumEntity]
         }catch{
             return [AlbumEntity]()
         }
