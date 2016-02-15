@@ -1,5 +1,5 @@
 //
-//  ITVCoreData.swift
+//  CCCoreData.swift
 //  InstaTV
 //
 //  Created by renan silva on 2/14/16.
@@ -10,9 +10,9 @@ import UIKit
 import CoreData
 import Foundation
 
-class ITVCoreData: NSObject {
+class CCCoreData: NSObject {
     
-    static let sharedInstance = ITVCoreData()
+    static let sharedInstance = CCCoreData()
     
     // MARK: - Core Data stack
     
@@ -22,8 +22,8 @@ class ITVCoreData: NSObject {
         var _ = managedObjectContext
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("persistentStoreDidChange"), name: NSPersistentStoreCoordinatorStoresDidChangeNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("persistentStoreWillChange:"), name: NSPersistentStoreCoordinatorStoresWillChangeNotification, object: managedObjectContext.persistentStoreCoordinator)
-        NSUbiquitousKeyValueStoreDidChangeExternallyNotification
-       // NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("receiveiCloudChanges:"), name: NSUbiquityIdentityDidChangeNotification, object: managedObjectContext.persistentStoreCoordinator)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("receiveiCloudChanges:"), name: NSPersistentStoreDidImportUbiquitousContentChangesNotification, object: managedObjectContext.persistentStoreCoordinator)
 
     }
     
@@ -33,11 +33,14 @@ class ITVCoreData: NSObject {
             self.managedObjectContext.mergeChangesFromContextDidSaveNotification(notification)
         }
         
-        NSUbiquitousKeyValueStore.defaultStore().synchronize()
+        //NSUbiquitousKeyValueStore.defaultStore().synchronize()
     }
     
     func persistentStoreDidChange(){
         print("2")
+        let list = AlbumEntity.getAll()
+        print("adasd")
+        NSNotificationCenter.defaultCenter().postNotificationName("updateList", object: nil)
     }
     
     func persistentStoreWillChange(notification : NSNotification){
@@ -47,9 +50,8 @@ class ITVCoreData: NSObject {
             do{
                try managedObjectContext.save()
             }catch{
-                
+                managedObjectContext.reset()
             }
-            
         }
     }
     
@@ -57,12 +59,12 @@ class ITVCoreData: NSObject {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "vsc._23" in the application's caches Application Support directory.
         ////let urls = NSFileManager.defaultManager().URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask)
         let urls = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: .UserDomainMask)
-        return urls[urls.count-1]
+        return urls.last!
     }()
     
     lazy var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = NSBundle.mainBundle().URLForResource("ITVCoreData", withExtension: "momd")!
+        let modelURL = NSBundle.mainBundle().URLForResource("CCCoreData", withExtension: "momd")!
         return NSManagedObjectModel(contentsOfURL: modelURL)!
     }()
     
@@ -70,13 +72,13 @@ class ITVCoreData: NSObject {
         // The persistent store coordinator for the application. This implementation creates and returns a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
         // Create the coordinator and store
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        let url = self.applicationCachesDirectory.URLByAppendingPathComponent("ITVCoreData.sqlite")
+        let url = self.applicationCachesDirectory.URLByAppendingPathComponent("CCCoreData.sqlite")
         var failureReason = "There was an error creating or loading the application's saved data."
         
-        //let option = NSDictionary(object: NSPersistentStoreCoordinator, forKey: "")
+        let option = [NSPersistentStoreUbiquitousContentNameKey : "CCCoreData"]
         
         do {
-            try coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
+            try coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: option)
         } catch {
             // Report any error we got.
             var dict = [String: AnyObject]()
