@@ -18,10 +18,36 @@ class ITVCoreData: NSObject {
     
     override init(){
         super.init()
-        //if self{
-            var _ = managedObjectContext
+
+        var _ = managedObjectContext
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("persistentStoreDidChange"), name: NSPersistentStoreCoordinatorStoresDidChangeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("persistentStoreWillChange:"), name: NSPersistentStoreCoordinatorStoresWillChangeNotification, object: managedObjectContext.persistentStoreCoordinator)
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("receiveiCloudChanges:"), name: NSPersistentStore, object: managedObjectContext.persistentStoreCoordinator)
+
+    }
+    
+//    func receiveiCloudChanges(notification : NSNotification){
+//        print("1")
+//        managedObjectContext.performBlock { () -> Void in
+//            self.managedObjectContext.mergeChangesFromContextDidSaveNotification(notification)
 //        }
-//        return self
+//    }
+    
+    func persistentStoreDidChange(){
+        print("2")
+    }
+    
+    func persistentStoreWillChange(notification : NSNotification){
+        print("3")
+        if managedObjectContext.hasChanges == true{
+            //var error:NSError? = nil
+            do{
+               try managedObjectContext.save()
+            }catch{
+                
+            }
+            
+        }
     }
     
     lazy var applicationCachesDirectory: NSURL = {

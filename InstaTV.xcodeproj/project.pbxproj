@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		329C4949DEC5E30FD45E3B95 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CF80D4B23D7F6E6496BD4E /* Pods.framework */; };
+		DB302B341C715568007D05EB /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB302B331C715568007D05EB /* CloudKit.framework */; };
 		DB7F9E981C6EF28F00DE6A44 /* UIImageViewAligned.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7F9E971C6EF28F00DE6A44 /* UIImageViewAligned.m */; };
 		DBB867F01C6EFB230069B8A8 /* SwiftUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB867ED1C6EFB220069B8A8 /* SwiftUtils.swift */; };
 		DBB867F11C6EFB230069B8A8 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB867EF1C6EFB220069B8A8 /* Utils.m */; };
@@ -20,7 +21,6 @@
 		DBB8684B1C712B950069B8A8 /* PhotoEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB868471C712B950069B8A8 /* PhotoEntity+CoreDataProperties.swift */; };
 		DBB8684C1C712B950069B8A8 /* PhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB868481C712B950069B8A8 /* PhotoEntity.swift */; };
 		DBB8684E1C71351E0069B8A8 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8684D1C71351E0069B8A8 /* star.png */; };
-		DBB868531C71407C0069B8A8 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB868521C71407C0069B8A8 /* CloudKit.framework */; };
 		DBD078A01C6CCF270007FE46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0789F1C6CCF270007FE46 /* AppDelegate.swift */; };
 		DBD078A21C6CCF270007FE46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD078A11C6CCF270007FE46 /* ViewController.swift */; };
 		DBD078A51C6CCF270007FE46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD078A31C6CCF270007FE46 /* Main.storyboard */; };
@@ -44,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		551BEE00F302954A1EB2D260 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DB302B331C715568007D05EB /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		DB7F9E961C6EF28F00DE6A44 /* UIImageViewAligned.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewAligned.h; sourceTree = "<group>"; };
 		DB7F9E971C6EF28F00DE6A44 /* UIImageViewAligned.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewAligned.m; sourceTree = "<group>"; };
 		DBB867ED1C6EFB220069B8A8 /* SwiftUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftUtils.swift; path = ../../ObjC_Utils/utils/SwiftUtils.swift; sourceTree = "<group>"; };
@@ -59,7 +60,6 @@
 		DBB868481C712B950069B8A8 /* PhotoEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoEntity.swift; sourceTree = "<group>"; };
 		DBB8684D1C71351E0069B8A8 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		DBB8684F1C713FDB0069B8A8 /* InstaTV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = InstaTV.entitlements; sourceTree = "<group>"; };
-		DBB868521C71407C0069B8A8 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		DBD0789C1C6CCF270007FE46 /* InstaTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD0789F1C6CCF270007FE46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBD078A11C6CCF270007FE46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBB868531C71407C0069B8A8 /* CloudKit.framework in Frameworks */,
+				DB302B341C715568007D05EB /* CloudKit.framework in Frameworks */,
 				DBD078D41C6CE8610007FE46 /* FBSDKTVOSKit.framework in Frameworks */,
 				329C4949DEC5E30FD45E3B95 /* Pods.framework in Frameworks */,
 				DBD078D21C6CE8610007FE46 /* FBSDKCoreKit.framework in Frameworks */,
@@ -267,7 +267,7 @@
 		E1E72E3C08DEE67D4C76F679 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DBB868521C71407C0069B8A8 /* CloudKit.framework */,
+				DB302B331C715568007D05EB /* CloudKit.framework */,
 				E4CF80D4B23D7F6E6496BD4E /* Pods.framework */,
 			);
 			name = Frameworks;
