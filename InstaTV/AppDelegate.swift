@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
         ITVCoreData.sharedInstance
+        ITVKV.sharedInstance
 //        
 //        if AlbumEntity.getAll().count == 0{
 //            let entity = AlbumEntity.newEntity()

@@ -40,6 +40,7 @@
 		DBD079091C6D17A60007FE46 /* InternetService.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD079081C6D17A60007FE46 /* InternetService.m */; };
 		DBD0790D1C6D18A50007FE46 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD0790C1C6D18A50007FE46 /* Reachability.m */; };
 		DBFDFEE91C72A6B9007A9FE1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFDFEE81C72A6B9007A9FE1 /* CloudKit.framework */; };
+		DBFDFEEB1C72BB3B007A9FE1 /* ITVKV.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFDFEEA1C72BB3B007A9FE1 /* ITVKV.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		DBD0790B1C6D18A50007FE46 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		DBD0790C1C6D18A50007FE46 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		DBFDFEE81C72A6B9007A9FE1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		DBFDFEEA1C72BB3B007A9FE1 /* ITVKV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVKV.swift; sourceTree = "<group>"; };
 		E4CF80D4B23D7F6E6496BD4E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6686C807F7407CBB336FDAB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +148,7 @@
 				DBB868461C712B950069B8A8 /* AlbumEntity.swift */,
 				DBB868471C712B950069B8A8 /* PhotoEntity+CoreDataProperties.swift */,
 				DBB868481C712B950069B8A8 /* PhotoEntity.swift */,
+				DBFDFEEA1C72BB3B007A9FE1 /* ITVKV.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 			files = (
 				DBD0790D1C6D18A50007FE46 /* Reachability.m in Sources */,
 				DBB867F51C7013200069B8A8 /* ITVAlbumPhotosViewController.swift in Sources */,
+				DBFDFEEB1C72BB3B007A9FE1 /* ITVKV.swift in Sources */,
 				DBD079061C6D153C0007FE46 /* DownloadService.m in Sources */,
 				DBB8684A1C712B950069B8A8 /* AlbumEntity.swift in Sources */,
 				DBD078A21C6CCF270007FE46 /* ViewController.swift in Sources */,
@@ -542,7 +546,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.mwg.itv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "df57be6c-7936-4894-bacc-17931375d6e0";
+				PROVISIONING_PROFILE = "c45c19dd-6d74-4e66-befd-1313f16d2507";
 				SWIFT_OBJC_BRIDGING_HEADER = "InstaTV/InstaTV-Bridging-Header.h";
 			};
 			name = Debug;
@@ -565,7 +569,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.mwg.itv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "df57be6c-7936-4894-bacc-17931375d6e0";
+				PROVISIONING_PROFILE = "c45c19dd-6d74-4e66-befd-1313f16d2507";
 				SWIFT_OBJC_BRIDGING_HEADER = "InstaTV/InstaTV-Bridging-Header.h";
 			};
 			name = Release;
