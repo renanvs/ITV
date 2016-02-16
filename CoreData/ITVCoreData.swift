@@ -20,11 +20,40 @@ class ITVCoreData: NSObject {
         super.init()
 
         var _ = managedObjectContext
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("persistentStoreDidChange"), name: NSPersistentStoreCoordinatorStoresDidChangeNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("persistentStoreWillChange:"), name: NSPersistentStoreCoordinatorStoresWillChangeNotification, object: managedObjectContext.persistentStoreCoordinator)
-        NSUbiquitousKeyValueStoreDidChangeExternallyNotification
-       // NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("receiveiCloudChanges:"), name: NSUbiquityIdentityDidChangeNotification, object: managedObjectContext.persistentStoreCoordinator)
-
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("changeKV:"), name: NSUbiquitousKeyValueStoreDidChangeExternallyNotification, object: nil)
+        
+        let store = NSUbiquitousKeyValueStore.defaultStore()
+        store.synchronize()
+    }
+    
+    func changeKV(notification:NSNotification){
+        let userInfo = notification.userInfo as! NSDictionary
+        let changeReason = userInfo.objectForKey(NSUbiquitousKeyValueStoreChangeReasonKey)
+        
+        if changeReason == nil{
+            return
+        }
+        
+        let reaseInt = changeReason!.integerValue
+        
+        if ((reaseInt == NSUbiquitousKeyValueStoreServerChange) || (reaseInt == NSUbiquitousKeyValueStoreInitialSyncChange)) {
+            
+            
+            let changedKeys = userInfo.objectForKey(NSUbiquitousKeyValueStoreChangedKeysKey) as! [String]
+            
+            let store = NSUbiquitousKeyValueStore.defaultStore()
+            
+            // Search Keys for "bookmarks" Key
+            for key in changedKeys {
+                if key == "bookmarks" {
+                    // Update Data Source
+                    //self.bookmarks = [NSMutableArray arrayWithArray:[store objectForKey:key]];
+                    print("dsfsdf")
+                    
+                }
+            }
+        }
     }
     
     func receiveiCloudChanges(notification : NSNotification){

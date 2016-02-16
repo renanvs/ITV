@@ -129,9 +129,13 @@ SynthensizeSingleTon(ITVFacebookService)
             photo.identifier = identifier;
             photo.name = [dic safeStringForKey:@"name"];
             
-            if (photo.favorited.boolValue != YES){
+            BOOL value = [[NSUbiquitousKeyValueStore defaultStore] boolForKey:photo.identifier];
+            if (value){
+                photo.favorited = @YES;
+            }else{
                 photo.favorited = @NO;
             }
+            
             
             photo.remotePhotoUrl = [NSString stringWithFormat:@"https://graph.facebook.com/v2.5/%@/picture?type=normal&access_token=%@",photo.identifier,[FBSDKAccessToken currentAccessToken].tokenString];
             photo.album = [AlbumEntity getByIndentifier:albumIdentifier];

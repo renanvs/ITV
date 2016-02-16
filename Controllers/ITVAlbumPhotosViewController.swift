@@ -73,14 +73,25 @@ class ITVAlbumPhotosViewController: UIViewController, UICollectionViewDataSource
         
         let cell = collectionView.cellForItemAtIndexPath(indexPath)!
         
+        let ds = NSUbiquitousKeyValueStore.defaultStore()
+        
         let favImageView = cell.contentView.viewWithUniqueTag(3) as! UIImageView
         if photoModel.favorited?.boolValue == false{
             favImageView.alpha = 1
             photoModel.favorited = NSNumber(bool: true)
+            
         }else{
             favImageView.alpha = 0
             photoModel.favorited = NSNumber(bool: false)
         }
+        
+        if photoModel.favorited!.boolValue{
+            ds.setBool(true, forKey: photoModel.identifier!)
+        }else{
+            ds.removeObjectForKey(photoModel.identifier!)
+        }
+        
+        ds.synchronize()
         
         ITVCoreData.saveContext()
     }
