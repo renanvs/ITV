@@ -542,7 +542,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.mwg.itv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c45c19dd-6d74-4e66-befd-1313f16d2507";
+				PROVISIONING_PROFILE = "df57be6c-7936-4894-bacc-17931375d6e0";
 				SWIFT_OBJC_BRIDGING_HEADER = "InstaTV/InstaTV-Bridging-Header.h";
 			};
 			name = Debug;
@@ -565,7 +565,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.mwg.itv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c45c19dd-6d74-4e66-befd-1313f16d2507";
+				PROVISIONING_PROFILE = "df57be6c-7936-4894-bacc-17931375d6e0";
 				SWIFT_OBJC_BRIDGING_HEADER = "InstaTV/InstaTV-Bridging-Header.h";
 			};
 			name = Release;

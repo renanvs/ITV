@@ -17,6 +17,12 @@ class ITVAlbumPhotosViewController: UIViewController, UICollectionViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("parsedAlbumPhotosSuccess:"), name: "parsedAlbumPhotosSuccess", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("entityUpdated"), name: "entityUpdated", object: nil)
+    }
+    
+    func entityUpdated(){
+        list = PhotoEntity.getAllWithAlbum(albumModel!)
+        photosCollectionView.reloadData()
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {

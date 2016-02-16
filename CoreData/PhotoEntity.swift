@@ -17,6 +17,18 @@ class PhotoEntity: NSManagedObject {
         return entity as! PhotoEntity
     }
     
+    class func getAll()->[PhotoEntity]{
+        let fetch = NSFetchRequest(entityName: "PhotoEntity")
+        
+        do{
+            let list = try ITVCoreData.ctx().executeFetchRequest(fetch)
+            return list as! [PhotoEntity]
+        }catch{
+            return [PhotoEntity]()
+        }
+        
+    }
+    
     class func getAllWithAlbum(album : AlbumEntity)->[PhotoEntity]{
         let fetch = NSFetchRequest(entityName: "PhotoEntity")
         let predicate = NSPredicate(format: "album.identifier == %@", album.identifier!)

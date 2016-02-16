@@ -22,9 +22,26 @@ class ITVCoreData: NSObject {
         var _ = managedObjectContext
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("changeKV:"), name: NSUbiquitousKeyValueStoreDidChangeExternallyNotification, object: nil)
-        
+
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keysUpdated"), name: "keysUpdated", object: nil)
+
         let store = NSUbiquitousKeyValueStore.defaultStore()
         store.synchronize()
+    }
+    
+    func keysUpdated(){
+        let list = PhotoEntity.getAll()
+        for photoEntity in list{
+            
+            let value = NSUbiquitousKeyValueStore.defaultStore().boolForKey(photoEntity.identifier!);
+            if value == true{
+                photoEntity.favorited = NSNumber(bool: true)
+            }else{
+                photoEntity.favorited = NSNumber(bool: false)
+            }
+        }
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("entityUpdated", object: nil)
     }
     
     func changeKV(notification:NSNotification){
@@ -53,6 +70,8 @@ class ITVCoreData: NSObject {
                     
                 }
             }
+            
+            NSNotificationCenter.defaultCenter().postNotificationName("keysUpdated", object: nil)
         }
     }
     
