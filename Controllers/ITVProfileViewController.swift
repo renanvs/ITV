@@ -40,33 +40,41 @@ class ITVProfileViewController: UIViewController, UICollectionViewDataSource, UI
         titleLabel.text = albumModel.name
         countLabel.text = albumModel.photoCount!.stringValue
         
-        
-        
-        dispatch_async(dispatch_get_global_queue(0, 0)) { () -> Void in
-            
-            //let identifier = albumModel.albumId
-            let data = NSData(contentsOfURL: NSURL(string: albumModel.remoteCoverUrl!)!)
-            var image : UIImage?
-            if let d = data{
-                image = UIImage(data: d)
+        if DownloadService.existThisFile(albumModel.identifier) == true{
+            if cell.tag == indexPath.row{
+                imageView.image = UIImage.ITVgetLocalImageWithIdentifier(albumModel.identifier)
             }
-            
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                if let img = image{
-                    
-                    
-                    if cell.tag == indexPath.row{
-//                        let imgView = cell.contentView.viewWithUniqueTag(1) as! UIImageView
-//                        imgView.adjustsImageWhenAncestorFocused = true
-                        //imageView.image = nil
-                        imageView.image = img
-                        //imgView.alignTop = true
-                        //imgView.clipsToBounds = true
-                    }
-                    
+        }else{
+            let model = DownloadRequestModel(identifierString: albumModel.identifier, andRemoteUrl: albumModel.remoteCoverUrl)
+            DownloadService.downloadWithRequestModel(model, blockSuccess: { (response) -> Void in
+                if cell.tag == indexPath.row{
+                    imageView.image = UIImage.ITVgetLocalImageWithIdentifier(albumModel.identifier)
                 }
-            })
+                }, blockError: nil)
         }
+        
+        
+        
+//        dispatch_async(dispatch_get_global_queue(0, 0)) { () -> Void in
+//            
+//            //let identifier = albumModel.albumId
+//            let data = NSData(contentsOfURL: NSURL(string: albumModel.remoteCoverUrl!)!)
+//            var image : UIImage?
+//            if let d = data{
+//                image = UIImage(data: d)
+//            }
+//            
+//            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//                if let img = image{
+//                    
+//                    
+//                    if cell.tag == indexPath.row{
+//                        imageView.image = img
+//                    }
+//                    
+//                }
+//            })
+//        }
 
         
         return cell

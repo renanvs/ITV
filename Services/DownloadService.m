@@ -62,7 +62,7 @@ SynthensizeSingleTon(DownloadService)
     //NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:requestUrl]];
     
     
-    NSString *fileName = [DownloadService getFileNameWithUrl:requestModel.remoteUrl];
+    NSString *fileName = requestModel.identifierString;
     NSString *fullPath = [DownloadService getPartialPathWithFileName:fileName];
     [DownloadService createDirectoryAtPath:folderToSave];
     NSString *pathStr = [NSString stringWithFormat:@"%@%@",[DownloadService getDocumentDirectory],fullPath];
@@ -74,7 +74,7 @@ SynthensizeSingleTon(DownloadService)
     
     NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
         
-        NSArray *urls = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
+        NSArray *urls = [[NSFileManager defaultManager] URLsForDirectory:NSCachesDirectory inDomains:NSUserDomainMask];
         NSURL *urlPath = urls[0];
         urlPath = [urlPath URLByAppendingPathComponent:fullPath isDirectory:YES];
         
@@ -219,7 +219,7 @@ SynthensizeSingleTon(DownloadService)
 }
 
 //verifica se existe o path (que é parte do caminho) no diretorio documents
-+(BOOL)existThisPathAbsolute:(NSString*)path{
++(BOOL)existThisFile:(NSString*)path{
     if ([NSString isStringEmpty:path]) {
         return NO;
     }
@@ -243,7 +243,7 @@ SynthensizeSingleTon(DownloadService)
 
 //Pega o caminho atual do Documents no dispositivo
 +(NSString*)getDocumentDirectory{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory = [paths lastObject];
     //NSLog(@"direc: %@", documentDirectory);
     return documentDirectory;
@@ -252,7 +252,7 @@ SynthensizeSingleTon(DownloadService)
 //retorna o caminho completo com base em parte do caminho
 +(NSString*)auxFullPath:(NSString*)lastPath{
     NSString *first = [DownloadService getDocumentDirectory];
-    return [NSString stringWithFormat:@"%@%@",first,lastPath];
+    return [NSString stringWithFormat:@"%@%@/%@",first,folderToSave ,lastPath];
 }
 
 //retorna o caminho completo com base em parte do caminho

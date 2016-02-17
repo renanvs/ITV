@@ -50,24 +50,37 @@ class ITVAlbumPhotosViewController: UIViewController, UICollectionViewDataSource
         
         titleLabel.text = photoModel.name
 
-        dispatch_async(dispatch_get_global_queue(0, 0)) { () -> Void in
-            
-            let data = NSData(contentsOfURL: NSURL(string: photoModel.remotePhotoUrl!)!)
-            var image : UIImage?
-            if let d = data{
-                image = UIImage(data: d)
+//        dispatch_async(dispatch_get_global_queue(0, 0)) { () -> Void in
+//            
+//            let data = NSData(contentsOfURL: NSURL(string: photoModel.remotePhotoUrl!)!)
+//            var image : UIImage?
+//            if let d = data{
+//                image = UIImage(data: d)
+//            }
+//            
+//            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//                if let img = image{
+//                    
+//                    
+//                    if cell.tag == indexPath.row{
+//                        imageView.image = img
+//                    }
+//                    
+//                }
+//            })
+//        }
+        
+        if DownloadService.existThisFile(photoModel.identifier) == true{
+            if cell.tag == indexPath.row{
+                imageView.image = UIImage.ITVgetLocalImageWithIdentifier(photoModel.identifier)
             }
-            
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                if let img = image{
-                    
-                    
-                    if cell.tag == indexPath.row{
-                        imageView.image = img
-                    }
-                    
+        }else{
+            let model = DownloadRequestModel(identifierString: photoModel.identifier, andRemoteUrl: photoModel.remotePhotoUrl)
+            DownloadService.downloadWithRequestModel(model, blockSuccess: { (response) -> Void in
+                if cell.tag == indexPath.row{
+                    imageView.image = UIImage.ITVgetLocalImageWithIdentifier(photoModel.identifier)
                 }
-            })
+                }, blockError: nil)
         }
         
         return cell

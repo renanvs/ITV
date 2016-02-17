@@ -38,7 +38,7 @@ class ITVKV: NSObject {
     }
     
     func changeKV(notification:NSNotification){
-        let userInfo = notification.userInfo as! NSDictionary
+        let userInfo = notification.userInfo! as NSDictionary
         let changeReason = userInfo.objectForKey(NSUbiquitousKeyValueStoreChangeReasonKey)
         
         if changeReason == nil{
@@ -52,7 +52,7 @@ class ITVKV: NSObject {
             
             let changedKeys = userInfo.objectForKey(NSUbiquitousKeyValueStoreChangedKeysKey) as! [String]
             
-            let store = NSUbiquitousKeyValueStore.defaultStore()
+            //let store = NSUbiquitousKeyValueStore.defaultStore()
             
             // Search Keys for "bookmarks" Key
             for key in changedKeys {

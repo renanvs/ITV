@@ -32,7 +32,7 @@
 
 +(void)deleteFileAtPath:(NSString*)path;
 
-+(BOOL)existThisPathAbsolute:(NSString*)path;
++(BOOL)existThisFile:(NSString*)path;
 +(BOOL)existThisFileBaseURI:(NSString*)uri;
 +(NSString*)auxFullPath:(NSString*)lastPath;
 +(NSString*)getFileNameWithUrl:(NSString*)url;
