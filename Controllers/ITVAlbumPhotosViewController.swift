@@ -16,6 +16,7 @@ class ITVAlbumPhotosViewController: UIViewController, UICollectionViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Albuns"
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("parsedAlbumPhotosSuccess:"), name: "parsedAlbumPhotosSuccess", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("entityUpdated"), name: "entityUpdated", object: nil)
     }

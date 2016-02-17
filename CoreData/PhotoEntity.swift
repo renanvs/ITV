@@ -29,6 +29,19 @@ class PhotoEntity: NSManagedObject {
         
     }
     
+    class func getAllFavorites()->[PhotoEntity]{
+        let fetch = NSFetchRequest(entityName: "PhotoEntity")
+        let predicate = NSPredicate(format: "favorited == %@", NSNumber(bool: true))
+        fetch.predicate = predicate
+        
+        do{
+            let list = try ITVCoreData.ctx().executeFetchRequest(fetch)
+            return list as! [PhotoEntity]
+        }catch{
+            return [PhotoEntity]()
+        }
+    }
+    
     class func getAllWithAlbum(album : AlbumEntity)->[PhotoEntity]{
         let fetch = NSFetchRequest(entityName: "PhotoEntity")
         let predicate = NSPredicate(format: "album.identifier == %@", album.identifier!)

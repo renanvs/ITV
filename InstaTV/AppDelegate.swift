@@ -42,8 +42,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         let navigationVc = UINavigationController(rootViewController: currentVC!)
+
+        if (FBSDKAccessToken.currentAccessToken() != nil) {
+            let tabcontroller = ITVTabBarController()
+            let favVC = sb.instantiateViewControllerWithIdentifier("ITVFavoritesViewController")
+            tabcontroller.viewControllers = [navigationVc,favVC]
+            
+            navigationVc.tabBarItem = UITabBarItem(title: "Title", image: nil, selectedImage: nil)
+            favVC.tabBarItem = UITabBarItem(title: "Title2", image: nil, selectedImage: nil)
+            
+            self.window?.rootViewController = tabcontroller
+        }else{
+            self.window?.rootViewController = navigationVc
+        }
         
-        self.window?.rootViewController = navigationVc
+        
         
         self.window?.makeKeyAndVisible()
         
