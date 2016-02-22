@@ -13,10 +13,35 @@ class ITVFavoritesViewController: UIViewController, UICollectionViewDataSource, 
     @IBOutlet weak var photosCollectionView : UICollectionView!
     var list = [PhotoEntity]()
     
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        self.title = "Favorites"
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.title = "Favorites"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Favorites"
+        let selectPlayButtonGesture = UITapGestureRecognizer(target: self, action: "playPress:")
+        selectPlayButtonGesture.enabled = true
+        selectPlayButtonGesture.allowedPressTypes = [NSNumber(integer: UIPressType.PlayPause.rawValue)]
+        self.view.addGestureRecognizer(selectPlayButtonGesture)
+    }
+    
+    func playPress(tap : UITapGestureRecognizer){
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let photosVC = sb.instantiateViewControllerWithIdentifier("ITVPhotosPageViewController") as! ITVPhotosPageViewController
+        photosVC.photosList = list
+        self.presentViewController(photosVC, animated: true, completion: nil)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         list = PhotoEntity.getAllFavorites()
+        photosCollectionView.reloadData()
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -31,10 +56,6 @@ class ITVFavoritesViewController: UIViewController, UICollectionViewDataSource, 
         imageView.adjustsImageWhenAncestorFocused = true
         imageView.image = UIImage(named: "1.png")
         imageView.contentMode = UIViewContentMode.ScaleAspectFit
-        
-        let titleLabel = cell.contentView.viewWithUniqueTag(2) as! UILabel
-        
-        titleLabel.text = photoModel.name
         
         if DownloadService.existThisFile(photoModel.identifier) == true{
             if cell.tag == indexPath.row{
@@ -54,6 +75,12 @@ class ITVFavoritesViewController: UIViewController, UICollectionViewDataSource, 
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let photoModel = list[indexPath.row]
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let photosVC = sb.instantiateViewControllerWithIdentifier("ITVPhotosPageViewController") as! ITVPhotosPageViewController
+        photosVC.photosList = list
+        photosVC.currentPhotoEntity = photoModel
+        self.presentViewController(photosVC, animated: true, completion: nil)
         
     }
     

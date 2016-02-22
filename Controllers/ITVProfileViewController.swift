@@ -135,4 +135,14 @@ class ITVProfileViewController: UIViewController, UICollectionViewDataSource, UI
 //        }
         
     }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        self.title = "Albuns"
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.title = "Albuns"
+    }
 }

@@ -33,27 +33,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
         
-        var currentVC : UIViewController?
-        
-        if (FBSDKAccessToken.currentAccessToken() != nil) {
-            currentVC = sb.instantiateViewControllerWithIdentifier("ITVProfileViewController")
-        }else{
-            currentVC = sb.instantiateViewControllerWithIdentifier("ITVLoginViewController")
-        }
-        
-        let navigationVc = UINavigationController(rootViewController: currentVC!)
-
         if (FBSDKAccessToken.currentAccessToken() != nil) {
             let tabcontroller = ITVTabBarController()
-            let favVC = sb.instantiateViewControllerWithIdentifier("ITVFavoritesViewController")
-            tabcontroller.viewControllers = [navigationVc,favVC]
             
-            navigationVc.tabBarItem = UITabBarItem(title: "Title", image: nil, selectedImage: nil)
-            favVC.tabBarItem = UITabBarItem(title: "Title2", image: nil, selectedImage: nil)
+            let currentVC = sb.instantiateViewControllerWithIdentifier("ITVProfileViewController")
+            let navigationVc = UINavigationController(rootViewController: currentVC)
             
+            var controllers = [UIViewController]()
+            controllers.append(navigationVc)
+            
+            if PhotoEntity.getAllFavorites().count > 0{
+                let favoriteVC = sb.instantiateViewControllerWithIdentifier("ITVFavoritesViewController") as! ITVFavoritesViewController
+                controllers.append(favoriteVC)
+            }
+            
+            let configVC = sb.instantiateViewControllerWithIdentifier("ITVSplitViewController")
+            controllers.append(configVC)
+            
+            tabcontroller.viewControllers = controllers
             self.window?.rootViewController = tabcontroller
         }else{
-            self.window?.rootViewController = navigationVc
+            self.window?.rootViewController = sb.instantiateViewControllerWithIdentifier("ITVLoginViewController")
         }
         
         

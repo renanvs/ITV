@@ -9,22 +9,112 @@
 import UIKit
 
 class ITVAlbumPhotosViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-
+    
     @IBOutlet weak var photosCollectionView : UICollectionView!
     var albumModel : AlbumEntity?
     var list = [PhotoEntity]()
+    var hasImageDisplaying = false
+    var selectMenuButtonGesture : UITapGestureRecognizer?
+    var currentIndexPath : NSIndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Albuns"
+        self.navigationController?.navigationBarHidden = true
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("parsedAlbumPhotosSuccess:"), name: "parsedAlbumPhotosSuccess", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("entityUpdated"), name: "entityUpdated", object: nil)
+        
+        selectMenuButtonGesture = UITapGestureRecognizer(target: self, action: "menuPress:")
+        selectMenuButtonGesture!.enabled = false
+        selectMenuButtonGesture!.allowedPressTypes = [NSNumber(integer: UIPressType.Menu.rawValue)]
+        self.view.addGestureRecognizer(selectMenuButtonGesture!)
+        
+        let selectPlayButtonGesture = UITapGestureRecognizer(target: self, action: "playPress:")
+        selectPlayButtonGesture.enabled = true
+        selectPlayButtonGesture.allowedPressTypes = [NSNumber(integer: UIPressType.PlayPause.rawValue)]
+        self.view.addGestureRecognizer(selectPlayButtonGesture)
+        
     }
+    
+    func menuPress(event : UITapGestureRecognizer){
+        if hasImageDisplaying == true{
+            removeDisplayedImage()
+        }
+    }
+    
+    override func shouldUpdateFocusInContext(context: UIFocusUpdateContext) -> Bool {
+        
+        // The magic is in the next two lines
+        if context.nextFocusedView is UICollectionViewCell{
+            let cell: UICollectionViewCell = context.nextFocusedView as! UICollectionViewCell
+            let indexPath: NSIndexPath? = photosCollectionView.indexPathForCell(cell)
+            currentIndexPath = indexPath!
+            print(indexPath)
+        }
+        
+        
+        // <NSIndexPath: 0xc000000000000016> {length = 2, path = 0 - 0}
+        
+        return true
+    }
+    
+    func playPress(event : UITapGestureRecognizer){
+        if hasImageDisplaying == true{
+            return
+        }
+        
+        let indexPath =  currentIndexPath!
+        
+        let photoModel = list[indexPath.row]
+        print("\(photoModel.name!) - id: \(photoModel.identifier)")
+        
+        let cell = photosCollectionView.cellForItemAtIndexPath(indexPath)!
+        
+        let ds = NSUbiquitousKeyValueStore.defaultStore()
+        
+        let favImageView = cell.contentView.viewWithUniqueTag(3) as! UIImageView
+        if photoModel.favorited?.boolValue == false{
+            favImageView.alpha = 1
+            photoModel.favorited = NSNumber(bool: true)
+            
+        }else{
+            favImageView.alpha = 0
+            photoModel.favorited = NSNumber(bool: false)
+        }
+        
+        if photoModel.favorited!.boolValue{
+            ds.setBool(true, forKey: photoModel.identifier!)
+        }else{
+            ds.removeObjectForKey(photoModel.identifier!)
+        }
+        
+        photosCollectionView.reloadData()
+        
+        ds.synchronize()
+        
+        ITVCoreData.saveContext()
+    }
+
     
     func entityUpdated(){
         list = PhotoEntity.getAllWithAlbum(albumModel!)
         photosCollectionView.reloadData()
     }
+    
+    func collectionView(collectionView: UICollectionView, canFocusItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+        
+        return true
+    }
+    
+    func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
+    func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+        //currentIndexPath = indexPath
+        return true
+    }
+    
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("albumPhotoCell", forIndexPath: indexPath)
@@ -50,26 +140,26 @@ class ITVAlbumPhotosViewController: UIViewController, UICollectionViewDataSource
         let titleLabel = cell.contentView.viewWithUniqueTag(2) as! UILabel
         
         titleLabel.text = photoModel.name
-
-//        dispatch_async(dispatch_get_global_queue(0, 0)) { () -> Void in
-//            
-//            let data = NSData(contentsOfURL: NSURL(string: photoModel.remotePhotoUrl!)!)
-//            var image : UIImage?
-//            if let d = data{
-//                image = UIImage(data: d)
-//            }
-//            
-//            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-//                if let img = image{
-//                    
-//                    
-//                    if cell.tag == indexPath.row{
-//                        imageView.image = img
-//                    }
-//                    
-//                }
-//            })
-//        }
+        
+        //        dispatch_async(dispatch_get_global_queue(0, 0)) { () -> Void in
+        //
+        //            let data = NSData(contentsOfURL: NSURL(string: photoModel.remotePhotoUrl!)!)
+        //            var image : UIImage?
+        //            if let d = data{
+        //                image = UIImage(data: d)
+        //            }
+        //
+        //            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+        //                if let img = image{
+        //
+        //
+        //                    if cell.tag == indexPath.row{
+        //                        imageView.image = img
+        //                    }
+        //
+        //                }
+        //            })
+        //        }
         
         if DownloadService.existThisFile(photoModel.identifier) == true{
             if cell.tag == indexPath.row{
@@ -84,36 +174,59 @@ class ITVAlbumPhotosViewController: UIViewController, UICollectionViewDataSource
                 }, blockError: nil)
         }
         
+        if currentIndexPath == nil{
+            currentIndexPath = indexPath
+        }
+        
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let photoModel = list[indexPath.row]
-        print("\(photoModel.name!) - id: \(photoModel.identifier)")
         
-        let cell = collectionView.cellForItemAtIndexPath(indexPath)!
-        
-        let ds = NSUbiquitousKeyValueStore.defaultStore()
-        
-        let favImageView = cell.contentView.viewWithUniqueTag(3) as! UIImageView
-        if photoModel.favorited?.boolValue == false{
-            favImageView.alpha = 1
-            photoModel.favorited = NSNumber(bool: true)
-            
+        if hasImageDisplaying == true{
+            removeDisplayedImage()
         }else{
-            favImageView.alpha = 0
-            photoModel.favorited = NSNumber(bool: false)
+            displayImageInScreen(photoModel.identifier!)
         }
-        
-        if photoModel.favorited!.boolValue{
-            ds.setBool(true, forKey: photoModel.identifier!)
-        }else{
-            ds.removeObjectForKey(photoModel.identifier!)
+    }
+    
+    func removeDisplayedImage(){
+        let container = self.view.viewWithTag(10)
+        if let ct = container{
+            UIView.animateWithDuration(1.0, animations: { () -> Void in
+                ct.alpha = 0
+                }) { (value) -> Void in
+                    ct.removeFromSuperview()
+                    self.hasImageDisplaying = false
+                    self.selectMenuButtonGesture?.enabled = false
+            }
         }
+    }
+    
+    func displayImageInScreen(identifier:String){
+        hasImageDisplaying = true
+        selectMenuButtonGesture?.enabled = true
         
-        ds.synchronize()
+        let container = UIView(frame: self.view.frame)
+        container.backgroundColor = UIColor.blackColor()
+        container.backgroundColor?.colorWithAlphaComponent(0.5)
+        container.tag = 10
+        container.alpha = 0
         
-        ITVCoreData.saveContext()
+        let imageView = UIImageView(image: UIImage.ITVgetLocalImageWithIdentifier(identifier))
+        imageView.frame = CGRectMake(0, 0, 1300, 800)
+        imageView.contentMode = .ScaleAspectFit
+        //imageView.adjustsImageWhenAncestorFocused = true
+        
+        container.addSubview(imageView)
+        imageView.centerInSuperview()
+        self.view.addSubview(container)
+        UIView.animateWithDuration(1.0, animations: { () -> Void in
+            container.alpha = 1
+            }) { (value) -> Void in
+                
+        }
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -129,12 +242,12 @@ class ITVAlbumPhotosViewController: UIViewController, UICollectionViewDataSource
         ITVFacebookService.requestPhotoFromAlbumIdentifier(albumModel!.identifier!)
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 5
-    }
+    //    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+    //        return 5
+    //    }
+    //
+    //    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+    //        return 10
+    //    }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 10
-    }
-
 }
