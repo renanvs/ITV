@@ -8,10 +8,9 @@
 
 import UIKit
 
-class ITVConfiguratiomViewController: UIViewController {
+class ITVConfigurationViewController: UITableViewController {
 
-    @IBOutlet weak var configTableView : UITableView!
-    @IBOutlet weak var container : UIView!
+    //@IBOutlet weak var configTableView : UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
