@@ -44,7 +44,7 @@
 		DBD079091C6D17A60007FE46 /* InternetService.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD079081C6D17A60007FE46 /* InternetService.m */; };
 		DBD0790D1C6D18A50007FE46 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD0790C1C6D18A50007FE46 /* Reachability.m */; };
 		DBD483B21C7A58860017643E /* ITVSingleFullPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD483B11C7A58860017643E /* ITVSingleFullPhotoViewController.swift */; };
-		DBD483B91C7A94DD0017643E /* ITVConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD483B81C7A94DC0017643E /* ITVConfigurationViewController.swift */; };
+		DBD483B91C7A94DD0017643E /* ITVConfigurationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD483B81C7A94DC0017643E /* ITVConfigurationTableViewController.swift */; };
 		DBFDFEE91C72A6B9007A9FE1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFDFEE81C72A6B9007A9FE1 /* CloudKit.framework */; };
 		DBFDFEEB1C72BB3B007A9FE1 /* ITVKV.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFDFEEA1C72BB3B007A9FE1 /* ITVKV.swift */; };
 /* End PBXBuildFile section */
@@ -99,7 +99,7 @@
 		DBD0790B1C6D18A50007FE46 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		DBD0790C1C6D18A50007FE46 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		DBD483B11C7A58860017643E /* ITVSingleFullPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVSingleFullPhotoViewController.swift; sourceTree = "<group>"; };
-		DBD483B81C7A94DC0017643E /* ITVConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVConfigurationViewController.swift; sourceTree = "<group>"; };
+		DBD483B81C7A94DC0017643E /* ITVConfigurationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVConfigurationTableViewController.swift; sourceTree = "<group>"; };
 		DBFDFEE81C72A6B9007A9FE1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		DBFDFEEA1C72BB3B007A9FE1 /* ITVKV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVKV.swift; sourceTree = "<group>"; };
 		E4CF80D4B23D7F6E6496BD4E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,7 +239,7 @@
 				DB7CBCF31C73FE2000B57D4F /* ITVFavoritesViewController.swift */,
 				DB4270CC1C754BF70013B5D3 /* ITVPhotosPageViewController.swift */,
 				DBD483B11C7A58860017643E /* ITVSingleFullPhotoViewController.swift */,
-				DBD483B81C7A94DC0017643E /* ITVConfigurationViewController.swift */,
+				DBD483B81C7A94DC0017643E /* ITVConfigurationTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -426,7 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBD483B91C7A94DD0017643E /* ITVConfigurationViewController.swift in Sources */,
+				DBD483B91C7A94DD0017643E /* ITVConfigurationTableViewController.swift in Sources */,
 				DBD0790D1C6D18A50007FE46 /* Reachability.m in Sources */,
 				DBB867F51C7013200069B8A8 /* ITVAlbumPhotosViewController.swift in Sources */,
 				DB4270CD1C754BF70013B5D3 /* ITVPhotosPageViewController.swift in Sources */,

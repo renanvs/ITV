@@ -142,12 +142,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KH9-y1-YkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1707" y="1068"/>
+            <point key="canvasLocation" x="-1869" y="1239"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5N3-6y-r1l">
+            <objects>
+                <viewController storyboardIdentifier="ITVFaceProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cJ1-Zo-Ufh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sfg-gz-TfH"/>
+                        <viewControllerLayoutGuide type="bottom" id="p9m-A7-oFU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QCd-J9-Kfz">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.18774584790209789" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="500" height="500"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iZW-Ot-y9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1957" y="-180"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="8Gd-sE-4td">
             <objects>
-                <viewController id="ARY-Pv-LFE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ITVFavoriteConfigViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ARY-Pv-LFE" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="So7-0Y-hYm"/>
                         <viewControllerLayoutGuide type="bottom" id="F6j-fH-368"/>
@@ -155,24 +175,25 @@
                     <view key="view" contentMode="scaleToFill" id="cAY-mC-eXa">
                         <rect key="frame" x="0.0" y="0.0" width="800" height="540"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.91093899909999998" green="0.42802735469999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="800" height="540"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WiU-HL-1qz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3048.5" y="1534"/>
+            <point key="canvasLocation" x="-1659" y="589"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="pi3-b7-jbw">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="clw-9b-Xss" customClass="ITVConfigurationViewController" customModule="InstaTV" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ITVConfigurationTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="clw-9b-Xss" customClass="ITVConfigurationTableViewController" customModule="InstaTV" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="1" sectionFooterHeight="1" id="Z0o-uY-BCH">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ConfigCell0" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ConfigCell0" id="AIE-Cp-ewY">
-                                <rect key="frame" x="0.0" y="15" width="1000" height="66"/>
+                                <rect key="frame" x="0.0" y="15" width="960" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AIE-Cp-ewY" id="xcf-wl-UKs">
                                     <rect key="frame" x="0.0" y="0.0" width="984" height="66"/>
@@ -187,9 +208,12 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.1764705882" green="0.18039215689999999" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="ARY-Pv-LFE" kind="showDetail" id="gF7-0C-jJS"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ConfigCell1" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ConfigCell1" id="8it-wH-3tK">
-                                <rect key="frame" x="0.0" y="95" width="1000" height="66"/>
+                                <rect key="frame" x="0.0" y="95" width="960" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8it-wH-3tK" id="XoS-IX-px3">
                                     <rect key="frame" x="0.0" y="0.0" width="984" height="66"/>
@@ -204,9 +228,12 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.91093899909999998" green="0.42802735469999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="cJ1-Zo-Ufh" kind="showDetail" id="5hZ-b2-l5Y"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="fVP-Bj-Olo">
-                                <rect key="frame" x="0.0" y="175" width="1000" height="66"/>
+                                <rect key="frame" x="0.0" y="175" width="960" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fVP-Bj-Olo" id="5A7-lo-FnW">
                                     <rect key="frame" x="0.0" y="0.0" width="984" height="66"/>
@@ -254,7 +281,6 @@
                     <size key="freeformSize" width="960" height="540"/>
                     <connections>
                         <segue destination="tqy-c1-AE3" kind="relationship" relationship="masterViewController" id="hbn-T6-TWz"/>
-                        <segue destination="ARY-Pv-LFE" kind="relationship" relationship="detailViewController" id="AYL-Lk-n2h"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rBa-7g-Yhm" userLabel="First Responder" sceneMemberID="firstResponder"/>
