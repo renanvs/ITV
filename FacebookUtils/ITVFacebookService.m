@@ -259,7 +259,8 @@ SynthensizeSingleTon(ITVFacebookService)
 }
 
 -(void)deviceLoginButtonDidLogOut:(FBSDKDeviceLoginButton *)button{
-    
+    UIViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ITVLoginViewController"];
+    [[[[UIApplication sharedApplication] delegate] window]setRootViewController:controller];
 }
 
 -(UIView*)generateLoginButton{
@@ -268,7 +269,14 @@ SynthensizeSingleTon(ITVFacebookService)
     button.center = [[[[UIApplication sharedApplication] delegate] window] rootViewController].view.center;
     button.delegate = self;
     return button;
-    
+}
+
+-(UIView*)generateLoginButtonWithCenterView:(UIView *)view{
+    FBSDKDeviceLoginButton *button = [[FBSDKDeviceLoginButton alloc] initWithFrame:CGRectZero];
+    button.readPermissions = @[@"email",@"user_photos"];
+    [button centerWithSuperView:view];
+    button.delegate = self;
+    return button;
 }
 
 @end

@@ -24,6 +24,7 @@
 		DBB8684B1C712B950069B8A8 /* PhotoEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB868471C712B950069B8A8 /* PhotoEntity+CoreDataProperties.swift */; };
 		DBB8684C1C712B950069B8A8 /* PhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB868481C712B950069B8A8 /* PhotoEntity.swift */; };
 		DBB8684E1C71351E0069B8A8 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8684D1C71351E0069B8A8 /* star.png */; };
+		DBBD47941C7BF4B900229474 /* ITVFaceProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD47931C7BF4B900229474 /* ITVFaceProfileViewController.swift */; };
 		DBD078A01C6CCF270007FE46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0789F1C6CCF270007FE46 /* AppDelegate.swift */; };
 		DBD078A21C6CCF270007FE46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD078A11C6CCF270007FE46 /* ViewController.swift */; };
 		DBD078A51C6CCF270007FE46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD078A31C6CCF270007FE46 /* Main.storyboard */; };
@@ -70,6 +71,7 @@
 		DBB868481C712B950069B8A8 /* PhotoEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoEntity.swift; sourceTree = "<group>"; };
 		DBB8684D1C71351E0069B8A8 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		DBB8684F1C713FDB0069B8A8 /* InstaTV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = InstaTV.entitlements; sourceTree = "<group>"; };
+		DBBD47931C7BF4B900229474 /* ITVFaceProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVFaceProfileViewController.swift; sourceTree = "<group>"; };
 		DBD0789C1C6CCF270007FE46 /* InstaTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD0789F1C6CCF270007FE46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBD078A11C6CCF270007FE46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				DB4270CC1C754BF70013B5D3 /* ITVPhotosPageViewController.swift */,
 				DBD483B11C7A58860017643E /* ITVSingleFullPhotoViewController.swift */,
 				DBD483B81C7A94DC0017643E /* ITVConfigurationTableViewController.swift */,
+				DBBD47931C7BF4B900229474 /* ITVFaceProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				DBD078A01C6CCF270007FE46 /* AppDelegate.swift in Sources */,
 				DBD079041C6D153C0007FE46 /* DownloadRequestModel.m in Sources */,
 				DB7CBCF41C73FE2000B57D4F /* ITVFavoritesViewController.swift in Sources */,
+				DBBD47941C7BF4B900229474 /* ITVFaceProfileViewController.swift in Sources */,
 				DBD078EF1C6CF7020007FE46 /* ITVLoginViewController.swift in Sources */,
 				DBB8684C1C712B950069B8A8 /* PhotoEntity.swift in Sources */,
 				DBD078F31C6CFADD0007FE46 /* ITVFacebookService.m in Sources */,

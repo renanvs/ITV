@@ -38,6 +38,8 @@
 
 -(UIView*)generateLoginButton;
 
+-(UIView*)generateLoginButtonWithCenterView:(UIView *)view;
+
 +(void)requestPhotoById:(NSString*)identifier BlockSuccess:(void(^)(DownloadResponseModel *responseModel))successBlock BlockError:(void(^)())errorBlock;
 
 +(void)requestPhotoFromAlbumIdentifier:(NSString*)albumIdentifier;

@@ -62,6 +62,15 @@ class ITVCoreData: NSObject {
         return NSManagedObjectModel(contentsOfURL: modelURL)!
     }()
     
+//    class func reset(){
+//        NSError *error;
+//        NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"AppName.sqlite"];
+//        [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
+//        for (NSManagedObject *ct in [self.managedObjectContext registeredObjects]) {
+//            [self.managedObjectContext deleteObject:ct];
+//        }
+//    }
+    
     lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
         // The persistent store coordinator for the application. This implementation creates and returns a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
         // Create the coordinator and store
