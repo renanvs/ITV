@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		329C4949DEC5E30FD45E3B95 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CF80D4B23D7F6E6496BD4E /* Pods.framework */; };
+		DB24DE161C7F8E0E00BE560F /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = DB24DE141C7F8E0E00BE560F /* pause.png */; };
+		DB24DE171C7F8E0E00BE560F /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = DB24DE151C7F8E0E00BE560F /* play.png */; };
 		DB4270CD1C754BF70013B5D3 /* ITVPhotosPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4270CC1C754BF70013B5D3 /* ITVPhotosPageViewController.swift */; };
 		DB7CBCF01C73F4CD00B57D4F /* ITVUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CBCEF1C73F4CD00B57D4F /* ITVUtils.swift */; };
 		DB7CBCF21C73FBAA00B57D4F /* ITVTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CBCF11C73FBAA00B57D4F /* ITVTabBarController.swift */; };
@@ -52,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		551BEE00F302954A1EB2D260 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DB24DE141C7F8E0E00BE560F /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		DB24DE151C7F8E0E00BE560F /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		DB4270CC1C754BF70013B5D3 /* ITVPhotosPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVPhotosPageViewController.swift; sourceTree = "<group>"; };
 		DB7CBCEF1C73F4CD00B57D4F /* ITVUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVUtils.swift; sourceTree = "<group>"; };
 		DB7CBCF11C73FBAA00B57D4F /* ITVTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVTabBarController.swift; sourceTree = "<group>"; };
@@ -133,6 +137,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DB24DE131C7F8E0E00BE560F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DB24DE141C7F8E0E00BE560F /* pause.png */,
+				DB24DE151C7F8E0E00BE560F /* play.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		DB7F9E951C6EF28F00DE6A44 /* UIImageViewAligned */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +184,7 @@
 		DBD078931C6CCF270007FE46 = {
 			isa = PBXGroup;
 			children = (
+				DB24DE131C7F8E0E00BE560F /* Images */,
 				DBB868331C7126F80069B8A8 /* CoreData */,
 				DBB867F21C700DBC0069B8A8 /* 1.png */,
 				DBB867EC1C6EFB150069B8A8 /* Utils */,
@@ -366,6 +380,8 @@
 			files = (
 				DBD078D51C6CE8610007FE46 /* LICENSE.txt in Resources */,
 				DBB867F31C700DBC0069B8A8 /* 1.png in Resources */,
+				DB24DE171C7F8E0E00BE560F /* play.png in Resources */,
+				DB24DE161C7F8E0E00BE560F /* pause.png in Resources */,
 				DBD078D11C6CE8610007FE46 /* FacebookSDKStrings.bundle in Resources */,
 				DBD078A71C6CCF270007FE46 /* Assets.xcassets in Resources */,
 				DBB8684E1C71351E0069B8A8 /* star.png in Resources */,

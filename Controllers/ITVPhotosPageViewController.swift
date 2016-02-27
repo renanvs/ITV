@@ -14,6 +14,7 @@ class ITVPhotosPageViewController: UIPageViewController, UIPageViewControllerDat
     var photosList = [PhotoEntity]()
     var currentPhotoEntity : PhotoEntity?
     var timer : NSTimer?
+    var isPlaying = true
     
     required override init(transitionStyle style: UIPageViewControllerTransitionStyle, navigationOrientation: UIPageViewControllerNavigationOrientation, options: [String : AnyObject]?) {
         super.init(transitionStyle: style, navigationOrientation: navigationOrientation, options: options)
@@ -25,6 +26,10 @@ class ITVPhotosPageViewController: UIPageViewController, UIPageViewControllerDat
     }
     
     func setTimer(){
+        if isPlaying == false{
+            return
+        }
+        
         timer?.invalidate()
         timer = nil
         timer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: "next", userInfo: nil, repeats: true)
@@ -50,6 +55,10 @@ class ITVPhotosPageViewController: UIPageViewController, UIPageViewControllerDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let selectPlayButtonGesture = UITapGestureRecognizer(target: self, action: "playPress:")
+        selectPlayButtonGesture.allowedPressTypes = [NSNumber(integer: UIPressType.PlayPause.rawValue)]
+        self.view.addGestureRecognizer(selectPlayButtonGesture)
+        
         self.dataSource = self
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
@@ -69,6 +78,45 @@ class ITVPhotosPageViewController: UIPageViewController, UIPageViewControllerDat
         }
         
         setViewControllers([currentViewController!], direction: .Forward, animated: false, completion: nil)
+    }
+    
+    func playPress(tap : UITapGestureRecognizer){
+        
+        let v = self.view.viewWithUniqueTag(111)
+        if let _v = v{
+            _v.removeFromSuperview()
+        }
+        
+        let imagePlayPause = UIImageView(frame: CGRectMake(0, 0, 250, 250))
+        
+        imagePlayPause.alpha = 0
+        imagePlayPause.contentMode = .ScaleAspectFit
+        imagePlayPause.tag = 111
+        imagePlayPause.userInteractionEnabled = false
+        
+        self.view.addSubview(imagePlayPause)
+        imagePlayPause.centerInSuperview()
+        
+        if isPlaying == true{
+            imagePlayPause.image = UIImage(named: "pause")
+            isPlaying = false
+            timer?.invalidate()
+            timer = nil;
+            print("Pause")
+        }else{
+            imagePlayPause.image = UIImage(named: "play")
+            isPlaying = true
+            setTimer()
+            print("Playing")
+        }
+        
+        imagePlayPause.alpha = 1
+        UIView.animateWithDuration(3.0, animations: { () -> Void in
+            imagePlayPause.alpha = 0
+            }) { (value) -> Void in
+                imagePlayPause.removeFromSuperview()
+        }
+        
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
