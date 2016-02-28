@@ -9,24 +9,35 @@
 import UIKit
 
 class ITVUtils: NSObject {
-
-}
-
-extension UIImage{
-    class func ITVgetLocalImageWithIdentifier(identifier : String?) -> UIImage?{
-        if identifier == nil{
-            return nil
-        }
+    class func getStoryBoard() -> UIStoryboard{
+        return UIStoryboard(name: "Main", bundle: nil)
+    }
+    
+    class func getControllerBaseOnFacebookStatus() -> UIViewController{
         
-        let fullPath = DownloadService.auxFullPath(identifier)
-        print("ImagePath: \(fullPath)")
-        let data = NSData(contentsOfFile: fullPath)
-        var image : UIImage?
+        let sb = ITVUtils.getStoryBoard()
         
-        if let d = data {
-            image = UIImage(data: d)
-            return image
+        if (FBSDKAccessToken.currentAccessToken() != nil) {
+            let tabcontroller = ITVTabBarController()
+            
+            let currentVC = sb.instantiateViewControllerWithIdentifier("ITVAlbumsViewController")
+            let navigationVc = UINavigationController(rootViewController: currentVC)
+            
+            var controllers = [UIViewController]()
+            controllers.append(navigationVc)
+            
+            if PhotoEntity.getAllFavorites().count > 0{
+                let favoriteVC = sb.instantiateViewControllerWithIdentifier("ITVFavoritesViewController") as! ITVFavoritesViewController
+                controllers.append(favoriteVC)
+            }
+            
+            let configVC = sb.instantiateViewControllerWithIdentifier("ITVSplitViewController")
+            controllers.append(configVC)
+            
+            tabcontroller.viewControllers = controllers
+            return tabcontroller
+        }else{
+            return sb.instantiateViewControllerWithIdentifier("ITVLoginViewController")
         }
-        return image
     }
 }

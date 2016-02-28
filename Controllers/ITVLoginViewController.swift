@@ -10,25 +10,19 @@ import UIKit
 
 class ITVLoginViewController: UIViewController{
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func viewWillAppear(animated: Bool) {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "requestCompleted", name: "finishedGetProfileInfo", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "requestCompleted", name: ITVStatics.NOTIFICATION_finishedGetProfileInfo, object: nil)
     }
     
     func requestCompleted(){
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewControllerWithIdentifier("ITVProfileViewController")
-        self.navigationController?.pushViewController(vc, animated: true)
+        let vc = ITVUtils.getControllerBaseOnFacebookStatus()
+        self.presentViewController(vc, animated: true, completion: nil)
     }
     
     override func viewDidAppear(animated: Bool) {
-        //let loginButton = fbsdkloggin
-        
-        let button = ITVFacebookService.sharedInstance().generateLoginButton()
-        self.view.addSubview(button)
-        
+        let view = self.view.viewWithTag(1)!
+        view.clearColor()
+        let button = ITVFacebookService.sharedInstance().generateLoginButtonWithCenterView(view)
+        view.addSubview(button)
     }
 }

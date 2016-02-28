@@ -13,15 +13,16 @@ class ITVFavoritesViewController: UIViewController, UICollectionViewDataSource, 
     @IBOutlet weak var photosCollectionView : UICollectionView!
     var list = [PhotoEntity]()
     
+    //MARK: Native Methods
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        self.title = "Favorites"
-        
+        self.title = ITVString.Lang(ITVString.Favorites_Title)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.title = "Favorites"
+        self.title = ITVString.Lang(ITVString.Favorites_Title)
     }
     
     override func viewDidLoad() {
@@ -32,17 +33,20 @@ class ITVFavoritesViewController: UIViewController, UICollectionViewDataSource, 
         self.view.addGestureRecognizer(selectPlayButtonGesture)
     }
     
-    func playPress(tap : UITapGestureRecognizer){
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let photosVC = sb.instantiateViewControllerWithIdentifier("ITVPhotosPageViewController") as! ITVPhotosPageViewController
-        photosVC.photosList = list
-        self.presentViewController(photosVC, animated: true, completion: nil)
-    }
-    
     override func viewWillAppear(animated: Bool) {
         list = PhotoEntity.getAllFavorites()
         photosCollectionView.reloadData()
     }
+    
+    //MARK: Internal Methods
+    
+    func playPress(tap : UITapGestureRecognizer){
+        let photosVC = ITVUtils.getStoryBoard().instantiateViewControllerWithIdentifier("ITVPhotosPageViewController") as! ITVPhotosPageViewController
+        photosVC.photosList = list
+        self.presentViewController(photosVC, animated: true, completion: nil)
+    }
+    
+    //MARK: CollectionViewDelegate
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("albumPhotoCell", forIndexPath: indexPath)
@@ -54,7 +58,7 @@ class ITVFavoritesViewController: UIViewController, UICollectionViewDataSource, 
         imageView.backgroundColor = UIColor.blackColor()
         imageView.image = nil
         imageView.adjustsImageWhenAncestorFocused = true
-        imageView.image = UIImage(named: "1.png")
+        imageView.image = UIImage.DefaultImage()
         imageView.contentMode = UIViewContentMode.ScaleAspectFit
         
         if DownloadService.existThisFile(photoModel.identifier) == true{
@@ -76,8 +80,7 @@ class ITVFavoritesViewController: UIViewController, UICollectionViewDataSource, 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let photoModel = list[indexPath.row]
         
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let photosVC = sb.instantiateViewControllerWithIdentifier("ITVPhotosPageViewController") as! ITVPhotosPageViewController
+        let photosVC = ITVUtils.getStoryBoard().instantiateViewControllerWithIdentifier("ITVPhotosPageViewController") as! ITVPhotosPageViewController
         photosVC.photosList = list
         photosVC.currentPhotoEntity = photoModel
         self.presentViewController(photosVC, animated: true, completion: nil)
@@ -86,9 +89,6 @@ class ITVFavoritesViewController: UIViewController, UICollectionViewDataSource, 
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return list.count
-    }
-    
-    override func viewDidAppear(animated: Bool) {
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {

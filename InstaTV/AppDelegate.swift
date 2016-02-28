@@ -19,44 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ITVCoreData.sharedInstance
         ITVKV.sharedInstance
-//        
-//        if AlbumEntity.getAll().count == 0{
-//            let entity = AlbumEntity.newEntity()
-//            entity.name = "ola album"
-//            ITVCoreData.saveContext()
-//        }else{
-//            let str = (AlbumEntity.getAll().first?.name)!
-//            print("\(str)")
-//        }
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        
-        if (FBSDKAccessToken.currentAccessToken() != nil) {
-            let tabcontroller = ITVTabBarController()
-            
-            let currentVC = sb.instantiateViewControllerWithIdentifier("ITVProfileViewController")
-            let navigationVc = UINavigationController(rootViewController: currentVC)
-            
-            var controllers = [UIViewController]()
-            controllers.append(navigationVc)
-            
-            if PhotoEntity.getAllFavorites().count > 0{
-                let favoriteVC = sb.instantiateViewControllerWithIdentifier("ITVFavoritesViewController") as! ITVFavoritesViewController
-                controllers.append(favoriteVC)
-            }
-            
-            let configVC = sb.instantiateViewControllerWithIdentifier("ITVSplitViewController")
-            controllers.append(configVC)
-            
-            tabcontroller.viewControllers = controllers
-            self.window?.rootViewController = tabcontroller
-        }else{
-            self.window?.rootViewController = sb.instantiateViewControllerWithIdentifier("ITVLoginViewController")
-        }
-        
-        
+        self.window?.rootViewController = ITVUtils.getControllerBaseOnFacebookStatus()
         
         self.window?.makeKeyAndVisible()
         
