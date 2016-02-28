@@ -19,6 +19,7 @@
 		DB9861751C83430A00163813 /* ITVString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9861741C83430A00163813 /* ITVString.swift */; };
 		DB9861771C8343A400163813 /* ITVExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9861761C8343A400163813 /* ITVExtensions.swift */; };
 		DB9861791C8343F300163813 /* ITVStatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9861781C8343F300163813 /* ITVStatics.swift */; };
+		DB98617F1C83AE9600163813 /* ITVBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB98617E1C83AE9600163813 /* ITVBaseViewController.swift */; };
 		DBB867F01C6EFB230069B8A8 /* SwiftUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB867ED1C6EFB220069B8A8 /* SwiftUtils.swift */; };
 		DBB867F11C6EFB230069B8A8 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB867EF1C6EFB220069B8A8 /* Utils.m */; };
 		DBB867F31C700DBC0069B8A8 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB867F21C700DBC0069B8A8 /* 1.png */; };
@@ -72,6 +73,7 @@
 		DB9861741C83430A00163813 /* ITVString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVString.swift; sourceTree = "<group>"; };
 		DB9861761C8343A400163813 /* ITVExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVExtensions.swift; sourceTree = "<group>"; };
 		DB9861781C8343F300163813 /* ITVStatics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVStatics.swift; sourceTree = "<group>"; };
+		DB98617E1C83AE9600163813 /* ITVBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVBaseViewController.swift; sourceTree = "<group>"; };
 		DBB867ED1C6EFB220069B8A8 /* SwiftUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftUtils.swift; path = ../../ObjC_Utils/utils/SwiftUtils.swift; sourceTree = "<group>"; };
 		DBB867EE1C6EFB220069B8A8 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = ../../ObjC_Utils/utils/Utils.h; sourceTree = "<group>"; };
 		DBB867EF1C6EFB220069B8A8 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = ../../ObjC_Utils/utils/Utils.m; sourceTree = "<group>"; };
@@ -161,6 +163,14 @@
 				DB7F9E971C6EF28F00DE6A44 /* UIImageViewAligned.m */,
 			);
 			path = UIImageViewAligned;
+			sourceTree = "<group>";
+		};
+		DB98617D1C83AE5B00163813 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB98617E1C83AE9600163813 /* ITVBaseViewController.swift */,
+			);
+			name = BaseViewController;
 			sourceTree = "<group>";
 		};
 		DBB867EC1C6EFB150069B8A8 /* Utils */ = {
@@ -259,6 +269,7 @@
 		DBD078EB1C6CF6E20007FE46 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DB98617D1C83AE5B00163813 /* BaseViewController */,
 				DBD078EE1C6CF7020007FE46 /* ITVLoginViewController.swift */,
 				DBD078EC1C6CF6EF0007FE46 /* ITVAlbumsViewController.swift */,
 				DBB867F41C7013200069B8A8 /* ITVAlbumPhotosViewController.swift */,
@@ -461,6 +472,7 @@
 				DB9861791C8343F300163813 /* ITVStatics.swift in Sources */,
 				DBD483B91C7A94DD0017643E /* ITVConfigurationTableViewController.swift in Sources */,
 				DBD0790D1C6D18A50007FE46 /* Reachability.m in Sources */,
+				DB98617F1C83AE9600163813 /* ITVBaseViewController.swift in Sources */,
 				DBB867F51C7013200069B8A8 /* ITVAlbumPhotosViewController.swift in Sources */,
 				DB4270CD1C754BF70013B5D3 /* ITVPhotosPageViewController.swift in Sources */,
 				DBFDFEEB1C72BB3B007A9FE1 /* ITVKV.swift in Sources */,

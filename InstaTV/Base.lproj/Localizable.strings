@@ -8,3 +8,7 @@
 
 "Albums_Title" = "Albums";
 "Favorites_Title" = "Favorites";
+"Albums__FirstRun_Message" = "Here you should view your photos from Facebook in your TV.\n\nIn this first screen you see your Facebook almbums.\n\nSelect to see the photos";
+"PhotoAlbums__FirstRun_Message" = "Select the photo to show it large.\n\n Push 'Play' button to bookmarked the photo, for view in Slide Show";
+
+"PhotoAlbumsFavorite__FirstRun_Message" = "A new screen option is avaliable in top bar named 'Favorites'.\nAfter Bookmarker some photos in this albums and others, go visit the tab 'Favorites'";

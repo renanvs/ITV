@@ -8,10 +8,10 @@
 
 import UIKit
 
-class ITVLoginViewController: UIViewController{
-    
-    override func viewWillAppear(animated: Bool) {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "requestCompleted", name: ITVStatics.NOTIFICATION_finishedGetProfileInfo, object: nil)
+class ITVLoginViewController: ITVBaseViewController{
+        
+    override func addObservers() {
+        addSimpleObserver(ITVStatics.NOTIFICATION_finishedGetProfileInfo, selectorName:"requestCompleted")
     }
     
     func requestCompleted(){

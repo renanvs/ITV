@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ITVAlbumPhotosViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class ITVAlbumPhotosViewController: ITVBaseViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var photosCollectionView : UICollectionView!
     var albumModel : AlbumEntity?
@@ -17,14 +17,20 @@ class ITVAlbumPhotosViewController: UIViewController, UICollectionViewDataSource
     var selectMenuButtonGesture : UITapGestureRecognizer?
     var currentIndexPath : NSIndexPath?
     
+    
+    //MARK: Base Class
+    override func addObservers() {
+        addSimpleObserver(ITVStatics.NOTIFICATION_parsedAlbumPhotosSuccess, selectorName:"parsedAlbumPhotosSuccess:")
+        addSimpleObserver(ITVStatics.NOTIFICATION_entityUpdated, selectorName: "entityUpdated")
+    }
+    
     //MARK: Native Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ITVUtils.showHelpPhotoAlbumMessage()
         self.title = ITVString.Lang(ITVString.Albums_Title)
         self.navigationController?.navigationBarHidden = true
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("parsedAlbumPhotosSuccess:"), name: ITVStatics.NOTIFICATION_parsedAlbumPhotosSuccess, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("entityUpdated"), name: ITVStatics.NOTIFICATION_entityUpdated, object: nil)
         
         selectMenuButtonGesture = UITapGestureRecognizer(target: self, action: "menuPress:")
         selectMenuButtonGesture!.enabled = false
@@ -69,8 +75,13 @@ class ITVAlbumPhotosViewController: UIViewController, UICollectionViewDataSource
                     ct.removeFromSuperview()
                     self.hasImageDisplaying = false
                     self.selectMenuButtonGesture?.enabled = false
+                    self.removeDisplayedImage()
             }
+            
+        }else{
+            return
         }
+        
     }
     
     func displayImageInScreen(identifier:String){
@@ -107,6 +118,8 @@ class ITVAlbumPhotosViewController: UIViewController, UICollectionViewDataSource
         if hasImageDisplaying == true{
             return
         }
+        
+        ITVUtils.showHelpPhotoAlbumFavorite()
         
         let indexPath =  currentIndexPath!
         

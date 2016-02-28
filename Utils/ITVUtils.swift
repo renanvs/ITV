@@ -40,4 +40,43 @@ class ITVUtils: NSObject {
             return sb.instantiateViewControllerWithIdentifier("ITVLoginViewController")
         }
     }
+    
+    class func showHelpAlbumMessage() -> Bool{
+        let value = NSUserDefaults.standardUserDefaults().objectForKey("ITVFirstRunAlbumMessage") == nil ? true : false
+        if value == true{
+            let currentController = Utils.getCurrentWindow().rootViewController;
+            let alert = UIAlertController(title: "Social Photo TV", message: ITVString.Lang(ITVString.Albums__FirstRun_Message), preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            currentController?.presentViewController(alert, animated: true, completion: nil)
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "ITVFirstRunAlbumMessage")
+        }
+        
+        return value
+    }
+    
+    class func showHelpPhotoAlbumMessage() -> Bool{
+        let value = NSUserDefaults.standardUserDefaults().objectForKey("ITVFirstRunPhotoAlbumMessage") == nil ? true : false
+        if value == true{
+            let currentController = Utils.getCurrentWindow().rootViewController;
+            let alert = UIAlertController(title: "Social Photo TV", message: ITVString.Lang(ITVString.PhotoAlbums__FirstRun_Message), preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            currentController?.presentViewController(alert, animated: true, completion: nil)
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "ITVFirstRunPhotoAlbumMessage")
+        }
+        
+        return value
+    }
+    
+    class func showHelpPhotoAlbumFavorite() -> Bool{
+        let value = NSUserDefaults.standardUserDefaults().objectForKey("ITVFirstRunPhotoAlbumFavoriteMessage") == nil ? true : false
+        if value == true{
+        let currentController = Utils.getCurrentWindow().rootViewController;
+        let alert = UIAlertController(title: "Social Photo TV", message: ITVString.Lang(ITVString.PhotoAlbumsFavorite__FirstRun_Message), preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        currentController?.presentViewController(alert, animated: true, completion: nil)
+        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "ITVFirstRunPhotoAlbumFavoriteMessage")
+        }
+    
+    return value
+    }
 }

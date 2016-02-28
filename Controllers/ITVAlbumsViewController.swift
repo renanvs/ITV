@@ -8,16 +8,22 @@
 
 import UIKit
 
-class ITVAlbumsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ITVAlbumsViewController: ITVBaseViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var albumCollectionView : UICollectionView!
     var list = [AlbumEntity]()
 
+    //MARK: Base Class
+    
+    override func addObservers() {
+        addSimpleObserver(ITVStatics.NOTIFICATION_parsedAlbunsSuccess, selectorName:"parsedAlbunsSuccess")
+    }
+    
     //MARK: Native Class
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("parsedAlbunsSuccess"), name: ITVStatics.NOTIFICATION_parsedAlbunsSuccess, object: nil)
+        ITVUtils.showHelpAlbumMessage()
     }
     
     override func viewDidAppear(animated: Bool) {
