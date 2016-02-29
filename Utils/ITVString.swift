@@ -19,5 +19,6 @@ class ITVString : NSObject{
     static let Albums__FirstRun_Message = "Albums__FirstRun_Message"
     static let PhotoAlbums__FirstRun_Message = "PhotoAlbums__FirstRun_Message"
     static let PhotoAlbumsFavorite__FirstRun_Message = "PhotoAlbumsFavorite__FirstRun_Message"
+    static let Favorites__FirstRun_Message = "Favorites__FirstRun_Message"
     
 }

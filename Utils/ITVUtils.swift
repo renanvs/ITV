@@ -77,6 +77,20 @@ class ITVUtils: NSObject {
         NSUserDefaults.standardUserDefaults().setBool(true, forKey: "ITVFirstRunPhotoAlbumFavoriteMessage")
         }
     
-    return value
+        return value
     }
+    
+    class func showHelpFavoritesMessage() -> Bool{
+        let value = NSUserDefaults.standardUserDefaults().objectForKey("ITVFirstRunFavoritesMessage") == nil ? true : false
+        if value == true{
+            let currentController = Utils.getCurrentWindow().rootViewController;
+            let alert = UIAlertController(title: "Social Photo TV", message: ITVString.Lang(ITVString.Favorites__FirstRun_Message), preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            currentController?.presentViewController(alert, animated: true, completion: nil)
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "ITVFirstRunFavoritesMessage")
+        }
+        
+        return value
+    }
+
 }

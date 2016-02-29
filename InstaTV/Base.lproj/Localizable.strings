@@ -12,3 +12,5 @@
 "PhotoAlbums__FirstRun_Message" = "Select the photo to show it large.\n\n Push 'Play' button to bookmarked the photo, for view in Slide Show";
 
 "PhotoAlbumsFavorite__FirstRun_Message" = "A new screen option is avaliable in top bar named 'Favorites'.\nAfter Bookmarker some photos in this albums and others, go visit the tab 'Favorites'";
+
+"Favorites__FirstRun_Message" = "Here you can see your favorite photos. Select the photo to begin the Slide Show.\nTip 1: Use the directional to navigate between the photos\nTip 2: To pause a photo press 'Play/Pause'";

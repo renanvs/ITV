@@ -12,3 +12,5 @@
 "PhotoAlbums__FirstRun_Message" = "Selecione a foto para visualiza-la maior.\n\n Aperte o 'Play' para favoritar a foto, para a exibição em Slide";
 
 "PhotoAlbumsFavorite__FirstRun_Message" = "Uma nova tela apareceu na barra do topo chamado 'Favoritos'.\nApós favoritar algumas fotos nesse e em outros álbuns vá visitar a aba 'Favoritos'";
+
+"Favorites__FirstRun_Message" = "Aqui você podera visualizar suas fotos favoritas. Selecione a foto para começar o Slide Show.\nDica 1: Use os direcionais para navegar entre fotos\nDica 2: Para pausar uma foto aperte 'Play/Pause'";

@@ -56,6 +56,12 @@ class ITVPhotosPageViewController: UIPageViewController, UIPageViewControllerDat
         
         setViewControllers([currentViewController!], direction: .Forward, animated: false, completion: nil)
     }
+    
+    override func viewWillDisappear(animated: Bool) {        
+        timer?.invalidate()
+        timer = nil
+        super.viewWillDisappear(animated)
+    }
 
     
     //MARK: Internal Methods

@@ -12,6 +12,7 @@ class ITVFavoritesViewController: UIViewController, UICollectionViewDataSource, 
     
     @IBOutlet weak var photosCollectionView : UICollectionView!
     var list = [PhotoEntity]()
+    var currentIndexPath : NSIndexPath?
     
     //MARK: Native Methods
     
@@ -27,6 +28,7 @@ class ITVFavoritesViewController: UIViewController, UICollectionViewDataSource, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ITVUtils.showHelpFavoritesMessage()
         let selectPlayButtonGesture = UITapGestureRecognizer(target: self, action: "playPress:")
         selectPlayButtonGesture.enabled = true
         selectPlayButtonGesture.allowedPressTypes = [NSNumber(integer: UIPressType.PlayPause.rawValue)]
@@ -38,11 +40,25 @@ class ITVFavoritesViewController: UIViewController, UICollectionViewDataSource, 
         photosCollectionView.reloadData()
     }
     
+    override func shouldUpdateFocusInContext(context: UIFocusUpdateContext) -> Bool {
+        
+        if context.nextFocusedView is UICollectionViewCell{
+            let cell: UICollectionViewCell = context.nextFocusedView as! UICollectionViewCell
+            let indexPath: NSIndexPath? = photosCollectionView.indexPathForCell(cell)
+            currentIndexPath = indexPath!
+            print(indexPath)
+        }
+        
+        return true
+    }
+    
     //MARK: Internal Methods
     
     func playPress(tap : UITapGestureRecognizer){
         let photosVC = ITVUtils.getStoryBoard().instantiateViewControllerWithIdentifier("ITVPhotosPageViewController") as! ITVPhotosPageViewController
         photosVC.photosList = list
+        let photoModel = list[currentIndexPath!.row]
+        photosVC.currentPhotoEntity = photoModel
         self.presentViewController(photosVC, animated: true, completion: nil)
     }
     
@@ -72,6 +88,10 @@ class ITVFavoritesViewController: UIViewController, UICollectionViewDataSource, 
                     imageView.image = UIImage.ITVgetLocalImageWithIdentifier(photoModel.identifier)
                 }
                 }, blockError: nil)
+        }
+        
+        if currentIndexPath == nil{
+            currentIndexPath = indexPath
         }
         
         return cell
