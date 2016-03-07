@@ -15,6 +15,11 @@
 		DB7CBCF21C73FBAA00B57D4F /* ITVTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CBCF11C73FBAA00B57D4F /* ITVTabBarController.swift */; };
 		DB7CBCF41C73FE2000B57D4F /* ITVFavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CBCF31C73FE2000B57D4F /* ITVFavoritesViewController.swift */; };
 		DB7F9E981C6EF28F00DE6A44 /* UIImageViewAligned.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7F9E971C6EF28F00DE6A44 /* UIImageViewAligned.m */; };
+		DB9861701C81452D00163813 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB9861721C81452D00163813 /* Localizable.strings */; };
+		DB9861751C83430A00163813 /* ITVString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9861741C83430A00163813 /* ITVString.swift */; };
+		DB9861771C8343A400163813 /* ITVExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9861761C8343A400163813 /* ITVExtensions.swift */; };
+		DB9861791C8343F300163813 /* ITVStatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9861781C8343F300163813 /* ITVStatics.swift */; };
+		DB98617F1C83AE9600163813 /* ITVBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB98617E1C83AE9600163813 /* ITVBaseViewController.swift */; };
 		DBB867F01C6EFB230069B8A8 /* SwiftUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB867ED1C6EFB220069B8A8 /* SwiftUtils.swift */; };
 		DBB867F11C6EFB230069B8A8 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB867EF1C6EFB220069B8A8 /* Utils.m */; };
 		DBB867F31C700DBC0069B8A8 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB867F21C700DBC0069B8A8 /* 1.png */; };
@@ -28,7 +33,6 @@
 		DBB8684E1C71351E0069B8A8 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8684D1C71351E0069B8A8 /* star.png */; };
 		DBBD47941C7BF4B900229474 /* ITVFaceProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD47931C7BF4B900229474 /* ITVFaceProfileViewController.swift */; };
 		DBD078A01C6CCF270007FE46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0789F1C6CCF270007FE46 /* AppDelegate.swift */; };
-		DBD078A21C6CCF270007FE46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD078A11C6CCF270007FE46 /* ViewController.swift */; };
 		DBD078A51C6CCF270007FE46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD078A31C6CCF270007FE46 /* Main.storyboard */; };
 		DBD078A71C6CCF270007FE46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD078A61C6CCF270007FE46 /* Assets.xcassets */; };
 		DBD078D11C6CE8610007FE46 /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DBD078B11C6CE8610007FE46 /* FacebookSDKStrings.bundle */; };
@@ -37,7 +41,7 @@
 		DBD078D41C6CE8610007FE46 /* FBSDKTVOSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD078B41C6CE8610007FE46 /* FBSDKTVOSKit.framework */; };
 		DBD078D51C6CE8610007FE46 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = DBD078B51C6CE8610007FE46 /* LICENSE.txt */; };
 		DBD078D61C6CE8610007FE46 /* README_TV.txt in Resources */ = {isa = PBXBuildFile; fileRef = DBD078B61C6CE8610007FE46 /* README_TV.txt */; };
-		DBD078ED1C6CF6EF0007FE46 /* ITVProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD078EC1C6CF6EF0007FE46 /* ITVProfileViewController.swift */; };
+		DBD078ED1C6CF6EF0007FE46 /* ITVAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD078EC1C6CF6EF0007FE46 /* ITVAlbumsViewController.swift */; };
 		DBD078EF1C6CF7020007FE46 /* ITVLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD078EE1C6CF7020007FE46 /* ITVLoginViewController.swift */; };
 		DBD078F31C6CFADD0007FE46 /* ITVFacebookService.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD078F21C6CFADD0007FE46 /* ITVFacebookService.m */; };
 		DBD078FB1C6D09F60007FE46 /* ITVFacebookUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD078FA1C6D09F60007FE46 /* ITVFacebookUser.swift */; };
@@ -62,6 +66,14 @@
 		DB7CBCF31C73FE2000B57D4F /* ITVFavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVFavoritesViewController.swift; sourceTree = "<group>"; };
 		DB7F9E961C6EF28F00DE6A44 /* UIImageViewAligned.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewAligned.h; sourceTree = "<group>"; };
 		DB7F9E971C6EF28F00DE6A44 /* UIImageViewAligned.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewAligned.m; sourceTree = "<group>"; };
+		DB98615C1C8140BA00163813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DB98615D1C81414A00163813 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		DB9861711C81452D00163813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DB9861731C81452F00163813 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		DB9861741C83430A00163813 /* ITVString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVString.swift; sourceTree = "<group>"; };
+		DB9861761C8343A400163813 /* ITVExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVExtensions.swift; sourceTree = "<group>"; };
+		DB9861781C8343F300163813 /* ITVStatics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVStatics.swift; sourceTree = "<group>"; };
+		DB98617E1C83AE9600163813 /* ITVBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVBaseViewController.swift; sourceTree = "<group>"; };
 		DBB867ED1C6EFB220069B8A8 /* SwiftUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftUtils.swift; path = ../../ObjC_Utils/utils/SwiftUtils.swift; sourceTree = "<group>"; };
 		DBB867EE1C6EFB220069B8A8 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = ../../ObjC_Utils/utils/Utils.h; sourceTree = "<group>"; };
 		DBB867EF1C6EFB220069B8A8 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = ../../ObjC_Utils/utils/Utils.m; sourceTree = "<group>"; };
@@ -78,8 +90,6 @@
 		DBBD47931C7BF4B900229474 /* ITVFaceProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVFaceProfileViewController.swift; sourceTree = "<group>"; };
 		DBD0789C1C6CCF270007FE46 /* InstaTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD0789F1C6CCF270007FE46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DBD078A11C6CCF270007FE46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DBD078A41C6CCF270007FE46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBD078A61C6CCF270007FE46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBD078A81C6CCF270007FE46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBD078AE1C6CD0EB0007FE46 /* InstaTV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InstaTV-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -89,7 +99,7 @@
 		DBD078B41C6CE8610007FE46 /* FBSDKTVOSKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKTVOSKit.framework; sourceTree = "<group>"; };
 		DBD078B51C6CE8610007FE46 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		DBD078B61C6CE8610007FE46 /* README_TV.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README_TV.txt; sourceTree = "<group>"; };
-		DBD078EC1C6CF6EF0007FE46 /* ITVProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVProfileViewController.swift; sourceTree = "<group>"; };
+		DBD078EC1C6CF6EF0007FE46 /* ITVAlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVAlbumsViewController.swift; sourceTree = "<group>"; };
 		DBD078EE1C6CF7020007FE46 /* ITVLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVLoginViewController.swift; sourceTree = "<group>"; };
 		DBD078F11C6CFADD0007FE46 /* ITVFacebookService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITVFacebookService.h; sourceTree = "<group>"; };
 		DBD078F21C6CFADD0007FE46 /* ITVFacebookService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITVFacebookService.m; sourceTree = "<group>"; };
@@ -155,6 +165,14 @@
 			path = UIImageViewAligned;
 			sourceTree = "<group>";
 		};
+		DB98617D1C83AE5B00163813 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB98617E1C83AE9600163813 /* ITVBaseViewController.swift */,
+			);
+			name = BaseViewController;
+			sourceTree = "<group>";
+		};
 		DBB867EC1C6EFB150069B8A8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +180,9 @@
 				DBB867EE1C6EFB220069B8A8 /* Utils.h */,
 				DBB867EF1C6EFB220069B8A8 /* Utils.m */,
 				DB7CBCEF1C73F4CD00B57D4F /* ITVUtils.swift */,
+				DB9861741C83430A00163813 /* ITVString.swift */,
+				DB9861761C8343A400163813 /* ITVExtensions.swift */,
+				DB9861781C8343F300163813 /* ITVStatics.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -213,11 +234,11 @@
 			children = (
 				DBB8684F1C713FDB0069B8A8 /* InstaTV.entitlements */,
 				DBD0789F1C6CCF270007FE46 /* AppDelegate.swift */,
-				DBD078A11C6CCF270007FE46 /* ViewController.swift */,
 				DBD078AE1C6CD0EB0007FE46 /* InstaTV-Bridging-Header.h */,
 				DBD078A31C6CCF270007FE46 /* Main.storyboard */,
 				DBD078A61C6CCF270007FE46 /* Assets.xcassets */,
 				DBD078A81C6CCF270007FE46 /* Info.plist */,
+				DB9861721C81452D00163813 /* Localizable.strings */,
 			);
 			path = InstaTV;
 			sourceTree = "<group>";
@@ -248,8 +269,9 @@
 		DBD078EB1C6CF6E20007FE46 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DBD078EC1C6CF6EF0007FE46 /* ITVProfileViewController.swift */,
+				DB98617D1C83AE5B00163813 /* BaseViewController */,
 				DBD078EE1C6CF7020007FE46 /* ITVLoginViewController.swift */,
+				DBD078EC1C6CF6EF0007FE46 /* ITVAlbumsViewController.swift */,
 				DBB867F41C7013200069B8A8 /* ITVAlbumPhotosViewController.swift */,
 				DB7CBCF11C73FBAA00B57D4F /* ITVTabBarController.swift */,
 				DB7CBCF31C73FE2000B57D4F /* ITVFavoritesViewController.swift */,
@@ -362,6 +384,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = DBD078931C6CCF270007FE46;
 			productRefGroup = DBD0789D1C6CCF270007FE46 /* Products */;
@@ -383,6 +406,7 @@
 				DB24DE171C7F8E0E00BE560F /* play.png in Resources */,
 				DB24DE161C7F8E0E00BE560F /* pause.png in Resources */,
 				DBD078D11C6CE8610007FE46 /* FacebookSDKStrings.bundle in Resources */,
+				DB9861701C81452D00163813 /* Localizable.strings in Resources */,
 				DBD078A71C6CCF270007FE46 /* Assets.xcassets in Resources */,
 				DBB8684E1C71351E0069B8A8 /* star.png in Resources */,
 				DBD078D61C6CE8610007FE46 /* README_TV.txt in Resources */,
@@ -445,16 +469,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB9861791C8343F300163813 /* ITVStatics.swift in Sources */,
 				DBD483B91C7A94DD0017643E /* ITVConfigurationTableViewController.swift in Sources */,
 				DBD0790D1C6D18A50007FE46 /* Reachability.m in Sources */,
+				DB98617F1C83AE9600163813 /* ITVBaseViewController.swift in Sources */,
 				DBB867F51C7013200069B8A8 /* ITVAlbumPhotosViewController.swift in Sources */,
 				DB4270CD1C754BF70013B5D3 /* ITVPhotosPageViewController.swift in Sources */,
 				DBFDFEEB1C72BB3B007A9FE1 /* ITVKV.swift in Sources */,
 				DBD079061C6D153C0007FE46 /* DownloadService.m in Sources */,
 				DBB8684A1C712B950069B8A8 /* AlbumEntity.swift in Sources */,
-				DBD078A21C6CCF270007FE46 /* ViewController.swift in Sources */,
 				DBB867F11C6EFB230069B8A8 /* Utils.m in Sources */,
 				DB7CBCF21C73FBAA00B57D4F /* ITVTabBarController.swift in Sources */,
+				DB9861771C8343A400163813 /* ITVExtensions.swift in Sources */,
 				DB7F9E981C6EF28F00DE6A44 /* UIImageViewAligned.m in Sources */,
 				DBD078A01C6CCF270007FE46 /* AppDelegate.swift in Sources */,
 				DBD079041C6D153C0007FE46 /* DownloadRequestModel.m in Sources */,
@@ -468,9 +494,10 @@
 				DBD483B21C7A58860017643E /* ITVSingleFullPhotoViewController.swift in Sources */,
 				DBD078FB1C6D09F60007FE46 /* ITVFacebookUser.swift in Sources */,
 				DBD079051C6D153C0007FE46 /* DownloadResponseModel.m in Sources */,
-				DBD078ED1C6CF6EF0007FE46 /* ITVProfileViewController.swift in Sources */,
+				DBD078ED1C6CF6EF0007FE46 /* ITVAlbumsViewController.swift in Sources */,
 				DBB868491C712B950069B8A8 /* AlbumEntity+CoreDataProperties.swift in Sources */,
 				DBB868351C7127180069B8A8 /* ITVCoreData.swift in Sources */,
+				DB9861751C83430A00163813 /* ITVString.swift in Sources */,
 				DBB8684B1C712B950069B8A8 /* PhotoEntity+CoreDataProperties.swift in Sources */,
 				DBD079091C6D17A60007FE46 /* InternetService.m in Sources */,
 				DBB868381C7129E30069B8A8 /* ITVCoreData.xcdatamodeld in Sources */,
@@ -480,10 +507,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		DB9861721C81452D00163813 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB9861711C81452D00163813 /* Base */,
+				DB9861731C81452F00163813 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		DBD078A31C6CCF270007FE46 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DBD078A41C6CCF270007FE46 /* Base */,
+				DB98615C1C8140BA00163813 /* Base */,
+				DB98615D1C81414A00163813 /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

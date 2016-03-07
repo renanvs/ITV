@@ -51,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="1549" y="-2071"/>
         </scene>
-        <!--Albums View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="qZQ-qJ-MP6">
             <objects>
-                <viewController storyboardIdentifier="ITVAlbumsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kzI-ww-0Kj" customClass="ITVAlbumsViewController" customModule="InstaTV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ITVProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kzI-ww-0Kj" customClass="ITVProfileViewController" customModule="InstaTV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hd3-yQ-aUU"/>
                         <viewControllerLayoutGuide type="bottom" id="6Dm-MQ-CjN"/>
@@ -268,7 +268,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SLIDE INTERVAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gCj-Hz-Xoa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEMPO DO SLIDE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gCj-Hz-Xoa">
                                 <rect key="frame" x="0.0" y="74" width="1000" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="5Dh-gI-UR2"/>
@@ -278,7 +278,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLEAN UP FAVORITES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NzC-fc-PWr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIMPAR FAVORITOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NzC-fc-PWr">
                                 <rect key="frame" x="0.0" y="369" width="1000" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="9QI-Mk-HVG"/>
@@ -304,7 +304,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="CLEAN"/>
+                                <state key="normal" title="LIMPAR"/>
                             </button>
                             <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcf-Eq-jOk">
                                 <rect key="frame" x="0.0" y="0.0" width="1" height="1080"/>
@@ -348,7 +348,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ConfigCell0" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ConfigCell0" id="AIE-Cp-ewY">
-                                <rect key="frame" x="0.0" y="15" width="960" height="80"/>
+                                <rect key="frame" x="0.0" y="15" width="1000" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AIE-Cp-ewY" id="xcf-wl-UKs">
                                     <rect key="frame" x="0.0" y="0.0" width="984" height="80"/>
@@ -368,7 +368,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ConfigCell1" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ConfigCell1" id="8it-wH-3tK">
-                                <rect key="frame" x="0.0" y="109" width="960" height="80"/>
+                                <rect key="frame" x="0.0" y="109" width="1000" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8it-wH-3tK" id="XoS-IX-px3">
                                     <rect key="frame" x="0.0" y="0.0" width="984" height="80"/>
@@ -388,7 +388,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="fVP-Bj-Olo">
-                                <rect key="frame" x="0.0" y="203" width="960" height="80"/>
+                                <rect key="frame" x="0.0" y="203" width="1000" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fVP-Bj-Olo" id="5A7-lo-FnW">
                                     <rect key="frame" x="0.0" y="0.0" width="984" height="80"/>

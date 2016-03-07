@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  InstaTV
+
+  Created by renan silva on 2/26/16.
+  Copyright © 2016 mwg. All rights reserved.
+*/
+
+"Albums_Title" = "Álbuns";
+"Favorites_Title" = "Favoritos";
+"Albums__FirstRun_Message" = "Aqui você podera visualizar sua fotos favoritas do Facebook diretamente na TV.\n\nNessa primeira tela você vera seus Álbuns.\n\nSelecione-o para visualizar as fotos";
+"PhotoAlbums__FirstRun_Message" = "Selecione a foto para visualiza-la maior.\n\n Aperte o 'Play' para favoritar a foto, para a exibição em Slide";
+
+"PhotoAlbumsFavorite__FirstRun_Message" = "Uma nova tela apareceu na barra do topo chamado 'Favoritos'.\nApós favoritar algumas fotos nesse e em outros álbuns vá visitar a aba 'Favoritos'";
+
+"Favorites__FirstRun_Message" = "Aqui você podera visualizar suas fotos favoritas. Selecione a foto para começar o Slide Show.\nDica 1: Use os direcionais para navegar entre fotos\nDica 2: Para pausar uma foto aperte 'Play/Pause'";

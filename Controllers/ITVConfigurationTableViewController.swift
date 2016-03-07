@@ -16,22 +16,24 @@ class ITVConfigurationTableViewController: UITableViewController{
     
     var currentType = ConfigurationType.Favorites
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-
-    }
-    
     var segueIdentifierMap: [String] {
         return
             [
                 "ITVFaceProfileViewController",
                 "ITVFavoriteConfigViewController"
-            ]
-        
+        ]
     }
+    
+    //MARK: Native Methods
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+    }
+    
+    //MARK: TableViewDelegate
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "ConfigCell\(indexPath.row)"
@@ -46,25 +48,17 @@ class ITVConfigurationTableViewController: UITableViewController{
         return 2
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     override func tableView(tableView: UITableView, didUpdateFocusInContext context: UITableViewFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
         
         guard let nextFocusedView = context.nextFocusedView where nextFocusedView.isDescendantOfView(tableView) else { return }
         guard let indexPath = context.nextFocusedIndexPath else { return }
         
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let controller = sb.instantiateViewControllerWithIdentifier(segueIdentifierMap[indexPath.row])
+        let controller = ITVUtils.getStoryBoard().instantiateViewControllerWithIdentifier(segueIdentifierMap[indexPath.row])
         
         self.splitViewController?.showDetailViewController(controller, sender: nil)
         
         self.tableView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: .None)
 
-    
-        
     }
 
 }

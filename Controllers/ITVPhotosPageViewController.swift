@@ -16,14 +16,55 @@ class ITVPhotosPageViewController: UIPageViewController, UIPageViewControllerDat
     var timer : NSTimer?
     var isPlaying = true
     
+    //MARK: Internal Methods
+    
     required override init(transitionStyle style: UIPageViewControllerTransitionStyle, navigationOrientation: UIPageViewControllerNavigationOrientation, options: [String : AnyObject]?) {
         super.init(transitionStyle: style, navigationOrientation: navigationOrientation, options: options)
-        self.title = "Favorites"
+        self.title = ITVString.Lang(ITVString.Favorites_Title)
     }
     
     override func viewDidAppear(animated: Bool) {
         setTimer()
     }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.title = ITVString.Lang(ITVString.Favorites_Title)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let selectPlayButtonGesture = UITapGestureRecognizer(target: self, action: "playPress:")
+        selectPlayButtonGesture.allowedPressTypes = [NSNumber(integer: UIPressType.PlayPause.rawValue)]
+        self.view.addGestureRecognizer(selectPlayButtonGesture)
+        
+        self.dataSource = self
+        
+        var currentViewController : UIViewController?
+        
+        for photoEntity in photosList{
+            let vc = ITVUtils.getStoryBoard().instantiateViewControllerWithIdentifier("ITVSingleFullPhotoViewController") as! ITVSingleFullPhotoViewController
+            vc.photoEntity = photoEntity
+            listControllers.append(vc)
+            
+            if currentViewController == nil{
+                currentViewController = vc
+            }else if photoEntity == currentPhotoEntity{
+                currentViewController = vc
+            }
+        }
+        
+        setViewControllers([currentViewController!], direction: .Forward, animated: false, completion: nil)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {        
+        timer?.invalidate()
+        timer = nil
+        super.viewWillDisappear(animated)
+    }
+
+    
+    //MARK: Internal Methods
     
     func setTimer(){
         if isPlaying == false{
@@ -46,38 +87,6 @@ class ITVPhotosPageViewController: UIPageViewController, UIPageViewControllerDat
         }
         
         return listControllers[index + 1]
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.title = "Favorites"
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let selectPlayButtonGesture = UITapGestureRecognizer(target: self, action: "playPress:")
-        selectPlayButtonGesture.allowedPressTypes = [NSNumber(integer: UIPressType.PlayPause.rawValue)]
-        self.view.addGestureRecognizer(selectPlayButtonGesture)
-        
-        self.dataSource = self
-        
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        
-        var currentViewController : UIViewController?
-        
-        for photoEntity in photosList{
-            let vc = sb.instantiateViewControllerWithIdentifier("ITVSingleFullPhotoViewController") as! ITVSingleFullPhotoViewController
-            vc.photoEntity = photoEntity
-            listControllers.append(vc)
-            
-            if currentViewController == nil{
-               currentViewController = vc
-            }else if photoEntity == currentPhotoEntity{
-               currentViewController = vc
-            }
-        }
-        
-        setViewControllers([currentViewController!], direction: .Forward, animated: false, completion: nil)
     }
     
     func playPress(tap : UITapGestureRecognizer){
@@ -118,6 +127,8 @@ class ITVPhotosPageViewController: UIPageViewController, UIPageViewControllerDat
         }
         
     }
+    
+    //MARK: PageViewDelegate
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         let index = listControllers.indexOf(viewController)!

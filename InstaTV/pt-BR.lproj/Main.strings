@@ -1,0 +1,42 @@
+
+/* Class = "UINavigationItem"; title = "Root View Controller"; ObjectID = "0To-jK-sQy"; */
+"0To-jK-sQy.title" = "Root View Controller";
+
+/* Class = "UIButton"; normalTitle = "LIMPAR"; ObjectID = "54q-37-xmE"; */
+"54q-37-xmE.normalTitle" = "LIMPAR";
+
+/* Class = "UILabel"; text = "Connect your facebook to start to view your photos on TV"; ObjectID = "Awo-px-Ywg"; */
+"Awo-px-Ywg.text" = "Conecte-se ao seu Facebook para começar a visualizar suas fotos na TV";
+
+/* Class = "UITextField"; text = "9"; ObjectID = "DAB-7d-PJX"; */
+"DAB-7d-PJX.text" = "9";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "HR1-3d-dTo"; */
+"HR1-3d-dTo.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "HuQ-68-edx"; */
+"HuQ-68-edx.text" = "Label";
+
+/* Class = "UILabel"; text = "LIMPAR FAVORITOS"; ObjectID = "NzC-fc-PWr"; */
+"NzC-fc-PWr.text" = "LIMPAR FAVORITOS";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "UA4-E1-yZQ"; */
+"UA4-E1-yZQ.text" = "Label";
+
+/* Class = "UILabel"; text = "Favorites"; ObjectID = "ezh-EA-ArQ"; */
+"ezh-EA-ArQ.text" = "Favoritos";
+
+/* Class = "UILabel"; text = "TEMPO DO SLIDE"; ObjectID = "gCj-Hz-Xoa"; */
+"gCj-Hz-Xoa.text" = "TEMPO DO SLIDE";
+
+/* Class = "UILabel"; text = "Profile"; ObjectID = "gNC-xb-7DP"; */
+"gNC-xb-7DP.text" = "Perfil";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "kzu-oO-rVi"; */
+"kzu-oO-rVi.text" = "Label";
+
+/* Class = "UISplitViewController"; title = "Configurations"; ObjectID = "nId-YZ-zIp"; */
+"nId-YZ-zIp.title" = "Configurações";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "yba-4m-ocz"; */
+"yba-4m-ocz.text" = "Label";
