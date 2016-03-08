@@ -69,13 +69,13 @@
 		DB7F9E961C6EF28F00DE6A44 /* UIImageViewAligned.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewAligned.h; sourceTree = "<group>"; };
 		DB7F9E971C6EF28F00DE6A44 /* UIImageViewAligned.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewAligned.m; sourceTree = "<group>"; };
 		DB98615C1C8140BA00163813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DB98615D1C81414A00163813 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		DB9861711C81452D00163813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DB9861731C81452F00163813 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		DB9861741C83430A00163813 /* ITVString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVString.swift; sourceTree = "<group>"; };
 		DB9861761C8343A400163813 /* ITVExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVExtensions.swift; sourceTree = "<group>"; };
 		DB9861781C8343F300163813 /* ITVStatics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVStatics.swift; sourceTree = "<group>"; };
 		DB98617E1C83AE9600163813 /* ITVBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVBaseViewController.swift; sourceTree = "<group>"; };
+		DB98D28A1C8E596400969C5C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		DBB867ED1C6EFB220069B8A8 /* SwiftUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftUtils.swift; path = ../../ObjC_Utils/utils/SwiftUtils.swift; sourceTree = "<group>"; };
 		DBB867EE1C6EFB220069B8A8 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = ../../ObjC_Utils/utils/Utils.h; sourceTree = "<group>"; };
 		DBB867EF1C6EFB220069B8A8 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = ../../ObjC_Utils/utils/Utils.m; sourceTree = "<group>"; };
@@ -520,7 +520,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DB98615C1C8140BA00163813 /* Base */,
-				DB98615D1C81414A00163813 /* pt-BR */,
+				DB98D28A1C8E596400969C5C /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

@@ -5,8 +5,13 @@
 /* Class = "UIButton"; normalTitle = "LIMPAR"; ObjectID = "54q-37-xmE"; */
 "54q-37-xmE.normalTitle" = "LIMPAR";
 
+/* Class = "UILabel"; text = "(min: 1 / max:60) 
+seconds"; ObjectID = "5ud-Sy-yKH"; */
+"5ud-Sy-yKH.text" = "(min: 1 / max:60) 
+segundos";
+
 /* Class = "UILabel"; text = "Connect your facebook to start to view your photos on TV"; ObjectID = "Awo-px-Ywg"; */
-"Awo-px-Ywg.text" = "Conecte-se ao seu Facebook para começar a visualizar suas fotos na TV";
+"Awo-px-Ywg.text" = "Connect your facebook to start to view your photos on TV";
 
 /* Class = "UITextField"; text = "9"; ObjectID = "DAB-7d-PJX"; */
 "DAB-7d-PJX.text" = "9";
@@ -24,19 +29,19 @@
 "UA4-E1-yZQ.text" = "Label";
 
 /* Class = "UILabel"; text = "Favorites"; ObjectID = "ezh-EA-ArQ"; */
-"ezh-EA-ArQ.text" = "Favoritos";
+"ezh-EA-ArQ.text" = "Favorites";
 
 /* Class = "UILabel"; text = "TEMPO DO SLIDE"; ObjectID = "gCj-Hz-Xoa"; */
 "gCj-Hz-Xoa.text" = "TEMPO DO SLIDE";
 
 /* Class = "UILabel"; text = "Profile"; ObjectID = "gNC-xb-7DP"; */
-"gNC-xb-7DP.text" = "Perfil";
+"gNC-xb-7DP.text" = "Profile";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "kzu-oO-rVi"; */
 "kzu-oO-rVi.text" = "Label";
 
 /* Class = "UISplitViewController"; title = "Configurations"; ObjectID = "nId-YZ-zIp"; */
-"nId-YZ-zIp.title" = "Configurações";
+"nId-YZ-zIp.title" = "Configurations";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "yba-4m-ocz"; */
 "yba-4m-ocz.text" = "Label";
