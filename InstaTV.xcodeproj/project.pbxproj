@@ -11,6 +11,8 @@
 		DB24DE161C7F8E0E00BE560F /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = DB24DE141C7F8E0E00BE560F /* pause.png */; };
 		DB24DE171C7F8E0E00BE560F /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = DB24DE151C7F8E0E00BE560F /* play.png */; };
 		DB4270CD1C754BF70013B5D3 /* ITVPhotosPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4270CC1C754BF70013B5D3 /* ITVPhotosPageViewController.swift */; };
+		DB685C071C8E492800DD7EF2 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = DB685C051C8E492800DD7EF2 /* star.png */; };
+		DB685C091C8E4BA700DD7EF2 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DB685C081C8E4BA700DD7EF2 /* 1.jpeg */; };
 		DB7CBCF01C73F4CD00B57D4F /* ITVUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CBCEF1C73F4CD00B57D4F /* ITVUtils.swift */; };
 		DB7CBCF21C73FBAA00B57D4F /* ITVTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CBCF11C73FBAA00B57D4F /* ITVTabBarController.swift */; };
 		DB7CBCF41C73FE2000B57D4F /* ITVFavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CBCF31C73FE2000B57D4F /* ITVFavoritesViewController.swift */; };
@@ -22,7 +24,6 @@
 		DB98617F1C83AE9600163813 /* ITVBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB98617E1C83AE9600163813 /* ITVBaseViewController.swift */; };
 		DBB867F01C6EFB230069B8A8 /* SwiftUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB867ED1C6EFB220069B8A8 /* SwiftUtils.swift */; };
 		DBB867F11C6EFB230069B8A8 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB867EF1C6EFB220069B8A8 /* Utils.m */; };
-		DBB867F31C700DBC0069B8A8 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB867F21C700DBC0069B8A8 /* 1.png */; };
 		DBB867F51C7013200069B8A8 /* ITVAlbumPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB867F41C7013200069B8A8 /* ITVAlbumPhotosViewController.swift */; };
 		DBB868351C7127180069B8A8 /* ITVCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB868341C7127180069B8A8 /* ITVCoreData.swift */; };
 		DBB868381C7129E30069B8A8 /* ITVCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBB868361C7129E30069B8A8 /* ITVCoreData.xcdatamodeld */; };
@@ -30,7 +31,6 @@
 		DBB8684A1C712B950069B8A8 /* AlbumEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB868461C712B950069B8A8 /* AlbumEntity.swift */; };
 		DBB8684B1C712B950069B8A8 /* PhotoEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB868471C712B950069B8A8 /* PhotoEntity+CoreDataProperties.swift */; };
 		DBB8684C1C712B950069B8A8 /* PhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB868481C712B950069B8A8 /* PhotoEntity.swift */; };
-		DBB8684E1C71351E0069B8A8 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = DBB8684D1C71351E0069B8A8 /* star.png */; };
 		DBBD47941C7BF4B900229474 /* ITVFaceProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD47931C7BF4B900229474 /* ITVFaceProfileViewController.swift */; };
 		DBD078A01C6CCF270007FE46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0789F1C6CCF270007FE46 /* AppDelegate.swift */; };
 		DBD078A51C6CCF270007FE46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD078A31C6CCF270007FE46 /* Main.storyboard */; };
@@ -61,6 +61,8 @@
 		DB24DE141C7F8E0E00BE560F /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		DB24DE151C7F8E0E00BE560F /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		DB4270CC1C754BF70013B5D3 /* ITVPhotosPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVPhotosPageViewController.swift; sourceTree = "<group>"; };
+		DB685C051C8E492800DD7EF2 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		DB685C081C8E4BA700DD7EF2 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
 		DB7CBCEF1C73F4CD00B57D4F /* ITVUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVUtils.swift; sourceTree = "<group>"; };
 		DB7CBCF11C73FBAA00B57D4F /* ITVTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVTabBarController.swift; sourceTree = "<group>"; };
 		DB7CBCF31C73FE2000B57D4F /* ITVFavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVFavoritesViewController.swift; sourceTree = "<group>"; };
@@ -77,7 +79,6 @@
 		DBB867ED1C6EFB220069B8A8 /* SwiftUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftUtils.swift; path = ../../ObjC_Utils/utils/SwiftUtils.swift; sourceTree = "<group>"; };
 		DBB867EE1C6EFB220069B8A8 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = ../../ObjC_Utils/utils/Utils.h; sourceTree = "<group>"; };
 		DBB867EF1C6EFB220069B8A8 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = ../../ObjC_Utils/utils/Utils.m; sourceTree = "<group>"; };
-		DBB867F21C700DBC0069B8A8 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		DBB867F41C7013200069B8A8 /* ITVAlbumPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVAlbumPhotosViewController.swift; sourceTree = "<group>"; };
 		DBB868341C7127180069B8A8 /* ITVCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVCoreData.swift; sourceTree = "<group>"; };
 		DBB868371C7129E30069B8A8 /* ITVCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ITVCoreData.xcdatamodel; sourceTree = "<group>"; };
@@ -85,7 +86,6 @@
 		DBB868461C712B950069B8A8 /* AlbumEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumEntity.swift; sourceTree = "<group>"; };
 		DBB868471C712B950069B8A8 /* PhotoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhotoEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DBB868481C712B950069B8A8 /* PhotoEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoEntity.swift; sourceTree = "<group>"; };
-		DBB8684D1C71351E0069B8A8 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		DBB8684F1C713FDB0069B8A8 /* InstaTV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = InstaTV.entitlements; sourceTree = "<group>"; };
 		DBBD47931C7BF4B900229474 /* ITVFaceProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITVFaceProfileViewController.swift; sourceTree = "<group>"; };
 		DBD0789C1C6CCF270007FE46 /* InstaTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +150,8 @@
 		DB24DE131C7F8E0E00BE560F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DB685C081C8E4BA700DD7EF2 /* 1.jpeg */,
+				DB685C051C8E492800DD7EF2 /* star.png */,
 				DB24DE141C7F8E0E00BE560F /* pause.png */,
 				DB24DE151C7F8E0E00BE560F /* play.png */,
 			);
@@ -190,7 +192,6 @@
 		DBB868331C7126F80069B8A8 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				DBB8684D1C71351E0069B8A8 /* star.png */,
 				DBB868341C7127180069B8A8 /* ITVCoreData.swift */,
 				DBB868361C7129E30069B8A8 /* ITVCoreData.xcdatamodeld */,
 				DBB868451C712B950069B8A8 /* AlbumEntity+CoreDataProperties.swift */,
@@ -207,7 +208,6 @@
 			children = (
 				DB24DE131C7F8E0E00BE560F /* Images */,
 				DBB868331C7126F80069B8A8 /* CoreData */,
-				DBB867F21C700DBC0069B8A8 /* 1.png */,
 				DBB867EC1C6EFB150069B8A8 /* Utils */,
 				DBD078FC1C6D153C0007FE46 /* Models */,
 				DBD079011C6D153C0007FE46 /* Services */,
@@ -401,14 +401,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB685C071C8E492800DD7EF2 /* star.png in Resources */,
 				DBD078D51C6CE8610007FE46 /* LICENSE.txt in Resources */,
-				DBB867F31C700DBC0069B8A8 /* 1.png in Resources */,
 				DB24DE171C7F8E0E00BE560F /* play.png in Resources */,
 				DB24DE161C7F8E0E00BE560F /* pause.png in Resources */,
 				DBD078D11C6CE8610007FE46 /* FacebookSDKStrings.bundle in Resources */,
+				DB685C091C8E4BA700DD7EF2 /* 1.jpeg in Resources */,
 				DB9861701C81452D00163813 /* Localizable.strings in Resources */,
 				DBD078A71C6CCF270007FE46 /* Assets.xcassets in Resources */,
-				DBB8684E1C71351E0069B8A8 /* star.png in Resources */,
 				DBD078D61C6CE8610007FE46 /* README_TV.txt in Resources */,
 				DBD078A51C6CCF270007FE46 /* Main.storyboard in Resources */,
 			);

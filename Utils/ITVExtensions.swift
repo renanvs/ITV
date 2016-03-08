@@ -31,6 +31,6 @@ extension UIImage{
     }
     
     class func DefaultImage() -> UIImage{
-        return UIImage(named: "1.png")!
+        return UIImage(named: "1.jpeg")!
     }
 }
