@@ -8,7 +8,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ITVLoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ITVLoginViewController" customModule="InstaTV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="STVLoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="STVLoginViewController" customModule="InstaTV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -54,7 +54,7 @@
         <!--Albums View Controller-->
         <scene sceneID="qZQ-qJ-MP6">
             <objects>
-                <viewController storyboardIdentifier="ITVAlbumsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kzI-ww-0Kj" customClass="ITVAlbumsViewController" customModule="InstaTV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="STVAlbumsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kzI-ww-0Kj" customClass="STVAlbumsViewController" customModule="InstaTV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hd3-yQ-aUU"/>
                         <viewControllerLayoutGuide type="bottom" id="6Dm-MQ-CjN"/>
@@ -136,7 +136,7 @@
         <!--Single Full Photo View Controller-->
         <scene sceneID="fFa-vN-yKS">
             <objects>
-                <viewController storyboardIdentifier="ITVSingleFullPhotoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AqX-oz-uAs" customClass="ITVSingleFullPhotoViewController" customModule="InstaTV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="STVSingleFullPhotoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AqX-oz-uAs" customClass="STVSingleFullPhotoViewController" customModule="InstaTV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="alJ-90-Ymm"/>
                         <viewControllerLayoutGuide type="bottom" id="Kic-o3-Htu"/>
@@ -175,7 +175,7 @@
         <!--Face Profile View Controller-->
         <scene sceneID="5N3-6y-r1l">
             <objects>
-                <viewController storyboardIdentifier="ITVFaceProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cJ1-Zo-Ufh" customClass="ITVFaceProfileViewController" customModule="InstaTV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="STVFaceProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cJ1-Zo-Ufh" customClass="STVFaceProfileViewController" customModule="InstaTV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sfg-gz-TfH"/>
                         <viewControllerLayoutGuide type="bottom" id="p9m-A7-oFU"/>
@@ -259,7 +259,7 @@
         <!--View Controller-->
         <scene sceneID="8Gd-sE-4td">
             <objects>
-                <viewController storyboardIdentifier="ITVFavoriteConfigViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ARY-Pv-LFE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="STVFavoriteConfigViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ARY-Pv-LFE" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="So7-0Y-hYm"/>
                         <viewControllerLayoutGuide type="bottom" id="F6j-fH-368"/>
@@ -277,7 +277,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(min: 1 / max:60)  seconds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5ud-Sy-yKH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(min: 1 / max:60) 
+seconds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5ud-Sy-yKH">
                                 <rect key="frame" x="0.0" y="104" width="1000" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="wni-bV-QwH"/>
@@ -353,7 +354,7 @@
         <!--Root View Controller-->
         <scene sceneID="pi3-b7-jbw">
             <objects>
-                <tableViewController storyboardIdentifier="ITVConfigurationTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="clw-9b-Xss" customClass="ITVConfigurationTableViewController" customModule="InstaTV" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="STVConfigurationTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="clw-9b-Xss" customClass="STVConfigurationTableViewController" customModule="InstaTV" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="1" sectionFooterHeight="1" id="Z0o-uY-BCH">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -442,7 +443,7 @@
         <!--Configurations-->
         <scene sceneID="ocT-sI-Xnf">
             <objects>
-                <splitViewController storyboardIdentifier="ITVSplitViewController" title="Configurations" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nId-YZ-zIp" sceneMemberID="viewController">
+                <splitViewController storyboardIdentifier="STVSplitViewController" title="Configurations" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nId-YZ-zIp" sceneMemberID="viewController">
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="960" height="540"/>
                     <connections>
@@ -456,7 +457,7 @@
         <!--Photos Page View Controller-->
         <scene sceneID="Ujk-Z5-Bz1">
             <objects>
-                <pageViewController storyboardIdentifier="ITVPhotosPageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="05X-zz-SRX" customClass="ITVPhotosPageViewController" customModule="InstaTV" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="STVPhotosPageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="05X-zz-SRX" customClass="STVPhotosPageViewController" customModule="InstaTV" customModuleProvider="target" sceneMemberID="viewController">
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="660"/>
                 </pageViewController>
@@ -467,7 +468,7 @@
         <!--Album Photos View Controller-->
         <scene sceneID="qmk-Gd-azT">
             <objects>
-                <viewController storyboardIdentifier="ITVAlbumPhotosViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EeV-rK-hIK" customClass="ITVAlbumPhotosViewController" customModule="InstaTV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="STVAlbumPhotosViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EeV-rK-hIK" customClass="STVAlbumPhotosViewController" customModule="InstaTV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MYX-sa-nbs"/>
                         <viewControllerLayoutGuide type="bottom" id="5OK-RK-oef"/>
@@ -549,7 +550,7 @@
         <!--Favorites View Controller-->
         <scene sceneID="GfO-IP-Y1C">
             <objects>
-                <viewController storyboardIdentifier="ITVFavoritesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="A9C-uG-BaU" customClass="ITVFavoritesViewController" customModule="InstaTV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="STVFavoritesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="A9C-uG-BaU" customClass="STVFavoritesViewController" customModule="InstaTV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CVj-pj-FJ4"/>
                         <viewControllerLayoutGuide type="bottom" id="I8t-Fg-cqR"/>

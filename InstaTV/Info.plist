@@ -32,7 +32,7 @@
 	<key>FacebookAppID</key>
 	<string>526466400861464</string>
 	<key>FacebookDisplayName</key>
-	<string>TVApp</string>
+	<string>Social Photo TV</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>

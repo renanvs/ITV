@@ -15,7 +15,7 @@ class AlbumEntity: NSManagedObject {
 // Insert code here to add functionality to your managed object subclass
     
     class func newEntity()->AlbumEntity{
-        let entity = NSEntityDescription.insertNewObjectForEntityForName("AlbumEntity", inManagedObjectContext: ITVCoreData.ctx())
+        let entity = NSEntityDescription.insertNewObjectForEntityForName("AlbumEntity", inManagedObjectContext: STVCoreData.ctx())
         return entity as! AlbumEntity
     }
     
@@ -23,7 +23,7 @@ class AlbumEntity: NSManagedObject {
         let fetch = NSFetchRequest(entityName: "AlbumEntity")
         
         do{
-            let list = try ITVCoreData.ctx().executeFetchRequest(fetch)
+            let list = try STVCoreData.ctx().executeFetchRequest(fetch)
             return list as! [AlbumEntity]
         }catch{
             return [AlbumEntity]()
@@ -37,7 +37,7 @@ class AlbumEntity: NSManagedObject {
         fetch.predicate = predicate
         
         do{
-            let list = try ITVCoreData.ctx().executeFetchRequest(fetch) as! [AlbumEntity]
+            let list = try STVCoreData.ctx().executeFetchRequest(fetch) as! [AlbumEntity]
             return list.first
         }catch{
             return nil

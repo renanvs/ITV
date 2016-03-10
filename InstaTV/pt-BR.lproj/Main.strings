@@ -40,7 +40,7 @@ segundos";
 /* Class = "UILabel"; text = "Label"; ObjectID = "kzu-oO-rVi"; */
 "kzu-oO-rVi.text" = "Label";
 
-/* Class = "UISplitViewController"; title = "Configurations"; ObjectID = "nId-YZ-zIp"; */
+/* Class = "UISplSTViewController"; title = "Configurations"; ObjectID = "nId-YZ-zIp"; */
 "nId-YZ-zIp.title" = "Configurations";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "yba-4m-ocz"; */

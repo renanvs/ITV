@@ -1,0 +1,695 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		329C4949DEC5E30FD45E3B95 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CF80D4B23D7F6E6496BD4E /* Pods.framework */; };
+		DB24DE161C7F8E0E00BE560F /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = DB24DE141C7F8E0E00BE560F /* pause.png */; };
+		DB24DE171C7F8E0E00BE560F /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = DB24DE151C7F8E0E00BE560F /* play.png */; };
+		DB4270CD1C754BF70013B5D3 /* STVPhotosPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4270CC1C754BF70013B5D3 /* STVPhotosPageViewController.swift */; };
+		DB685C071C8E492800DD7EF2 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = DB685C051C8E492800DD7EF2 /* star.png */; };
+		DB685C091C8E4BA700DD7EF2 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DB685C081C8E4BA700DD7EF2 /* 1.jpeg */; };
+		DB7CBCF01C73F4CD00B57D4F /* STVUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CBCEF1C73F4CD00B57D4F /* STVUtils.swift */; };
+		DB7CBCF21C73FBAA00B57D4F /* STVTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CBCF11C73FBAA00B57D4F /* STVTabBarController.swift */; };
+		DB7CBCF41C73FE2000B57D4F /* STVFavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CBCF31C73FE2000B57D4F /* STVFavoritesViewController.swift */; };
+		DB7F9E981C6EF28F00DE6A44 /* UIImageViewAligned.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7F9E971C6EF28F00DE6A44 /* UIImageViewAligned.m */; };
+		DB9861701C81452D00163813 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB9861721C81452D00163813 /* Localizable.strings */; };
+		DB9861751C83430A00163813 /* STVString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9861741C83430A00163813 /* STVString.swift */; };
+		DB9861771C8343A400163813 /* STVExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9861761C8343A400163813 /* STVExtensions.swift */; };
+		DB9861791C8343F300163813 /* STVStatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9861781C8343F300163813 /* STVStatics.swift */; };
+		DB98617F1C83AE9600163813 /* STVBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB98617E1C83AE9600163813 /* STVBaseViewController.swift */; };
+		DBB867F01C6EFB230069B8A8 /* SwiftUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB867ED1C6EFB220069B8A8 /* SwiftUtils.swift */; };
+		DBB867F11C6EFB230069B8A8 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB867EF1C6EFB220069B8A8 /* Utils.m */; };
+		DBB867F51C7013200069B8A8 /* STVAlbumPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB867F41C7013200069B8A8 /* STVAlbumPhotosViewController.swift */; };
+		DBB868351C7127180069B8A8 /* STVCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB868341C7127180069B8A8 /* STVCoreData.swift */; };
+		DBB868381C7129E30069B8A8 /* STVCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBB868361C7129E30069B8A8 /* STVCoreData.xcdatamodeld */; };
+		DBB868491C712B950069B8A8 /* AlbumEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB868451C712B950069B8A8 /* AlbumEntity+CoreDataProperties.swift */; };
+		DBB8684A1C712B950069B8A8 /* AlbumEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB868461C712B950069B8A8 /* AlbumEntity.swift */; };
+		DBB8684B1C712B950069B8A8 /* PhotoEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB868471C712B950069B8A8 /* PhotoEntity+CoreDataProperties.swift */; };
+		DBB8684C1C712B950069B8A8 /* PhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB868481C712B950069B8A8 /* PhotoEntity.swift */; };
+		DBBD47941C7BF4B900229474 /* STVFaceProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD47931C7BF4B900229474 /* STVFaceProfileViewController.swift */; };
+		DBD078A01C6CCF270007FE46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0789F1C6CCF270007FE46 /* AppDelegate.swift */; };
+		DBD078A51C6CCF270007FE46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD078A31C6CCF270007FE46 /* Main.storyboard */; };
+		DBD078A71C6CCF270007FE46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD078A61C6CCF270007FE46 /* Assets.xcassets */; };
+		DBD078D11C6CE8610007FE46 /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DBD078B11C6CE8610007FE46 /* FacebookSDKStrings.bundle */; };
+		DBD078D21C6CE8610007FE46 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD078B21C6CE8610007FE46 /* FBSDKCoreKit.framework */; };
+		DBD078D31C6CE8610007FE46 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD078B31C6CE8610007FE46 /* FBSDKShareKit.framework */; };
+		DBD078D41C6CE8610007FE46 /* FBSDKTVOSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD078B41C6CE8610007FE46 /* FBSDKTVOSKit.framework */; };
+		DBD078D51C6CE8610007FE46 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = DBD078B51C6CE8610007FE46 /* LICENSE.txt */; };
+		DBD078D61C6CE8610007FE46 /* README_TV.txt in Resources */ = {isa = PBXBuildFile; fileRef = DBD078B61C6CE8610007FE46 /* README_TV.txt */; };
+		DBD078ED1C6CF6EF0007FE46 /* STVAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD078EC1C6CF6EF0007FE46 /* STVAlbumsViewController.swift */; };
+		DBD078EF1C6CF7020007FE46 /* STVLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD078EE1C6CF7020007FE46 /* STVLoginViewController.swift */; };
+		DBD078F31C6CFADD0007FE46 /* STVFacebookService.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD078F21C6CFADD0007FE46 /* STVFacebookService.m */; };
+		DBD078FB1C6D09F60007FE46 /* STVFacebookUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD078FA1C6D09F60007FE46 /* STVFacebookUser.swift */; };
+		DBD079041C6D153C0007FE46 /* DownloadRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD078FE1C6D153C0007FE46 /* DownloadRequestModel.m */; };
+		DBD079051C6D153C0007FE46 /* DownloadResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD079001C6D153C0007FE46 /* DownloadResponseModel.m */; };
+		DBD079061C6D153C0007FE46 /* DownloadService.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD079031C6D153C0007FE46 /* DownloadService.m */; };
+		DBD079091C6D17A60007FE46 /* InternetService.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD079081C6D17A60007FE46 /* InternetService.m */; };
+		DBD0790D1C6D18A50007FE46 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD0790C1C6D18A50007FE46 /* Reachability.m */; };
+		DBD483B21C7A58860017643E /* STVSingleFullPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD483B11C7A58860017643E /* STVSingleFullPhotoViewController.swift */; };
+		DBD483B91C7A94DD0017643E /* STVConfigurationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD483B81C7A94DC0017643E /* STVConfigurationTableViewController.swift */; };
+		DBFDFEE91C72A6B9007A9FE1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFDFEE81C72A6B9007A9FE1 /* CloudKit.framework */; };
+		DBFDFEEB1C72BB3B007A9FE1 /* STVKV.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFDFEEA1C72BB3B007A9FE1 /* STVKV.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		551BEE00F302954A1EB2D260 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DB24DE141C7F8E0E00BE560F /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		DB24DE151C7F8E0E00BE560F /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		DB4270CC1C754BF70013B5D3 /* STVPhotosPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVPhotosPageViewController.swift; sourceTree = "<group>"; };
+		DB685C051C8E492800DD7EF2 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		DB685C081C8E4BA700DD7EF2 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
+		DB7CBCEF1C73F4CD00B57D4F /* STVUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVUtils.swift; sourceTree = "<group>"; };
+		DB7CBCF11C73FBAA00B57D4F /* STVTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVTabBarController.swift; sourceTree = "<group>"; };
+		DB7CBCF31C73FE2000B57D4F /* STVFavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVFavoritesViewController.swift; sourceTree = "<group>"; };
+		DB7F9E961C6EF28F00DE6A44 /* UIImageViewAligned.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewAligned.h; sourceTree = "<group>"; };
+		DB7F9E971C6EF28F00DE6A44 /* UIImageViewAligned.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewAligned.m; sourceTree = "<group>"; };
+		DB98615C1C8140BA00163813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DB9861711C81452D00163813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DB9861731C81452F00163813 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		DB9861741C83430A00163813 /* STVString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVString.swift; sourceTree = "<group>"; };
+		DB9861761C8343A400163813 /* STVExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVExtensions.swift; sourceTree = "<group>"; };
+		DB9861781C8343F300163813 /* STVStatics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVStatics.swift; sourceTree = "<group>"; };
+		DB98617E1C83AE9600163813 /* STVBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVBaseViewController.swift; sourceTree = "<group>"; };
+		DB98D28A1C8E596400969C5C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		DBB867ED1C6EFB220069B8A8 /* SwiftUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftUtils.swift; path = ../../ObjC_Utils/utils/SwiftUtils.swift; sourceTree = "<group>"; };
+		DBB867EE1C6EFB220069B8A8 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = ../../ObjC_Utils/utils/Utils.h; sourceTree = "<group>"; };
+		DBB867EF1C6EFB220069B8A8 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = ../../ObjC_Utils/utils/Utils.m; sourceTree = "<group>"; };
+		DBB867F41C7013200069B8A8 /* STVAlbumPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVAlbumPhotosViewController.swift; sourceTree = "<group>"; };
+		DBB868341C7127180069B8A8 /* STVCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVCoreData.swift; sourceTree = "<group>"; };
+		DBB868371C7129E30069B8A8 /* STVCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = STVCoreData.xcdatamodel; sourceTree = "<group>"; };
+		DBB868451C712B950069B8A8 /* AlbumEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DBB868461C712B950069B8A8 /* AlbumEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumEntity.swift; sourceTree = "<group>"; };
+		DBB868471C712B950069B8A8 /* PhotoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhotoEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DBB868481C712B950069B8A8 /* PhotoEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoEntity.swift; sourceTree = "<group>"; };
+		DBB8684F1C713FDB0069B8A8 /* InstaTV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = InstaTV.entitlements; sourceTree = "<group>"; };
+		DBBD47931C7BF4B900229474 /* STVFaceProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVFaceProfileViewController.swift; sourceTree = "<group>"; };
+		DBD0789C1C6CCF270007FE46 /* SocialPhotoTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialPhotoTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBD0789F1C6CCF270007FE46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DBD078A61C6CCF270007FE46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBD078A81C6CCF270007FE46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBD078AE1C6CD0EB0007FE46 /* InstaTV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InstaTV-Bridging-Header.h"; sourceTree = "<group>"; };
+		DBD078B11C6CE8610007FE46 /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKStrings.bundle; sourceTree = "<group>"; };
+		DBD078B21C6CE8610007FE46 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		DBD078B31C6CE8610007FE46 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		DBD078B41C6CE8610007FE46 /* FBSDKTVOSKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKTVOSKit.framework; sourceTree = "<group>"; };
+		DBD078B51C6CE8610007FE46 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		DBD078B61C6CE8610007FE46 /* README_TV.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README_TV.txt; sourceTree = "<group>"; };
+		DBD078EC1C6CF6EF0007FE46 /* STVAlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVAlbumsViewController.swift; sourceTree = "<group>"; };
+		DBD078EE1C6CF7020007FE46 /* STVLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVLoginViewController.swift; sourceTree = "<group>"; };
+		DBD078F11C6CFADD0007FE46 /* STVFacebookService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVFacebookService.h; sourceTree = "<group>"; };
+		DBD078F21C6CFADD0007FE46 /* STVFacebookService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STVFacebookService.m; sourceTree = "<group>"; };
+		DBD078FA1C6D09F60007FE46 /* STVFacebookUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVFacebookUser.swift; sourceTree = "<group>"; };
+		DBD078FD1C6D153C0007FE46 /* DownloadRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadRequestModel.h; sourceTree = "<group>"; };
+		DBD078FE1C6D153C0007FE46 /* DownloadRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadRequestModel.m; sourceTree = "<group>"; };
+		DBD078FF1C6D153C0007FE46 /* DownloadResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadResponseModel.h; sourceTree = "<group>"; };
+		DBD079001C6D153C0007FE46 /* DownloadResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadResponseModel.m; sourceTree = "<group>"; };
+		DBD079021C6D153C0007FE46 /* DownloadService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadService.h; sourceTree = "<group>"; };
+		DBD079031C6D153C0007FE46 /* DownloadService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadService.m; sourceTree = "<group>"; };
+		DBD079071C6D17A60007FE46 /* InternetService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InternetService.h; sourceTree = "<group>"; };
+		DBD079081C6D17A60007FE46 /* InternetService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InternetService.m; sourceTree = "<group>"; };
+		DBD0790B1C6D18A50007FE46 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		DBD0790C1C6D18A50007FE46 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		DBD483B11C7A58860017643E /* STVSingleFullPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVSingleFullPhotoViewController.swift; sourceTree = "<group>"; };
+		DBD483B81C7A94DC0017643E /* STVConfigurationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVConfigurationTableViewController.swift; sourceTree = "<group>"; };
+		DBFDFEE81C72A6B9007A9FE1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		DBFDFEEA1C72BB3B007A9FE1 /* STVKV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVKV.swift; sourceTree = "<group>"; };
+		E4CF80D4B23D7F6E6496BD4E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6686C807F7407CBB336FDAB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DBD078991C6CCF270007FE46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBFDFEE91C72A6B9007A9FE1 /* CloudKit.framework in Frameworks */,
+				DBD078D41C6CE8610007FE46 /* FBSDKTVOSKit.framework in Frameworks */,
+				329C4949DEC5E30FD45E3B95 /* Pods.framework in Frameworks */,
+				DBD078D21C6CE8610007FE46 /* FBSDKCoreKit.framework in Frameworks */,
+				DBD078D31C6CE8610007FE46 /* FBSDKShareKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		46CE375B0EEA0CFD7065420A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6686C807F7407CBB336FDAB /* Pods.debug.xcconfig */,
+				551BEE00F302954A1EB2D260 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DB24DE131C7F8E0E00BE560F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DB685C081C8E4BA700DD7EF2 /* 1.jpeg */,
+				DB685C051C8E492800DD7EF2 /* star.png */,
+				DB24DE141C7F8E0E00BE560F /* pause.png */,
+				DB24DE151C7F8E0E00BE560F /* play.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		DB7F9E951C6EF28F00DE6A44 /* UIImageViewAligned */ = {
+			isa = PBXGroup;
+			children = (
+				DB7F9E961C6EF28F00DE6A44 /* UIImageViewAligned.h */,
+				DB7F9E971C6EF28F00DE6A44 /* UIImageViewAligned.m */,
+			);
+			path = UIImageViewAligned;
+			sourceTree = "<group>";
+		};
+		DB98617D1C83AE5B00163813 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB98617E1C83AE9600163813 /* STVBaseViewController.swift */,
+			);
+			name = BaseViewController;
+			sourceTree = "<group>";
+		};
+		DBB867EC1C6EFB150069B8A8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DBB867ED1C6EFB220069B8A8 /* SwiftUtils.swift */,
+				DBB867EE1C6EFB220069B8A8 /* Utils.h */,
+				DBB867EF1C6EFB220069B8A8 /* Utils.m */,
+				DB7CBCEF1C73F4CD00B57D4F /* STVUtils.swift */,
+				DB9861741C83430A00163813 /* STVString.swift */,
+				DB9861761C8343A400163813 /* STVExtensions.swift */,
+				DB9861781C8343F300163813 /* STVStatics.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DBB868331C7126F80069B8A8 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				DBB868341C7127180069B8A8 /* STVCoreData.swift */,
+				DBB868361C7129E30069B8A8 /* STVCoreData.xcdatamodeld */,
+				DBB868451C712B950069B8A8 /* AlbumEntity+CoreDataProperties.swift */,
+				DBB868461C712B950069B8A8 /* AlbumEntity.swift */,
+				DBB868471C712B950069B8A8 /* PhotoEntity+CoreDataProperties.swift */,
+				DBB868481C712B950069B8A8 /* PhotoEntity.swift */,
+				DBFDFEEA1C72BB3B007A9FE1 /* STVKV.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		DBD078931C6CCF270007FE46 = {
+			isa = PBXGroup;
+			children = (
+				DB24DE131C7F8E0E00BE560F /* Images */,
+				DBB868331C7126F80069B8A8 /* CoreData */,
+				DBB867EC1C6EFB150069B8A8 /* Utils */,
+				DBD078FC1C6D153C0007FE46 /* Models */,
+				DBD079011C6D153C0007FE46 /* Services */,
+				DBD078F01C6CFADD0007FE46 /* FacebookUtils */,
+				DBD078EB1C6CF6E20007FE46 /* Controllers */,
+				DBD078AF1C6CE8610007FE46 /* External */,
+				DBD0789E1C6CCF270007FE46 /* InstaTV */,
+				DBD0789D1C6CCF270007FE46 /* Products */,
+				46CE375B0EEA0CFD7065420A /* Pods */,
+				E1E72E3C08DEE67D4C76F679 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DBD0789D1C6CCF270007FE46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBD0789C1C6CCF270007FE46 /* SocialPhotoTV.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBD0789E1C6CCF270007FE46 /* InstaTV */ = {
+			isa = PBXGroup;
+			children = (
+				DBB8684F1C713FDB0069B8A8 /* InstaTV.entitlements */,
+				DBD0789F1C6CCF270007FE46 /* AppDelegate.swift */,
+				DBD078AE1C6CD0EB0007FE46 /* InstaTV-Bridging-Header.h */,
+				DBD078A31C6CCF270007FE46 /* Main.storyboard */,
+				DBD078A61C6CCF270007FE46 /* Assets.xcassets */,
+				DBD078A81C6CCF270007FE46 /* Info.plist */,
+				DB9861721C81452D00163813 /* Localizable.strings */,
+			);
+			path = InstaTV;
+			sourceTree = "<group>";
+		};
+		DBD078AF1C6CE8610007FE46 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				DB7F9E951C6EF28F00DE6A44 /* UIImageViewAligned */,
+				DBD0790A1C6D18A50007FE46 /* Reachability */,
+				DBD078B01C6CE8610007FE46 /* FacebookSDKs-tvOS */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		DBD078B01C6CE8610007FE46 /* FacebookSDKs-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				DBD078B11C6CE8610007FE46 /* FacebookSDKStrings.bundle */,
+				DBD078B21C6CE8610007FE46 /* FBSDKCoreKit.framework */,
+				DBD078B31C6CE8610007FE46 /* FBSDKShareKit.framework */,
+				DBD078B41C6CE8610007FE46 /* FBSDKTVOSKit.framework */,
+				DBD078B51C6CE8610007FE46 /* LICENSE.txt */,
+				DBD078B61C6CE8610007FE46 /* README_TV.txt */,
+			);
+			path = "FacebookSDKs-tvOS";
+			sourceTree = "<group>";
+		};
+		DBD078EB1C6CF6E20007FE46 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB98617D1C83AE5B00163813 /* BaseViewController */,
+				DBD078EE1C6CF7020007FE46 /* STVLoginViewController.swift */,
+				DBD078EC1C6CF6EF0007FE46 /* STVAlbumsViewController.swift */,
+				DBB867F41C7013200069B8A8 /* STVAlbumPhotosViewController.swift */,
+				DB7CBCF11C73FBAA00B57D4F /* STVTabBarController.swift */,
+				DB7CBCF31C73FE2000B57D4F /* STVFavoritesViewController.swift */,
+				DB4270CC1C754BF70013B5D3 /* STVPhotosPageViewController.swift */,
+				DBD483B11C7A58860017643E /* STVSingleFullPhotoViewController.swift */,
+				DBD483B81C7A94DC0017643E /* STVConfigurationTableViewController.swift */,
+				DBBD47931C7BF4B900229474 /* STVFaceProfileViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DBD078F01C6CFADD0007FE46 /* FacebookUtils */ = {
+			isa = PBXGroup;
+			children = (
+				DBD078F11C6CFADD0007FE46 /* STVFacebookService.h */,
+				DBD078F21C6CFADD0007FE46 /* STVFacebookService.m */,
+				DBD078FA1C6D09F60007FE46 /* STVFacebookUser.swift */,
+			);
+			path = FacebookUtils;
+			sourceTree = "<group>";
+		};
+		DBD078FC1C6D153C0007FE46 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DBD078FD1C6D153C0007FE46 /* DownloadRequestModel.h */,
+				DBD078FE1C6D153C0007FE46 /* DownloadRequestModel.m */,
+				DBD078FF1C6D153C0007FE46 /* DownloadResponseModel.h */,
+				DBD079001C6D153C0007FE46 /* DownloadResponseModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DBD079011C6D153C0007FE46 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DBD079071C6D17A60007FE46 /* InternetService.h */,
+				DBD079081C6D17A60007FE46 /* InternetService.m */,
+				DBD079021C6D153C0007FE46 /* DownloadService.h */,
+				DBD079031C6D153C0007FE46 /* DownloadService.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DBD0790A1C6D18A50007FE46 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				DBD0790B1C6D18A50007FE46 /* Reachability.h */,
+				DBD0790C1C6D18A50007FE46 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		E1E72E3C08DEE67D4C76F679 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBFDFEE81C72A6B9007A9FE1 /* CloudKit.framework */,
+				E4CF80D4B23D7F6E6496BD4E /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DBD0789B1C6CCF270007FE46 /* SocialPhotoTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBD078AB1C6CCF270007FE46 /* Build configuration list for PBXNativeTarget "SocialPhotoTV" */;
+			buildPhases = (
+				773F3CCB7202E29702F72E64 /* Check Pods Manifest.lock */,
+				DBD078981C6CCF270007FE46 /* Sources */,
+				DBD078991C6CCF270007FE46 /* Frameworks */,
+				DBD0789A1C6CCF270007FE46 /* Resources */,
+				EE9066C14940A96C44451C9A /* Embed Pods Frameworks */,
+				4057151CD000E3DCA1EFE888 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SocialPhotoTV;
+			productName = InstaTV;
+			productReference = DBD0789C1C6CCF270007FE46 /* SocialPhotoTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBD078941C6CCF270007FE46 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = mwg;
+				TargetAttributes = {
+					DBD0789B1C6CCF270007FE46 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 99PGLV2Z48;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = DBD078971C6CCF270007FE46 /* Build configuration list for PBXProject "SocialPhotoTV" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"pt-BR",
+			);
+			mainGroup = DBD078931C6CCF270007FE46;
+			productRefGroup = DBD0789D1C6CCF270007FE46 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DBD0789B1C6CCF270007FE46 /* SocialPhotoTV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DBD0789A1C6CCF270007FE46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB685C071C8E492800DD7EF2 /* star.png in Resources */,
+				DBD078D51C6CE8610007FE46 /* LICENSE.txt in Resources */,
+				DB24DE171C7F8E0E00BE560F /* play.png in Resources */,
+				DB24DE161C7F8E0E00BE560F /* pause.png in Resources */,
+				DBD078D11C6CE8610007FE46 /* FacebookSDKStrings.bundle in Resources */,
+				DB685C091C8E4BA700DD7EF2 /* 1.jpeg in Resources */,
+				DB9861701C81452D00163813 /* Localizable.strings in Resources */,
+				DBD078A71C6CCF270007FE46 /* Assets.xcassets in Resources */,
+				DBD078D61C6CE8610007FE46 /* README_TV.txt in Resources */,
+				DBD078A51C6CCF270007FE46 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4057151CD000E3DCA1EFE888 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		773F3CCB7202E29702F72E64 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EE9066C14940A96C44451C9A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBD078981C6CCF270007FE46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB9861791C8343F300163813 /* STVStatics.swift in Sources */,
+				DBD483B91C7A94DD0017643E /* STVConfigurationTableViewController.swift in Sources */,
+				DBD0790D1C6D18A50007FE46 /* Reachability.m in Sources */,
+				DB98617F1C83AE9600163813 /* STVBaseViewController.swift in Sources */,
+				DBB867F51C7013200069B8A8 /* STVAlbumPhotosViewController.swift in Sources */,
+				DB4270CD1C754BF70013B5D3 /* STVPhotosPageViewController.swift in Sources */,
+				DBFDFEEB1C72BB3B007A9FE1 /* STVKV.swift in Sources */,
+				DBD079061C6D153C0007FE46 /* DownloadService.m in Sources */,
+				DBB8684A1C712B950069B8A8 /* AlbumEntity.swift in Sources */,
+				DBB867F11C6EFB230069B8A8 /* Utils.m in Sources */,
+				DB7CBCF21C73FBAA00B57D4F /* STVTabBarController.swift in Sources */,
+				DB9861771C8343A400163813 /* STVExtensions.swift in Sources */,
+				DB7F9E981C6EF28F00DE6A44 /* UIImageViewAligned.m in Sources */,
+				DBD078A01C6CCF270007FE46 /* AppDelegate.swift in Sources */,
+				DBD079041C6D153C0007FE46 /* DownloadRequestModel.m in Sources */,
+				DB7CBCF41C73FE2000B57D4F /* STVFavoritesViewController.swift in Sources */,
+				DBBD47941C7BF4B900229474 /* STVFaceProfileViewController.swift in Sources */,
+				DBD078EF1C6CF7020007FE46 /* STVLoginViewController.swift in Sources */,
+				DBB8684C1C712B950069B8A8 /* PhotoEntity.swift in Sources */,
+				DBD078F31C6CFADD0007FE46 /* STVFacebookService.m in Sources */,
+				DB7CBCF01C73F4CD00B57D4F /* STVUtils.swift in Sources */,
+				DBB867F01C6EFB230069B8A8 /* SwiftUtils.swift in Sources */,
+				DBD483B21C7A58860017643E /* STVSingleFullPhotoViewController.swift in Sources */,
+				DBD078FB1C6D09F60007FE46 /* STVFacebookUser.swift in Sources */,
+				DBD079051C6D153C0007FE46 /* DownloadResponseModel.m in Sources */,
+				DBD078ED1C6CF6EF0007FE46 /* STVAlbumsViewController.swift in Sources */,
+				DBB868491C712B950069B8A8 /* AlbumEntity+CoreDataProperties.swift in Sources */,
+				DBB868351C7127180069B8A8 /* STVCoreData.swift in Sources */,
+				DB9861751C83430A00163813 /* STVString.swift in Sources */,
+				DBB8684B1C712B950069B8A8 /* PhotoEntity+CoreDataProperties.swift in Sources */,
+				DBD079091C6D17A60007FE46 /* InternetService.m in Sources */,
+				DBB868381C7129E30069B8A8 /* STVCoreData.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DB9861721C81452D00163813 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB9861711C81452D00163813 /* Base */,
+				DB9861731C81452F00163813 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		DBD078A31C6CCF270007FE46 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB98615C1C8140BA00163813 /* Base */,
+				DB98D28A1C8E596400969C5C /* pt-BR */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DBD078A91C6CCF270007FE46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		DBD078AA1C6CCF270007FE46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DBD078AC1C6CCF270007FE46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6686C807F7407CBB336FDAB /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = InstaTV/InstaTV.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/External/FacebookSDKs-tvOS",
+				);
+				INFOPLIST_FILE = InstaTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mwg.socialphototv;
+				PRODUCT_NAME = SocialPhotoTV;
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "InstaTV/InstaTV-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		DBD078AD1C6CCF270007FE46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 551BEE00F302954A1EB2D260 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = InstaTV/InstaTV.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/External/FacebookSDKs-tvOS",
+				);
+				INFOPLIST_FILE = InstaTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mwg.socialphototv;
+				PRODUCT_NAME = SocialPhotoTV;
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "InstaTV/InstaTV-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DBD078971C6CCF270007FE46 /* Build configuration list for PBXProject "SocialPhotoTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBD078A91C6CCF270007FE46 /* Debug */,
+				DBD078AA1C6CCF270007FE46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBD078AB1C6CCF270007FE46 /* Build configuration list for PBXNativeTarget "SocialPhotoTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBD078AC1C6CCF270007FE46 /* Debug */,
+				DBD078AD1C6CCF270007FE46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DBB868361C7129E30069B8A8 /* STVCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DBB868371C7129E30069B8A8 /* STVCoreData.xcdatamodel */,
+			);
+			currentVersion = DBB868371C7129E30069B8A8 /* STVCoreData.xcdatamodel */;
+			path = STVCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DBD078941C6CCF270007FE46 /* Project object */;
+}

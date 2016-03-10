@@ -17,12 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
-        ITVCoreData.sharedInstance
-        ITVKV.sharedInstance
+        STVCoreData.sharedInstance
+        STVKV.sharedInstance
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        self.window?.rootViewController = ITVUtils.getControllerBaseOnFacebookStatus()
+        self.window?.rootViewController = STVUtils.getControllerBaseOnFacebookStatus()
         
         self.window?.makeKeyAndVisible()
         

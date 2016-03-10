@@ -13,7 +13,7 @@ import CoreData
 class PhotoEntity: NSManagedObject {
 
     class func newEntity()->PhotoEntity{
-        let entity = NSEntityDescription.insertNewObjectForEntityForName("PhotoEntity", inManagedObjectContext: ITVCoreData.ctx())
+        let entity = NSEntityDescription.insertNewObjectForEntityForName("PhotoEntity", inManagedObjectContext: STVCoreData.ctx())
         return entity as! PhotoEntity
     }
     
@@ -21,7 +21,7 @@ class PhotoEntity: NSManagedObject {
         let fetch = NSFetchRequest(entityName: "PhotoEntity")
         
         do{
-            let list = try ITVCoreData.ctx().executeFetchRequest(fetch)
+            let list = try STVCoreData.ctx().executeFetchRequest(fetch)
             return list as! [PhotoEntity]
         }catch{
             return [PhotoEntity]()
@@ -35,7 +35,7 @@ class PhotoEntity: NSManagedObject {
         fetch.predicate = predicate
         
         do{
-            let list = try ITVCoreData.ctx().executeFetchRequest(fetch)
+            let list = try STVCoreData.ctx().executeFetchRequest(fetch)
             return list as! [PhotoEntity]
         }catch{
             return [PhotoEntity]()
@@ -48,7 +48,7 @@ class PhotoEntity: NSManagedObject {
         fetch.predicate = predicate
         
         do{
-            let list = try ITVCoreData.ctx().executeFetchRequest(fetch)
+            let list = try STVCoreData.ctx().executeFetchRequest(fetch)
             return list as! [PhotoEntity]
         }catch{
             return [PhotoEntity]()
@@ -62,7 +62,7 @@ class PhotoEntity: NSManagedObject {
         fetch.predicate = predicate
         
         do{
-            let list = try ITVCoreData.ctx().executeFetchRequest(fetch) as! [PhotoEntity]
+            let list = try STVCoreData.ctx().executeFetchRequest(fetch) as! [PhotoEntity]
             return list.first
         }catch{
             return nil

@@ -15,7 +15,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKTVOSKit/FBSDKTVOSKit.h>
 
-#import "ITVFacebookService.h"
+#import "STVFacebookService.h"
 
 //#import "AFNetworking.h"
 //#import "Utils.h"
@@ -25,8 +25,8 @@
 #import "DownloadRequestModel.h"
 #import "DownloadResponseModel.h"
 #import "DownloadService.h"
-//#import "ITVFaceAlbum.h"
-//#import "ITVFacePhoto.h"
+//#import "STVFaceAlbum.h"
+//#import "STVFacePhoto.h"
 
 #import "UIImageViewAligned.h"
 
