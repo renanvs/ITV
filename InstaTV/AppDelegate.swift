@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
+        STVTracker.startTrackService()
+        STVTracker.trackEvent("tv", action: "program", label: "5")
+        
         STVCoreData.sharedInstance
         STVKV.sharedInstance
         

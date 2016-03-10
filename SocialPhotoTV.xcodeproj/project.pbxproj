@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		329C4949DEC5E30FD45E3B95 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CF80D4B23D7F6E6496BD4E /* Pods.framework */; };
+		DB160A281C90FC4000E641E6 /* STVTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB160A271C90FC4000E641E6 /* STVTracker.swift */; };
 		DB24DE161C7F8E0E00BE560F /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = DB24DE141C7F8E0E00BE560F /* pause.png */; };
 		DB24DE171C7F8E0E00BE560F /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = DB24DE151C7F8E0E00BE560F /* play.png */; };
 		DB4270CD1C754BF70013B5D3 /* STVPhotosPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4270CC1C754BF70013B5D3 /* STVPhotosPageViewController.swift */; };
+		DB5AC7F21C90FCA900AB70A5 /* GATracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5AC7F11C90FCA900AB70A5 /* GATracker.swift */; };
 		DB685C071C8E492800DD7EF2 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = DB685C051C8E492800DD7EF2 /* star.png */; };
 		DB685C091C8E4BA700DD7EF2 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DB685C081C8E4BA700DD7EF2 /* 1.jpeg */; };
 		DB7CBCF01C73F4CD00B57D4F /* STVUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CBCEF1C73F4CD00B57D4F /* STVUtils.swift */; };
@@ -58,9 +60,11 @@
 
 /* Begin PBXFileReference section */
 		551BEE00F302954A1EB2D260 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DB160A271C90FC4000E641E6 /* STVTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVTracker.swift; sourceTree = "<group>"; };
 		DB24DE141C7F8E0E00BE560F /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		DB24DE151C7F8E0E00BE560F /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		DB4270CC1C754BF70013B5D3 /* STVPhotosPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVPhotosPageViewController.swift; sourceTree = "<group>"; };
+		DB5AC7F11C90FCA900AB70A5 /* GATracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GATracker.swift; sourceTree = "<group>"; };
 		DB685C051C8E492800DD7EF2 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		DB685C081C8E4BA700DD7EF2 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
 		DB7CBCEF1C73F4CD00B57D4F /* STVUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVUtils.swift; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 				DB9861741C83430A00163813 /* STVString.swift */,
 				DB9861761C8343A400163813 /* STVExtensions.swift */,
 				DB9861781C8343F300163813 /* STVStatics.swift */,
+				DB160A271C90FC4000E641E6 /* STVTracker.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 		DBD078AF1C6CE8610007FE46 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				DB5AC7F11C90FCA900AB70A5 /* GATracker.swift */,
 				DB7F9E951C6EF28F00DE6A44 /* UIImageViewAligned */,
 				DBD0790A1C6D18A50007FE46 /* Reachability */,
 				DBD078B01C6CE8610007FE46 /* FacebookSDKs-tvOS */,
@@ -475,6 +481,7 @@
 				DB98617F1C83AE9600163813 /* STVBaseViewController.swift in Sources */,
 				DBB867F51C7013200069B8A8 /* STVAlbumPhotosViewController.swift in Sources */,
 				DB4270CD1C754BF70013B5D3 /* STVPhotosPageViewController.swift in Sources */,
+				DB5AC7F21C90FCA900AB70A5 /* GATracker.swift in Sources */,
 				DBFDFEEB1C72BB3B007A9FE1 /* STVKV.swift in Sources */,
 				DBD079061C6D153C0007FE46 /* DownloadService.m in Sources */,
 				DBB8684A1C712B950069B8A8 /* AlbumEntity.swift in Sources */,
@@ -489,6 +496,7 @@
 				DBD078EF1C6CF7020007FE46 /* STVLoginViewController.swift in Sources */,
 				DBB8684C1C712B950069B8A8 /* PhotoEntity.swift in Sources */,
 				DBD078F31C6CFADD0007FE46 /* STVFacebookService.m in Sources */,
+				DB160A281C90FC4000E641E6 /* STVTracker.swift in Sources */,
 				DB7CBCF01C73F4CD00B57D4F /* STVUtils.swift in Sources */,
 				DBB867F01C6EFB230069B8A8 /* SwiftUtils.swift in Sources */,
 				DBD483B21C7A58860017643E /* STVSingleFullPhotoViewController.swift in Sources */,
