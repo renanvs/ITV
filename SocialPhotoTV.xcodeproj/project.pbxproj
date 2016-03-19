@@ -19,6 +19,7 @@
 		DB7CBCF21C73FBAA00B57D4F /* STVTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CBCF11C73FBAA00B57D4F /* STVTabBarController.swift */; };
 		DB7CBCF41C73FE2000B57D4F /* STVFavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CBCF31C73FE2000B57D4F /* STVFavoritesViewController.swift */; };
 		DB7F9E981C6EF28F00DE6A44 /* UIImageViewAligned.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7F9E971C6EF28F00DE6A44 /* UIImageViewAligned.m */; };
+		DB82A7721C9E06AB0022EAC0 /* STVFavoriteConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82A7711C9E06AB0022EAC0 /* STVFavoriteConfigViewController.swift */; };
 		DB9861701C81452D00163813 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB9861721C81452D00163813 /* Localizable.strings */; };
 		DB9861751C83430A00163813 /* STVString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9861741C83430A00163813 /* STVString.swift */; };
 		DB9861771C8343A400163813 /* STVExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9861761C8343A400163813 /* STVExtensions.swift */; };
@@ -72,6 +73,7 @@
 		DB7CBCF31C73FE2000B57D4F /* STVFavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVFavoritesViewController.swift; sourceTree = "<group>"; };
 		DB7F9E961C6EF28F00DE6A44 /* UIImageViewAligned.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewAligned.h; sourceTree = "<group>"; };
 		DB7F9E971C6EF28F00DE6A44 /* UIImageViewAligned.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewAligned.m; sourceTree = "<group>"; };
+		DB82A7711C9E06AB0022EAC0 /* STVFavoriteConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVFavoriteConfigViewController.swift; sourceTree = "<group>"; };
 		DB98615C1C8140BA00163813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB9861711C81452D00163813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DB9861731C81452F00163813 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				DBB867F41C7013200069B8A8 /* STVAlbumPhotosViewController.swift */,
 				DB7CBCF11C73FBAA00B57D4F /* STVTabBarController.swift */,
 				DB7CBCF31C73FE2000B57D4F /* STVFavoritesViewController.swift */,
+				DB82A7711C9E06AB0022EAC0 /* STVFavoriteConfigViewController.swift */,
 				DB4270CC1C754BF70013B5D3 /* STVPhotosPageViewController.swift */,
 				DBD483B11C7A58860017643E /* STVSingleFullPhotoViewController.swift */,
 				DBD483B81C7A94DC0017643E /* STVConfigurationTableViewController.swift */,
@@ -501,6 +504,7 @@
 				DBB867F01C6EFB230069B8A8 /* SwiftUtils.swift in Sources */,
 				DBD483B21C7A58860017643E /* STVSingleFullPhotoViewController.swift in Sources */,
 				DBD078FB1C6D09F60007FE46 /* STVFacebookUser.swift in Sources */,
+				DB82A7721C9E06AB0022EAC0 /* STVFavoriteConfigViewController.swift in Sources */,
 				DBD079051C6D153C0007FE46 /* DownloadResponseModel.m in Sources */,
 				DBD078ED1C6CF6EF0007FE46 /* STVAlbumsViewController.swift in Sources */,
 				DBB868491C712B950069B8A8 /* AlbumEntity+CoreDataProperties.swift in Sources */,

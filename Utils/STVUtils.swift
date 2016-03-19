@@ -92,5 +92,27 @@ class STVUtils: NSObject {
         
         return value
     }
+    
+    class func getSlideTime() -> Double{
+        let obj = NSUbiquitousKeyValueStore.defaultStore().objectForKey(STVStatics.DEFINE_SlideTime)
+        
+        var value : Double = 3
+        
+        if obj != nil{
+            value = obj!.doubleValue
+        }
+        
+        if value < 1 {
+            value = 1
+        }
+        
+        if value > 60{
+            value = 60
+        }
+        
+        NSUbiquitousKeyValueStore.defaultStore().setDouble(value, forKey: STVStatics.DEFINE_SlideTime)
+        
+        return value
+    }
 
 }

@@ -73,7 +73,8 @@ class STVPhotosPageViewController: UIPageViewController, UIPageViewControllerDat
         
         timer?.invalidate()
         timer = nil
-        timer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: "next", userInfo: nil, repeats: true)
+        let value = STVUtils.getSlideTime()
+        timer = NSTimer.scheduledTimerWithTimeInterval(value, target: self, selector: "next", userInfo: nil, repeats: true)
     }
     
     func next(){

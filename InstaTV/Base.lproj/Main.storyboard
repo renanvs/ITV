@@ -256,10 +256,10 @@
             </objects>
             <point key="canvasLocation" x="-2827.5" y="-669"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorite Config View Controller-->
         <scene sceneID="8Gd-sE-4td">
             <objects>
-                <viewController storyboardIdentifier="STVFavoriteConfigViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ARY-Pv-LFE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="STVFavoriteConfigViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ARY-Pv-LFE" customClass="STVFavoriteConfigViewController" customModule="InstaTV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="So7-0Y-hYm"/>
                         <viewControllerLayoutGuide type="bottom" id="F6j-fH-368"/>
@@ -277,8 +277,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(min: 1 / max:60) 
-seconds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5ud-Sy-yKH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(min: 1 / max:60)  seconds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5ud-Sy-yKH">
                                 <rect key="frame" x="0.0" y="104" width="1000" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="wni-bV-QwH"/>
@@ -314,6 +313,9 @@ seconds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2"
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="33"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="CLEAN"/>
+                                <connections>
+                                    <action selector="cleanFavorites" destination="ARY-Pv-LFE" eventType="primaryActionTriggered" id="5je-Fj-ogx"/>
+                                </connections>
                             </button>
                             <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcf-Eq-jOk">
                                 <rect key="frame" x="0.0" y="0.0" width="1" height="1080"/>
@@ -346,6 +348,9 @@ seconds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2"
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1000" height="1080"/>
+                    <connections>
+                        <outlet property="slideTime" destination="DAB-7d-PJX" id="nv2-Nd-PXL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WiU-HL-1qz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
