@@ -28,7 +28,8 @@ class STVConfigurationTableViewController: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBarHidden = false
+        self.title = ""
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }

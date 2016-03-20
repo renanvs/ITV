@@ -13,6 +13,9 @@ class STVFavoriteConfigViewController: STVBaseViewController, UITextFieldDelegat
     @IBOutlet weak var slideTime : UITextField!
     
     @IBAction func cleanFavorites(){
+        
+        STVTracker.trackEvent("FavoritesConfigScreen", action: "CleanPressed", label: nil)
+        
         let ds = NSUbiquitousKeyValueStore.defaultStore()
         let keys = (ds.dictionaryRepresentation as NSDictionary).allKeys
         for key in keys as! [String]{
@@ -74,7 +77,13 @@ class STVFavoriteConfigViewController: STVBaseViewController, UITextFieldDelegat
         NSUserDefaults.standardUserDefaults().setDouble(value, forKey: STVStatics.DEFINE_SlideTime)
         NSUserDefaults.standardUserDefaults().synchronize()
         
+        STVTracker.trackEvent("FavoritesConfigScreen", action: "SetValueForSlide", label: String(format: "%.0f", value))
+        
         slideTime.text = String(format: "%.0f", value)
+    }
+    
+    override func trackScreen() {
+        STVTracker.trackScreen("FavoritesConfig")
     }
 
 }

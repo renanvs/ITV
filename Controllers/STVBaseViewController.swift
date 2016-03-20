@@ -23,4 +23,11 @@ class STVBaseViewController: UIViewController {
     override func viewWillDisappear(animated: Bool) {
         removeAllNotificationObservers()
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        trackScreen()
+    }
+    
+    func trackScreen(){}
 }

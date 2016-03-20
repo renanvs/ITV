@@ -9,6 +9,7 @@
 #import "DownloadService.h"
 #import "AFNetworking.h"
 #import "Utils.h"
+#import "SocialPhotoTV-swift.h"
 
 @implementation DownloadService
 @synthesize downloadingUrlList;
@@ -93,6 +94,8 @@ SynthensizeSingleTon(DownloadService)
                     
                     responseModel.localUrl = fullPath;
                     
+                    [STVTracker trackEvent:@"Download" action:@"Success" label:responseModel.remoteUrl];
+                    
                     if ([[NSFileManager defaultManager] fileExistsAtPath:pathStr]) {
                         successBlock(responseModel);
                         NSLog(@"Finish Downloading");
@@ -103,6 +106,8 @@ SynthensizeSingleTon(DownloadService)
         }else{
             NSLog(@"download failed: %@",[response.URL absoluteString]);
             
+            
+            [STVTracker trackEvent:@"Download" action:@"Error" label:[response.URL absoluteString]];
             
             [self removeFileFromListAndDisk:requestModel];
             

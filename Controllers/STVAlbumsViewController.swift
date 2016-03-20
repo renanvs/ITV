@@ -19,6 +19,10 @@ class STVAlbumsViewController: STVBaseViewController, UICollectionViewDataSource
         addSimpleObserver(STVStatics.NOTIFICATION_parsedAlbunsSuccess, selectorName:"parsedAlbunsSuccess")
     }
     
+    override func trackScreen() {
+        STVTracker.trackScreen("Albums")
+    }
+    
     //MARK: Native Class
     
     override func viewDidLoad() {
@@ -81,6 +85,9 @@ class STVAlbumsViewController: STVBaseViewController, UICollectionViewDataSource
         let albumModel = list[indexPath.row]
         
         let vc = STVUtils.getStoryBoard().instantiateViewControllerWithIdentifier("STVAlbumPhotosViewController") as! STVAlbumPhotosViewController
+        
+        STVTracker.trackEvent("AlbumScreen", action: "Album_Selected", label: vc.albumModel?.remoteCoverUrl)
+        
         vc.albumModel = albumModel
         self.navigationController?.pushViewController(vc, animated: true)
     }

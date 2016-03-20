@@ -34,6 +34,9 @@ class STVPhotosPageViewController: UIPageViewController, UIPageViewControllerDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        STVTracker.trackScreen("PhotosFull")
+        
         let selectPlayButtonGesture = UITapGestureRecognizer(target: self, action: "playPress:")
         selectPlayButtonGesture.allowedPressTypes = [NSNumber(integer: UIPressType.PlayPause.rawValue)]
         self.view.addGestureRecognizer(selectPlayButtonGesture)
@@ -113,10 +116,13 @@ class STVPhotosPageViewController: UIPageViewController, UIPageViewControllerDat
             timer?.invalidate()
             timer = nil;
             print("Pause")
+            
+            STVTracker.trackEvent("PhotosFullScreen", action: "Pause", label: nil)
         }else{
             imagePlayPause.image = UIImage(named: "play")
             isPlaying = true
             setTimer()
+            STVTracker.trackEvent("PhotosFullScreen", action: "Play", label: nil)
             print("Playing")
         }
         

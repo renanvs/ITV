@@ -8,14 +8,20 @@
 
 import UIKit
 
-class STVFaceProfileViewController: UIViewController {
+class STVFaceProfileViewController: STVBaseViewController {
     
     @IBOutlet var profileImageView : UIImageView!
     @IBOutlet var nameLabel : UILabel!
     @IBOutlet var mailLabel : UILabel!
     @IBOutlet var facebookContainer : UIView!
 
+    
+    override func trackScreen() {
+        STVTracker.trackScreen("Screen")
+    }
+    
     override func viewDidAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         let button = STVFacebookService.sharedInstance().generateLoginButtonWithCenterView(facebookContainer)
         facebookContainer.addSubview(button)
     }
@@ -28,6 +34,7 @@ class STVFaceProfileViewController: UIViewController {
         nameLabel.text = facebookUser.name?.uppercaseString
         mailLabel.text = facebookUser.email.uppercaseString
         
+        STVTracker.trackEvent("ProfileScreen", action: "Info", label: "name: \(facebookUser.name!) | email: \(facebookUser.email) | image: \(facebookUser.pictureURI)")
         
         if DownloadService.existThisFile(facebookUser.identifier){
             profileImageView.image = UIImage.STVgetLocalImageWithIdentifier(facebookUser.identifier)

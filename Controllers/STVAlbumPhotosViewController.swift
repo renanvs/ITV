@@ -24,6 +24,10 @@ class STVAlbumPhotosViewController: STVBaseViewController, UICollectionViewDataS
         addSimpleObserver(STVStatics.NOTIFICATION_entityUpdated, selectorName: "entityUpdated")
     }
     
+    override func trackScreen() {
+        STVTracker.trackScreen("AlbumsPhotos")
+    }
+    
     //MARK: Native Methods
     
     override func viewDidLoad() {
@@ -145,6 +149,8 @@ class STVAlbumPhotosViewController: STVBaseViewController, UICollectionViewDataS
             ds.removeObjectForKey(photoModel.identifier!)
         }
         
+        STVTracker.trackEvent("PhotoAlbumScreen", action: "Favorite", label: "\(photoModel.remotePhotoUrl) - \(photoModel.favorited)")
+        
         photosCollectionView.reloadData()
         
         ds.synchronize()
@@ -154,7 +160,7 @@ class STVAlbumPhotosViewController: STVBaseViewController, UICollectionViewDataS
         if PhotoEntity.getAllFavorites().count > 0{
             let favoriteVC = STVUtils.getStoryBoard().instantiateViewControllerWithIdentifier("STVFavoritesViewController") as! STVFavoritesViewController
             
-            let tabBarController = Utils.getCurrentWindow().rootViewController as! UITabBarController
+            let tabBarController = self.tabBarController!
             tabBarController.viewControllers?.insert(favoriteVC, atIndex: 1)
 
         }
@@ -227,6 +233,7 @@ class STVAlbumPhotosViewController: STVBaseViewController, UICollectionViewDataS
         if hasImageDisplaying == true{
             removeDisplayedImage()
         }else{
+            STVTracker.trackEvent("PhotoAlbumScreen", action: "DisplayImage", label: photoModel.remotePhotoUrl)
             displayImageInScreen(photoModel.identifier!)
         }
     }

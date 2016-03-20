@@ -8,7 +8,7 @@
 
 import UIKit
 
-class STVFavoritesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class STVFavoritesViewController: STVBaseViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var photosCollectionView : UICollectionView!
     var list = [PhotoEntity]()
@@ -36,6 +36,7 @@ class STVFavoritesViewController: UIViewController, UICollectionViewDataSource, 
     }
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         list = PhotoEntity.getAllFavorites()
         photosCollectionView.reloadData()
     }
@@ -59,7 +60,16 @@ class STVFavoritesViewController: UIViewController, UICollectionViewDataSource, 
         photosVC.photosList = list
         let photoModel = list[currentIndexPath!.row]
         photosVC.currentPhotoEntity = photoModel
+        
+        STVTracker.trackEvent("FavoritesScreen", action: "Select_Photo", label: photoModel.remotePhotoUrl)
+        
         self.presentViewController(photosVC, animated: true, completion: nil)
+    }
+    
+    //Mark: Base class methods
+    
+    override func trackScreen() {
+        STVTracker.trackScreen("Favorites")
     }
     
     //MARK: CollectionViewDelegate
@@ -103,6 +113,9 @@ class STVFavoritesViewController: UIViewController, UICollectionViewDataSource, 
         let photosVC = STVUtils.getStoryBoard().instantiateViewControllerWithIdentifier("STVPhotosPageViewController") as! STVPhotosPageViewController
         photosVC.photosList = list
         photosVC.currentPhotoEntity = photoModel
+        
+        STVTracker.trackEvent("FavoritesScreen", action: "Select_Photo", label: photoModel.remotePhotoUrl)
+        
         self.presentViewController(photosVC, animated: true, completion: nil)
         
     }

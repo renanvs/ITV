@@ -244,6 +244,8 @@ SynthensizeSingleTon(STVFacebookService)
     NSString *url = [dataDic safeStringForKey:@"url"];
     faceUser.pictureURI = url;
     
+    [STVTracker trackEvent:@"Facebook" action:@"Info" label:dic.description];
+    
 }
 
 -(void)deviceLoginButtonDidLogIn:(FBSDKDeviceLoginButton *)button {
@@ -261,6 +263,8 @@ SynthensizeSingleTon(STVFacebookService)
 -(void)deviceLoginButtonDidLogOut:(FBSDKDeviceLoginButton *)button{
     UIViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"STVLoginViewController"];
     [[[[UIApplication sharedApplication] delegate] window]setRootViewController:controller];
+    
+    [STVTracker trackEvent:@"Facebook" action:@"Logout" label:nil];
 }
 
 -(UIView*)generateLoginButton{

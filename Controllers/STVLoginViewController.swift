@@ -25,4 +25,8 @@ class STVLoginViewController: STVBaseViewController{
         let button = STVFacebookService.sharedInstance().generateLoginButtonWithCenterView(view)
         view.addSubview(button)
     }
+    
+    override func trackScreen() {
+        STVTracker.trackScreen("Login")
+    }
 }

@@ -17,5 +17,9 @@ class STVTracker: NSObject {
     class func trackEvent(event : String, action : String, label : String?){
         GATracker.sharedInstance.event(event, action: action, label: label, customParameters: nil)
     }
+    
+    class func trackScreen(value : String){
+        GATracker.sharedInstance.screenView("\(value)_Screen", customParameters: nil)
+    }
 
 }
