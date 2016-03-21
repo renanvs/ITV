@@ -20,6 +20,9 @@
 		DB7CBCF41C73FE2000B57D4F /* STVFavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CBCF31C73FE2000B57D4F /* STVFavoritesViewController.swift */; };
 		DB7F9E981C6EF28F00DE6A44 /* UIImageViewAligned.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7F9E971C6EF28F00DE6A44 /* UIImageViewAligned.m */; };
 		DB82A7721C9E06AB0022EAC0 /* STVFavoriteConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82A7711C9E06AB0022EAC0 /* STVFavoriteConfigViewController.swift */; };
+		DB891BFB1C9F28040035CA14 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB891BF91C9F28040035CA14 /* Fabric.framework */; };
+		DB891BFC1C9F28040035CA14 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB891BFA1C9F28040035CA14 /* Crashlytics.framework */; };
+		DB92C7751C9F355300E24696 /* libFlurrytvOS_1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB92C7741C9F355300E24696 /* libFlurrytvOS_1.0.0.a */; };
 		DB9861701C81452D00163813 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB9861721C81452D00163813 /* Localizable.strings */; };
 		DB9861751C83430A00163813 /* STVString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9861741C83430A00163813 /* STVString.swift */; };
 		DB9861771C8343A400163813 /* STVExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9861761C8343A400163813 /* STVExtensions.swift */; };
@@ -74,6 +77,10 @@
 		DB7F9E961C6EF28F00DE6A44 /* UIImageViewAligned.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewAligned.h; sourceTree = "<group>"; };
 		DB7F9E971C6EF28F00DE6A44 /* UIImageViewAligned.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewAligned.m; sourceTree = "<group>"; };
 		DB82A7711C9E06AB0022EAC0 /* STVFavoriteConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVFavoriteConfigViewController.swift; sourceTree = "<group>"; };
+		DB891BF91C9F28040035CA14 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		DB891BFA1C9F28040035CA14 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		DB92C7731C9F355300E24696 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		DB92C7741C9F355300E24696 /* libFlurrytvOS_1.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurrytvOS_1.0.0.a; sourceTree = "<group>"; };
 		DB98615C1C8140BA00163813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB9861711C81452D00163813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DB9861731C81452F00163813 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -138,6 +145,9 @@
 				329C4949DEC5E30FD45E3B95 /* Pods.framework in Frameworks */,
 				DBD078D21C6CE8610007FE46 /* FBSDKCoreKit.framework in Frameworks */,
 				DBD078D31C6CE8610007FE46 /* FBSDKShareKit.framework in Frameworks */,
+				DB891BFB1C9F28040035CA14 /* Fabric.framework in Frameworks */,
+				DB891BFC1C9F28040035CA14 /* Crashlytics.framework in Frameworks */,
+				DB92C7751C9F355300E24696 /* libFlurrytvOS_1.0.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +181,15 @@
 				DB7F9E971C6EF28F00DE6A44 /* UIImageViewAligned.m */,
 			);
 			path = UIImageViewAligned;
+			sourceTree = "<group>";
+		};
+		DB92C7721C9F355300E24696 /* FlurrytvOS */ = {
+			isa = PBXGroup;
+			children = (
+				DB92C7731C9F355300E24696 /* Flurry.h */,
+				DB92C7741C9F355300E24696 /* libFlurrytvOS_1.0.0.a */,
+			);
+			path = FlurrytvOS;
 			sourceTree = "<group>";
 		};
 		DB98617D1C83AE5B00163813 /* BaseViewController */ = {
@@ -213,6 +232,8 @@
 		DBD078931C6CCF270007FE46 = {
 			isa = PBXGroup;
 			children = (
+				DB891BF91C9F28040035CA14 /* Fabric.framework */,
+				DB891BFA1C9F28040035CA14 /* Crashlytics.framework */,
 				DB24DE131C7F8E0E00BE560F /* Images */,
 				DBB868331C7126F80069B8A8 /* CoreData */,
 				DBB867EC1C6EFB150069B8A8 /* Utils */,
@@ -253,6 +274,7 @@
 		DBD078AF1C6CE8610007FE46 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				DB92C7721C9F355300E24696 /* FlurrytvOS */,
 				DB5AC7F11C90FCA900AB70A5 /* GATracker.swift */,
 				DB7F9E951C6EF28F00DE6A44 /* UIImageViewAligned */,
 				DBD0790A1C6D18A50007FE46 /* Reachability */,
@@ -355,6 +377,7 @@
 				DBD0789A1C6CCF270007FE46 /* Resources */,
 				EE9066C14940A96C44451C9A /* Embed Pods Frameworks */,
 				4057151CD000E3DCA1EFE888 /* Copy Pods Resources */,
+				DB891BF81C9F27E60035CA14 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -455,6 +478,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		DB891BF81C9F27E60035CA14 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 112c4e2c88d4cf3b7bd4753fd5d8859ebac1f0ba 941e411f5c5edc87e8ffd76df7bf589c9ebdae2aa6843ded3312139f9efefdf0";
 		};
 		EE9066C14940A96C44451C9A /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -628,18 +664,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = InstaTV/InstaTV.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: MACWINGO ltda (99PGLV2Z48)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Distribution: MACWINGO ltda (99PGLV2Z48)";
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/External/FacebookSDKs-tvOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = InstaTV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/External/FlurrytvOS",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.mwg.socialphototv;
 				PRODUCT_NAME = SocialPhotoTV;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "d5c8cafc-2043-43b4-9e26-32b501791990";
 				SWIFT_OBJC_BRIDGING_HEADER = "InstaTV/InstaTV-Bridging-Header.h";
 			};
 			name = Debug;
@@ -651,18 +692,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = InstaTV/InstaTV.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: MACWINGO ltda (99PGLV2Z48)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Distribution: MACWINGO ltda (99PGLV2Z48)";
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/External/FacebookSDKs-tvOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = InstaTV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/External/FlurrytvOS",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.mwg.socialphototv;
 				PRODUCT_NAME = SocialPhotoTV;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "d5c8cafc-2043-43b4-9e26-32b501791990";
 				SWIFT_OBJC_BRIDGING_HEADER = "InstaTV/InstaTV-Bridging-Header.h";
 			};
 			name = Release;

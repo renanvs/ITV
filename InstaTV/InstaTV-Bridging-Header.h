@@ -17,6 +17,8 @@
 
 #import "STVFacebookService.h"
 
+#import "Flurry.h"
+
 //#import "AFNetworking.h"
 #import "Utils.h"
 

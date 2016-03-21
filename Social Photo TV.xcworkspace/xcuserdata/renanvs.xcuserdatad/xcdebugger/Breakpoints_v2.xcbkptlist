@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "InstaTV/AppDelegate.swift"
-            timestampString = "479264391.350285"
+            timestampString = "480198634.712666"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -35,13 +35,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "InstaTV/AppDelegate.swift"
-            timestampString = "479264413.38619"
+            filePath = "Utils/STVTracker.swift"
+            timestampString = "480198751.390885"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "startTrackService()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
