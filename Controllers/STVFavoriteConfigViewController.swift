@@ -62,7 +62,8 @@ class STVFavoriteConfigViewController: STVBaseViewController, UITextFieldDelegat
     }
     
     
-    private func setValueForSlide(var value : Double){
+    private func setValueForSlide(value : Double){
+        var value = value
         
         if value < 1 {
             value = 1

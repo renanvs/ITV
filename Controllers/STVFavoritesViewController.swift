@@ -29,7 +29,7 @@ class STVFavoritesViewController: STVBaseViewController, UICollectionViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         STVUtils.showHelpFavoritesMessage()
-        let selectPlayButtonGesture = UITapGestureRecognizer(target: self, action: "playPress:")
+        let selectPlayButtonGesture = UITapGestureRecognizer(target: self, action: #selector(STVFavoritesViewController.playPress(_:)))
         selectPlayButtonGesture.enabled = true
         selectPlayButtonGesture.allowedPressTypes = [NSNumber(integer: UIPressType.PlayPause.rawValue)]
         self.view.addGestureRecognizer(selectPlayButtonGesture)

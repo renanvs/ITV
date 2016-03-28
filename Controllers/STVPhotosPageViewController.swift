@@ -37,7 +37,7 @@ class STVPhotosPageViewController: UIPageViewController, UIPageViewControllerDat
         
         STVTracker.trackScreen("PhotosFull")
         
-        let selectPlayButtonGesture = UITapGestureRecognizer(target: self, action: "playPress:")
+        let selectPlayButtonGesture = UITapGestureRecognizer(target: self, action: #selector(STVPhotosPageViewController.playPress(_:)))
         selectPlayButtonGesture.allowedPressTypes = [NSNumber(integer: UIPressType.PlayPause.rawValue)]
         self.view.addGestureRecognizer(selectPlayButtonGesture)
         
@@ -77,7 +77,7 @@ class STVPhotosPageViewController: UIPageViewController, UIPageViewControllerDat
         timer?.invalidate()
         timer = nil
         let value = STVUtils.getSlideTime()
-        timer = NSTimer.scheduledTimerWithTimeInterval(value, target: self, selector: "next", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(value, target: self, selector: #selector(STVPhotosPageViewController.next), userInfo: nil, repeats: true)
     }
     
     func next(){

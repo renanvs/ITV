@@ -14,9 +14,9 @@ class STVKV: NSObject {
     override init(){
         super.init()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("changeKV:"), name: NSUbiquitousKeyValueStoreDidChangeExternallyNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(STVKV.changeKV(_:)), name: NSUbiquitousKeyValueStoreDidChangeExternallyNotification, object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keysUpdated"), name: "keysUpdated", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(STVKV.keysUpdated), name: "keysUpdated", object: nil)
         
         let store = NSUbiquitousKeyValueStore.defaultStore()
         store.synchronize()

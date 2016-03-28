@@ -36,12 +36,12 @@ class STVAlbumPhotosViewController: STVBaseViewController, UICollectionViewDataS
         self.title = STVString.Lang(STVString.Albums_Title)
         self.navigationController?.navigationBarHidden = true
         
-        selectMenuButtonGesture = UITapGestureRecognizer(target: self, action: "menuPress:")
+        selectMenuButtonGesture = UITapGestureRecognizer(target: self, action: #selector(STVAlbumPhotosViewController.menuPress(_:)))
         selectMenuButtonGesture!.enabled = false
         selectMenuButtonGesture!.allowedPressTypes = [NSNumber(integer: UIPressType.Menu.rawValue)]
         self.view.addGestureRecognizer(selectMenuButtonGesture!)
         
-        let selectPlayButtonGesture = UITapGestureRecognizer(target: self, action: "playPress:")
+        let selectPlayButtonGesture = UITapGestureRecognizer(target: self, action: #selector(STVAlbumPhotosViewController.playPress(_:)))
         selectPlayButtonGesture.enabled = true
         selectPlayButtonGesture.allowedPressTypes = [NSNumber(integer: UIPressType.PlayPause.rawValue)]
         self.view.addGestureRecognizer(selectPlayButtonGesture)
