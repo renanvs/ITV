@@ -13,11 +13,11 @@ import Crashlytics
 class STVTracker: NSObject {
     
     class func startTrackService(){
-            GATracker.setup("")
-            Flurry.startSession("");
-//            Fabric.with([Crashlytics.self])
-//            GATracker.setup("UA-74946012-2")
-//            Flurry.startSession("V48Z9RZV5J5GDDB2M3KD");
+//            GATracker.setup("")
+//            Flurry.startSession("");
+            Fabric.with([Crashlytics.self])
+            GATracker.setup("UA-74946012-2")
+            Flurry.startSession("V48Z9RZV5J5GDDB2M3KD");
         
         
     }

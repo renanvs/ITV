@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4414DC9785181F35D19D6252AD647F83FFC9F80A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4414DC9785181F35D19D6252AD647F83FFC9F80A" : 0,
+    "5289EA39FDC0C50AE45BC6BEED8933F1E7A365D1" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "11E07F0C-44B4-4ECF-AB57-3BD1ADDDF44F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4414DC9785181F35D19D6252AD647F83FFC9F80A" : "ITV\/",
+    "5289EA39FDC0C50AE45BC6BEED8933F1E7A365D1" : "ObjC_Utils\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SocialPhotoTV",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SocialPhotoTV.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/renanvs\/ITV.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4414DC9785181F35D19D6252AD647F83FFC9F80A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:renanvs\/ObjC_Utils.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5289EA39FDC0C50AE45BC6BEED8933F1E7A365D1"
+    }
+  ]
+}
