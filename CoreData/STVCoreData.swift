@@ -52,7 +52,7 @@ class STVCoreData: NSObject {
     lazy var applicationCachesDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "vsc._23" in the application's caches Application Support directory.
         ////let urls = NSFileManager.defaultManager().URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask)
-        let urls = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: .UserDomainMask)
+        let urls = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.CachesDirectory, inDomains: .UserDomainMask)
         return urls[urls.count-1]
     }()
     
