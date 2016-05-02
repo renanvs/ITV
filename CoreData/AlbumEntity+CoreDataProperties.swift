@@ -1,8 +1,8 @@
 //
 //  AlbumEntity+CoreDataProperties.swift
-//  InstaTV
+//  SocialPhotoTV
 //
-//  Created by renan silva on 2/14/16.
+//  Created by renanvs on 5/2/16.
 //  Copyright © 2016 mwg. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,10 +14,10 @@ import CoreData
 
 extension AlbumEntity {
 
-    @NSManaged var identifier: String?
-    @NSManaged var photoCount: NSNumber?
     @NSManaged var coverPhotoId: String?
+    @NSManaged var identifier: String?
     @NSManaged var name: String?
+    @NSManaged var photoCount: NSNumber?
     @NSManaged var remoteCoverUrl: String?
     @NSManaged var photos: NSSet?
 

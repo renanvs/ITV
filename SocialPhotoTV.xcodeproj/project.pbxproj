@@ -11,6 +11,7 @@
 		DB160A281C90FC4000E641E6 /* STVTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB160A271C90FC4000E641E6 /* STVTracker.swift */; };
 		DB24DE161C7F8E0E00BE560F /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = DB24DE141C7F8E0E00BE560F /* pause.png */; };
 		DB24DE171C7F8E0E00BE560F /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = DB24DE151C7F8E0E00BE560F /* play.png */; };
+		DB416A2B1CD70FF000A5606F /* STVCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBB868361C7129E30069B8A8 /* STVCoreData.xcdatamodeld */; };
 		DB4270CD1C754BF70013B5D3 /* STVPhotosPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4270CC1C754BF70013B5D3 /* STVPhotosPageViewController.swift */; };
 		DB5AC7F21C90FCA900AB70A5 /* GATracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5AC7F11C90FCA900AB70A5 /* GATracker.swift */; };
 		DB685C071C8E492800DD7EF2 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = DB685C051C8E492800DD7EF2 /* star.png */; };
@@ -32,7 +33,6 @@
 		DBB867F11C6EFB230069B8A8 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB867EF1C6EFB220069B8A8 /* Utils.m */; };
 		DBB867F51C7013200069B8A8 /* STVAlbumPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB867F41C7013200069B8A8 /* STVAlbumPhotosViewController.swift */; };
 		DBB868351C7127180069B8A8 /* STVCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB868341C7127180069B8A8 /* STVCoreData.swift */; };
-		DBB868381C7129E30069B8A8 /* STVCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBB868361C7129E30069B8A8 /* STVCoreData.xcdatamodeld */; };
 		DBB868491C712B950069B8A8 /* AlbumEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB868451C712B950069B8A8 /* AlbumEntity+CoreDataProperties.swift */; };
 		DBB8684A1C712B950069B8A8 /* AlbumEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB868461C712B950069B8A8 /* AlbumEntity.swift */; };
 		DBB8684B1C712B950069B8A8 /* PhotoEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB868471C712B950069B8A8 /* PhotoEntity+CoreDataProperties.swift */; };
@@ -532,6 +532,7 @@
 				DBD079041C6D153C0007FE46 /* DownloadRequestModel.m in Sources */,
 				DB7CBCF41C73FE2000B57D4F /* STVFavoritesViewController.swift in Sources */,
 				DBBD47941C7BF4B900229474 /* STVFaceProfileViewController.swift in Sources */,
+				DB416A2B1CD70FF000A5606F /* STVCoreData.xcdatamodeld in Sources */,
 				DBD078EF1C6CF7020007FE46 /* STVLoginViewController.swift in Sources */,
 				DBB8684C1C712B950069B8A8 /* PhotoEntity.swift in Sources */,
 				DBD078F31C6CFADD0007FE46 /* STVFacebookService.m in Sources */,
@@ -548,7 +549,6 @@
 				DB9861751C83430A00163813 /* STVString.swift in Sources */,
 				DBB8684B1C712B950069B8A8 /* PhotoEntity+CoreDataProperties.swift in Sources */,
 				DBD079091C6D17A60007FE46 /* InternetService.m in Sources */,
-				DBB868381C7129E30069B8A8 /* STVCoreData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

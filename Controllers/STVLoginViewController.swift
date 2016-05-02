@@ -12,6 +12,14 @@ class STVLoginViewController: STVBaseViewController{
         
     override func addObservers() {
         addSimpleObserver(STVStatics.NOTIFICATION_finishedGetProfileInfo, selectorName:"requestCompleted")
+        addSimpleObserver("deviceLoginButtonDidLogIn", selectorName: "requestWillStart")
+    }
+    
+    func requestWillStart(){
+        let b = self.view.viewWithTag(666)
+        if b != nil{
+            b!.removeFromSuperview()
+        }
     }
     
     func requestCompleted(){
@@ -23,6 +31,7 @@ class STVLoginViewController: STVBaseViewController{
         let view = self.view.viewWithTag(1)!
         view.clearColor()
         let button = STVFacebookService.sharedInstance().generateLoginButtonWithCenterView(view)
+        button.tag = 666
         view.addSubview(button)
     }
     

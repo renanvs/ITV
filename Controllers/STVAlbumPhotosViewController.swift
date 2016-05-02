@@ -157,7 +157,7 @@ class STVAlbumPhotosViewController: STVBaseViewController, UICollectionViewDataS
         
         STVCoreData.saveContext()
         
-        if PhotoEntity.getAllFavorites().count > 0{
+        if PhotoEntity.getAllFavorites().count == 1{
             let favoriteVC = STVUtils.getStoryBoard().instantiateViewControllerWithIdentifier("STVFavoritesViewController") as! STVFavoritesViewController
             
             let tabBarController = self.tabBarController!

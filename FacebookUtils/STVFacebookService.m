@@ -249,6 +249,7 @@ SynthensizeSingleTon(STVFacebookService)
 }
 
 -(void)deviceLoginButtonDidLogIn:(FBSDKDeviceLoginButton *)button {
+    [STVFacebookService postSimpleNotification:@"deviceLoginButtonDidLogIn"];
     [[STVFacebookService sharedInstance] requestProfileInfo];
 }
 
@@ -261,10 +262,29 @@ SynthensizeSingleTon(STVFacebookService)
 }
 
 -(void)deviceLoginButtonDidLogOut:(FBSDKDeviceLoginButton *)button{
-    UIViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"STVLoginViewController"];
-    [[[[UIApplication sharedApplication] delegate] window]setRootViewController:controller];
+    [[[[[UIApplication sharedApplication] delegate] window] rootViewController] dismissViewControllerAnimated:false completion:^{
+        [[[[UIApplication sharedApplication] delegate] window]setRootViewController:[STVUtils getControllerBaseOnFacebookStatus]];
+    }];
+    
+    
+    [STVFacebookService deleteAllFromEntity:@"AlbumEntity"];
+    [STVFacebookService deleteAllFromEntity:@"PhotoEntity"];
     
     [STVTracker trackEvent:@"Facebook" action:@"Logout" label:nil];
+}
+
++ (void) deleteAllFromEntity:(NSString *)entityName {
+    NSManagedObjectContext *managedObjectContext = [[STVCoreData sharedInstance]managedObjectContext];
+    NSFetchRequest * allRecords = [[NSFetchRequest alloc] init];
+    [allRecords setEntity:[NSEntityDescription entityForName:entityName inManagedObjectContext:managedObjectContext]];
+    [allRecords setIncludesPropertyValues:NO];
+    NSError * error = nil;
+    NSArray * result = [managedObjectContext executeFetchRequest:allRecords error:&error];
+    for (NSManagedObject * profile in result) {
+        [managedObjectContext deleteObject:profile];
+    }
+    NSError *saveError = nil;
+    [managedObjectContext save:&saveError];
 }
 
 -(UIView*)generateLoginButton{
