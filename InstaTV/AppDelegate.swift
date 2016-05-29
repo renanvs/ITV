@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
+        FBSDKSettings.setClientToken("5862ce3a4fe16d46eb209483044ced01")
+        
         STVTracker.startTrackService()
         
         STVCoreData.sharedInstance

@@ -29,7 +29,6 @@
 		DB82A7721C9E06AB0022EAC0 /* STVFavoriteConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82A7711C9E06AB0022EAC0 /* STVFavoriteConfigViewController.swift */; };
 		DB891BFB1C9F28040035CA14 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB891BF91C9F28040035CA14 /* Fabric.framework */; };
 		DB891BFC1C9F28040035CA14 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB891BFA1C9F28040035CA14 /* Crashlytics.framework */; };
-		DB92C7751C9F355300E24696 /* libFlurrytvOS_1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB92C7741C9F355300E24696 /* libFlurrytvOS_1.0.0.a */; };
 		DB9861701C81452D00163813 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB9861721C81452D00163813 /* Localizable.strings */; };
 		DB9861751C83430A00163813 /* STVString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9861741C83430A00163813 /* STVString.swift */; };
 		DB9861771C8343A400163813 /* STVExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9861761C8343A400163813 /* STVExtensions.swift */; };
@@ -58,6 +57,7 @@
 		DBD0790D1C6D18A50007FE46 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD0790C1C6D18A50007FE46 /* Reachability.m */; };
 		DBD483B21C7A58860017643E /* STVSingleFullPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD483B11C7A58860017643E /* STVSingleFullPhotoViewController.swift */; };
 		DBD483B91C7A94DD0017643E /* STVConfigurationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD483B81C7A94DC0017643E /* STVConfigurationTableViewController.swift */; };
+		DBD9FBA71CFA7B1B0074F7B1 /* libFlurrytvOS_1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD9FBA61CFA7B1B0074F7B1 /* libFlurrytvOS_1.0.0.a */; };
 		DBFDFEE91C72A6B9007A9FE1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFDFEE81C72A6B9007A9FE1 /* CloudKit.framework */; };
 		DBFDFEEB1C72BB3B007A9FE1 /* STVKV.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFDFEEA1C72BB3B007A9FE1 /* STVKV.swift */; };
 /* End PBXBuildFile section */
@@ -85,8 +85,6 @@
 		DB82A7711C9E06AB0022EAC0 /* STVFavoriteConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVFavoriteConfigViewController.swift; sourceTree = "<group>"; };
 		DB891BF91C9F28040035CA14 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		DB891BFA1C9F28040035CA14 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
-		DB92C7731C9F355300E24696 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
-		DB92C7741C9F355300E24696 /* libFlurrytvOS_1.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurrytvOS_1.0.0.a; sourceTree = "<group>"; };
 		DB98615C1C8140BA00163813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB9861711C81452D00163813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DB9861731C81452F00163813 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -129,6 +127,8 @@
 		DBD0790C1C6D18A50007FE46 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		DBD483B11C7A58860017643E /* STVSingleFullPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVSingleFullPhotoViewController.swift; sourceTree = "<group>"; };
 		DBD483B81C7A94DC0017643E /* STVConfigurationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVConfigurationTableViewController.swift; sourceTree = "<group>"; };
+		DBD9FBA51CFA7B1B0074F7B1 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		DBD9FBA61CFA7B1B0074F7B1 /* libFlurrytvOS_1.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurrytvOS_1.0.0.a; sourceTree = "<group>"; };
 		DBFDFEE81C72A6B9007A9FE1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		DBFDFEEA1C72BB3B007A9FE1 /* STVKV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVKV.swift; sourceTree = "<group>"; };
 		E4CF80D4B23D7F6E6496BD4E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,7 +147,7 @@
 				1ECF33381CFA6F670061BC43 /* FBSDKShareKit.framework in Frameworks */,
 				DB891BFB1C9F28040035CA14 /* Fabric.framework in Frameworks */,
 				DB891BFC1C9F28040035CA14 /* Crashlytics.framework in Frameworks */,
-				DB92C7751C9F355300E24696 /* libFlurrytvOS_1.0.0.a in Frameworks */,
+				DBD9FBA71CFA7B1B0074F7B1 /* libFlurrytvOS_1.0.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,15 +194,6 @@
 				DB7F9E971C6EF28F00DE6A44 /* UIImageViewAligned.m */,
 			);
 			path = UIImageViewAligned;
-			sourceTree = "<group>";
-		};
-		DB92C7721C9F355300E24696 /* FlurrytvOS */ = {
-			isa = PBXGroup;
-			children = (
-				DB92C7731C9F355300E24696 /* Flurry.h */,
-				DB92C7741C9F355300E24696 /* libFlurrytvOS_1.0.0.a */,
-			);
-			path = FlurrytvOS;
 			sourceTree = "<group>";
 		};
 		DB98617D1C83AE5B00163813 /* BaseViewController */ = {
@@ -287,8 +278,8 @@
 		DBD078AF1C6CE8610007FE46 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				DBD9FBA41CFA7B1B0074F7B1 /* FlurrytvOS */,
 				1ECF33141CFA6F670061BC43 /* FacebookSDKs-tvOS */,
-				DB92C7721C9F355300E24696 /* FlurrytvOS */,
 				DB5AC7F11C90FCA900AB70A5 /* GATracker.swift */,
 				DB7F9E951C6EF28F00DE6A44 /* UIImageViewAligned */,
 				DBD0790A1C6D18A50007FE46 /* Reachability */,
@@ -353,6 +344,15 @@
 				DBD0790C1C6D18A50007FE46 /* Reachability.m */,
 			);
 			path = Reachability;
+			sourceTree = "<group>";
+		};
+		DBD9FBA41CFA7B1B0074F7B1 /* FlurrytvOS */ = {
+			isa = PBXGroup;
+			children = (
+				DBD9FBA51CFA7B1B0074F7B1 /* Flurry.h */,
+				DBD9FBA61CFA7B1B0074F7B1 /* libFlurrytvOS_1.0.0.a */,
+			);
+			path = FlurrytvOS;
 			sourceTree = "<group>";
 		};
 		E1E72E3C08DEE67D4C76F679 /* Frameworks */ = {

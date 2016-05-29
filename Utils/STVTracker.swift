@@ -16,8 +16,8 @@ class STVTracker: NSObject {
 //            GATracker.setup("")
 //            Flurry.startSession("");
             Fabric.with([Crashlytics.self])
-            GATracker.setup("UA-74946012-2")
-            Flurry.startSession("V48Z9RZV5J5GDDB2M3KD");
+            GATracker.setup("UA-74946012-3")
+            Flurry.startSession("D8QHRXSBF47QXZN4PN9R");
     }
     
     class func trackEvent(event : String, action : String, label : String?){
