@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1ECF33361CFA6F670061BC43 /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1ECF33151CFA6F670061BC43 /* FacebookSDKStrings.bundle */; };
+		1ECF33371CFA6F670061BC43 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECF33161CFA6F670061BC43 /* FBSDKCoreKit.framework */; };
+		1ECF33381CFA6F670061BC43 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECF33171CFA6F670061BC43 /* FBSDKShareKit.framework */; };
+		1ECF33391CFA6F670061BC43 /* FBSDKTVOSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECF33181CFA6F670061BC43 /* FBSDKTVOSKit.framework */; };
+		1ECF333A1CFA6F670061BC43 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1ECF33191CFA6F670061BC43 /* LICENSE.txt */; };
+		1ECF333B1CFA6F670061BC43 /* README_TV.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1ECF331A1CFA6F670061BC43 /* README_TV.txt */; };
 		329C4949DEC5E30FD45E3B95 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CF80D4B23D7F6E6496BD4E /* Pods.framework */; };
 		DB160A281C90FC4000E641E6 /* STVTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB160A271C90FC4000E641E6 /* STVTracker.swift */; };
 		DB24DE161C7F8E0E00BE560F /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = DB24DE141C7F8E0E00BE560F /* pause.png */; };
@@ -30,7 +36,7 @@
 		DB9861791C8343F300163813 /* STVStatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9861781C8343F300163813 /* STVStatics.swift */; };
 		DB98617F1C83AE9600163813 /* STVBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB98617E1C83AE9600163813 /* STVBaseViewController.swift */; };
 		DBB867F01C6EFB230069B8A8 /* SwiftUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB867ED1C6EFB220069B8A8 /* SwiftUtils.swift */; };
-		DBB867F11C6EFB230069B8A8 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB867EF1C6EFB220069B8A8 /* Utils.m */; };
+		DBB867F11C6EFB230069B8A8 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB867EF1C6EFB220069B8A8 /* Utils.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		DBB867F51C7013200069B8A8 /* STVAlbumPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB867F41C7013200069B8A8 /* STVAlbumPhotosViewController.swift */; };
 		DBB868351C7127180069B8A8 /* STVCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB868341C7127180069B8A8 /* STVCoreData.swift */; };
 		DBB868491C712B950069B8A8 /* AlbumEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB868451C712B950069B8A8 /* AlbumEntity+CoreDataProperties.swift */; };
@@ -41,19 +47,13 @@
 		DBD078A01C6CCF270007FE46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD0789F1C6CCF270007FE46 /* AppDelegate.swift */; };
 		DBD078A51C6CCF270007FE46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD078A31C6CCF270007FE46 /* Main.storyboard */; };
 		DBD078A71C6CCF270007FE46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD078A61C6CCF270007FE46 /* Assets.xcassets */; };
-		DBD078D11C6CE8610007FE46 /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DBD078B11C6CE8610007FE46 /* FacebookSDKStrings.bundle */; };
-		DBD078D21C6CE8610007FE46 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD078B21C6CE8610007FE46 /* FBSDKCoreKit.framework */; };
-		DBD078D31C6CE8610007FE46 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD078B31C6CE8610007FE46 /* FBSDKShareKit.framework */; };
-		DBD078D41C6CE8610007FE46 /* FBSDKTVOSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD078B41C6CE8610007FE46 /* FBSDKTVOSKit.framework */; };
-		DBD078D51C6CE8610007FE46 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = DBD078B51C6CE8610007FE46 /* LICENSE.txt */; };
-		DBD078D61C6CE8610007FE46 /* README_TV.txt in Resources */ = {isa = PBXBuildFile; fileRef = DBD078B61C6CE8610007FE46 /* README_TV.txt */; };
 		DBD078ED1C6CF6EF0007FE46 /* STVAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD078EC1C6CF6EF0007FE46 /* STVAlbumsViewController.swift */; };
 		DBD078EF1C6CF7020007FE46 /* STVLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD078EE1C6CF7020007FE46 /* STVLoginViewController.swift */; };
 		DBD078F31C6CFADD0007FE46 /* STVFacebookService.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD078F21C6CFADD0007FE46 /* STVFacebookService.m */; };
 		DBD078FB1C6D09F60007FE46 /* STVFacebookUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD078FA1C6D09F60007FE46 /* STVFacebookUser.swift */; };
 		DBD079041C6D153C0007FE46 /* DownloadRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD078FE1C6D153C0007FE46 /* DownloadRequestModel.m */; };
 		DBD079051C6D153C0007FE46 /* DownloadResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD079001C6D153C0007FE46 /* DownloadResponseModel.m */; };
-		DBD079061C6D153C0007FE46 /* DownloadService.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD079031C6D153C0007FE46 /* DownloadService.m */; };
+		DBD079061C6D153C0007FE46 /* DownloadService.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD079031C6D153C0007FE46 /* DownloadService.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		DBD079091C6D17A60007FE46 /* InternetService.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD079081C6D17A60007FE46 /* InternetService.m */; };
 		DBD0790D1C6D18A50007FE46 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD0790C1C6D18A50007FE46 /* Reachability.m */; };
 		DBD483B21C7A58860017643E /* STVSingleFullPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD483B11C7A58860017643E /* STVSingleFullPhotoViewController.swift */; };
@@ -63,6 +63,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1ECF33151CFA6F670061BC43 /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKStrings.bundle; sourceTree = "<group>"; };
+		1ECF33161CFA6F670061BC43 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		1ECF33171CFA6F670061BC43 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		1ECF33181CFA6F670061BC43 /* FBSDKTVOSKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKTVOSKit.framework; sourceTree = "<group>"; };
+		1ECF33191CFA6F670061BC43 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		1ECF331A1CFA6F670061BC43 /* README_TV.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README_TV.txt; sourceTree = "<group>"; };
 		551BEE00F302954A1EB2D260 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DB160A271C90FC4000E641E6 /* STVTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVTracker.swift; sourceTree = "<group>"; };
 		DB24DE141C7F8E0E00BE560F /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
@@ -106,12 +112,6 @@
 		DBD078A61C6CCF270007FE46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBD078A81C6CCF270007FE46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBD078AE1C6CD0EB0007FE46 /* InstaTV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InstaTV-Bridging-Header.h"; sourceTree = "<group>"; };
-		DBD078B11C6CE8610007FE46 /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKStrings.bundle; sourceTree = "<group>"; };
-		DBD078B21C6CE8610007FE46 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		DBD078B31C6CE8610007FE46 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
-		DBD078B41C6CE8610007FE46 /* FBSDKTVOSKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKTVOSKit.framework; sourceTree = "<group>"; };
-		DBD078B51C6CE8610007FE46 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
-		DBD078B61C6CE8610007FE46 /* README_TV.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README_TV.txt; sourceTree = "<group>"; };
 		DBD078EC1C6CF6EF0007FE46 /* STVAlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVAlbumsViewController.swift; sourceTree = "<group>"; };
 		DBD078EE1C6CF7020007FE46 /* STVLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STVLoginViewController.swift; sourceTree = "<group>"; };
 		DBD078F11C6CFADD0007FE46 /* STVFacebookService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVFacebookService.h; sourceTree = "<group>"; };
@@ -140,11 +140,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ECF33391CFA6F670061BC43 /* FBSDKTVOSKit.framework in Frameworks */,
 				DBFDFEE91C72A6B9007A9FE1 /* CloudKit.framework in Frameworks */,
-				DBD078D41C6CE8610007FE46 /* FBSDKTVOSKit.framework in Frameworks */,
+				1ECF33371CFA6F670061BC43 /* FBSDKCoreKit.framework in Frameworks */,
 				329C4949DEC5E30FD45E3B95 /* Pods.framework in Frameworks */,
-				DBD078D21C6CE8610007FE46 /* FBSDKCoreKit.framework in Frameworks */,
-				DBD078D31C6CE8610007FE46 /* FBSDKShareKit.framework in Frameworks */,
+				1ECF33381CFA6F670061BC43 /* FBSDKShareKit.framework in Frameworks */,
 				DB891BFB1C9F28040035CA14 /* Fabric.framework in Frameworks */,
 				DB891BFC1C9F28040035CA14 /* Crashlytics.framework in Frameworks */,
 				DB92C7751C9F355300E24696 /* libFlurrytvOS_1.0.0.a in Frameworks */,
@@ -154,6 +154,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1ECF33141CFA6F670061BC43 /* FacebookSDKs-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				1ECF33151CFA6F670061BC43 /* FacebookSDKStrings.bundle */,
+				1ECF33161CFA6F670061BC43 /* FBSDKCoreKit.framework */,
+				1ECF33171CFA6F670061BC43 /* FBSDKShareKit.framework */,
+				1ECF33181CFA6F670061BC43 /* FBSDKTVOSKit.framework */,
+				1ECF33191CFA6F670061BC43 /* LICENSE.txt */,
+				1ECF331A1CFA6F670061BC43 /* README_TV.txt */,
+			);
+			path = "FacebookSDKs-tvOS";
+			sourceTree = "<group>";
+		};
 		46CE375B0EEA0CFD7065420A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,26 +287,13 @@
 		DBD078AF1C6CE8610007FE46 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				1ECF33141CFA6F670061BC43 /* FacebookSDKs-tvOS */,
 				DB92C7721C9F355300E24696 /* FlurrytvOS */,
 				DB5AC7F11C90FCA900AB70A5 /* GATracker.swift */,
 				DB7F9E951C6EF28F00DE6A44 /* UIImageViewAligned */,
 				DBD0790A1C6D18A50007FE46 /* Reachability */,
-				DBD078B01C6CE8610007FE46 /* FacebookSDKs-tvOS */,
 			);
 			path = External;
-			sourceTree = "<group>";
-		};
-		DBD078B01C6CE8610007FE46 /* FacebookSDKs-tvOS */ = {
-			isa = PBXGroup;
-			children = (
-				DBD078B11C6CE8610007FE46 /* FacebookSDKStrings.bundle */,
-				DBD078B21C6CE8610007FE46 /* FBSDKCoreKit.framework */,
-				DBD078B31C6CE8610007FE46 /* FBSDKShareKit.framework */,
-				DBD078B41C6CE8610007FE46 /* FBSDKTVOSKit.framework */,
-				DBD078B51C6CE8610007FE46 /* LICENSE.txt */,
-				DBD078B61C6CE8610007FE46 /* README_TV.txt */,
-			);
-			path = "FacebookSDKs-tvOS";
 			sourceTree = "<group>";
 		};
 		DBD078EB1C6CF6E20007FE46 /* Controllers */ = {
@@ -434,15 +434,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB685C071C8E492800DD7EF2 /* star.png in Resources */,
-				DBD078D51C6CE8610007FE46 /* LICENSE.txt in Resources */,
 				DB24DE171C7F8E0E00BE560F /* play.png in Resources */,
 				DB24DE161C7F8E0E00BE560F /* pause.png in Resources */,
-				DBD078D11C6CE8610007FE46 /* FacebookSDKStrings.bundle in Resources */,
+				1ECF333A1CFA6F670061BC43 /* LICENSE.txt in Resources */,
 				DB685C091C8E4BA700DD7EF2 /* 1.jpeg in Resources */,
 				DB9861701C81452D00163813 /* Localizable.strings in Resources */,
 				DBD078A71C6CCF270007FE46 /* Assets.xcassets in Resources */,
-				DBD078D61C6CE8610007FE46 /* README_TV.txt in Resources */,
 				DBD078A51C6CCF270007FE46 /* Main.storyboard in Resources */,
+				1ECF333B1CFA6F670061BC43 /* README_TV.txt in Resources */,
+				1ECF33361CFA6F670061BC43 /* FacebookSDKStrings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

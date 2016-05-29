@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -365,7 +365,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ConfigCell0" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ConfigCell0" id="AIE-Cp-ewY">
-                                <rect key="frame" x="0.0" y="15" width="960" height="80"/>
+                                <rect key="frame" x="0.0" y="15" width="1000" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AIE-Cp-ewY" id="xcf-wl-UKs">
                                     <rect key="frame" x="0.0" y="0.0" width="984" height="80"/>
@@ -385,7 +385,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ConfigCell1" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ConfigCell1" id="8it-wH-3tK">
-                                <rect key="frame" x="0.0" y="109" width="960" height="80"/>
+                                <rect key="frame" x="0.0" y="109" width="1000" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8it-wH-3tK" id="XoS-IX-px3">
                                     <rect key="frame" x="0.0" y="0.0" width="984" height="80"/>
@@ -404,8 +404,8 @@
                                     <segue destination="cJ1-Zo-Ufh" kind="showDetail" id="5hZ-b2-l5Y"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="fVP-Bj-Olo">
-                                <rect key="frame" x="0.0" y="203" width="960" height="80"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sample" id="fVP-Bj-Olo">
+                                <rect key="frame" x="0.0" y="203" width="1000" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fVP-Bj-Olo" id="5A7-lo-FnW">
                                     <rect key="frame" x="0.0" y="0.0" width="984" height="80"/>
@@ -432,7 +432,7 @@
             <objects>
                 <navigationController id="tqy-c1-AE3" sceneMemberID="viewController">
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="1024" height="100"/>
+                    <size key="freeformSize" width="1920" height="100"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ORY-BR-3GL">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
                         <autoresizingMask key="autoresizingMask"/>
