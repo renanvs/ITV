@@ -666,6 +666,7 @@
 				CODE_SIGN_ENTITLEMENTS = InstaTV/InstaTV.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: MACWINGO ltda (99PGLV2Z48)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Distribution: MACWINGO ltda (99PGLV2Z48)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -680,7 +681,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.mwg.socialphototv;
 				PRODUCT_NAME = SocialPhotoTV;
-				PROVISIONING_PROFILE = "d5c8cafc-2043-43b4-9e26-32b501791990";
+				PROVISIONING_PROFILE = "a0107a31-52eb-425f-9896-69bc06efa140";
 				SWIFT_OBJC_BRIDGING_HEADER = "InstaTV/InstaTV-Bridging-Header.h";
 			};
 			name = Debug;
@@ -708,7 +709,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.mwg.socialphototv;
 				PRODUCT_NAME = SocialPhotoTV;
-				PROVISIONING_PROFILE = "d5c8cafc-2043-43b4-9e26-32b501791990";
+				PROVISIONING_PROFILE = "a0107a31-52eb-425f-9896-69bc06efa140";
 				SWIFT_OBJC_BRIDGING_HEADER = "InstaTV/InstaTV-Bridging-Header.h";
 			};
 			name = Release;
