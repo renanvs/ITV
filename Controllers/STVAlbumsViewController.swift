@@ -63,7 +63,7 @@ class STVAlbumsViewController: STVBaseViewController, UICollectionViewDataSource
         let countLabel = cell.contentView.viewWithUniqueTag(3) as! UILabel
         
         titleLabel.text = albumModel.name
-        countLabel.text = albumModel.photoCount!.stringValue
+        countLabel.text = "\(albumModel.photoCount!.stringValue) \(STVString.Lang(STVString.Photos_Title))"
         
         if DownloadService.existThisFile(albumModel.identifier) == true{
             if cell.tag == indexPath.row{

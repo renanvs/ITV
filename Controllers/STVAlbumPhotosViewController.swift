@@ -13,7 +13,6 @@ class STVAlbumPhotosViewController: STVBaseViewController, UICollectionViewDataS
     @IBOutlet weak var photosCollectionView : UICollectionView!
     var albumModel : AlbumEntity?
     var list = [PhotoEntity]()
-    var hasImageDisplaying = false
     var selectMenuButtonGesture : UITapGestureRecognizer?
     var currentIndexPath : NSIndexPath?
     
@@ -45,9 +44,7 @@ class STVAlbumPhotosViewController: STVBaseViewController, UICollectionViewDataS
         selectPlayButtonGesture.enabled = true
         selectPlayButtonGesture.allowedPressTypes = [NSNumber(integer: UIPressType.PlayPause.rawValue)]
         self.view.addGestureRecognizer(selectPlayButtonGesture)
-    }
-    
-    override func viewDidAppear(animated: Bool) {
+        
         STVFacebookService.requestPhotoFromAlbumIdentifier(albumModel!.identifier!)
     }
     
@@ -70,58 +67,11 @@ class STVAlbumPhotosViewController: STVBaseViewController, UICollectionViewDataS
         photosCollectionView.reloadData()
     }
     
-    func removeDisplayedImage(){
-        let container = self.view.viewWithTag(10)
-        if let ct = container{
-            UIView.animateWithDuration(1.0, animations: { () -> Void in
-                ct.alpha = 0
-                }) { (value) -> Void in
-                    ct.removeFromSuperview()
-                    self.hasImageDisplaying = false
-                    self.selectMenuButtonGesture?.enabled = false
-                    self.removeDisplayedImage()
-            }
-            
-        }else{
-            return
-        }
-        
-    }
-    
-    func displayImageInScreen(identifier:String){
-        hasImageDisplaying = true
-        selectMenuButtonGesture?.enabled = true
-        
-        let container = UIView(frame: self.view.frame)
-        container.backgroundColor = UIColor.blackColor()
-        container.backgroundColor?.colorWithAlphaComponent(0.5)
-        container.tag = 10
-        container.alpha = 0
-        
-        let imageView = UIImageView(image: UIImage.STVgetLocalImageWithIdentifier(identifier))
-        imageView.frame = CGRectMake(0, 0, 1300, 800)
-        imageView.contentMode = .ScaleAspectFit
-        
-        container.addSubview(imageView)
-        imageView.centerInSuperview()
-        self.view.addSubview(container)
-        UIView.animateWithDuration(1.0, animations: { () -> Void in
-            container.alpha = 1
-            }) { (value) -> Void in
-                
-        }
-    }
-    
     func menuPress(event : UITapGestureRecognizer){
-        if hasImageDisplaying == true{
-            removeDisplayedImage()
-        }
+        
     }
     
     func playPress(event : UITapGestureRecognizer){
-        if hasImageDisplaying == true{
-            return
-        }
         
         STVUtils.showHelpPhotoAlbumFavorite()
         
@@ -157,12 +107,19 @@ class STVAlbumPhotosViewController: STVBaseViewController, UICollectionViewDataS
         
         STVCoreData.saveContext()
         
-        if PhotoEntity.getAllFavorites().count == 1{
+        if STVUtils.existFavoriteInNavController() == false{
             let favoriteVC = STVUtils.getStoryBoard().instantiateViewControllerWithIdentifier("STVFavoritesViewController") as! STVFavoritesViewController
             
             let tabBarController = self.tabBarController!
             tabBarController.viewControllers?.insert(favoriteVC, atIndex: 1)
 
+        }else if PhotoEntity.getAllFavorites().count == 0{
+            for controller in self.tabBarController!.viewControllers!{
+                if controller.isKindOfClass(STVFavoritesViewController){
+                    let index = self.tabBarController!.viewControllers!.indexOf(controller)!
+                   tabBarController!.viewControllers!.removeAtIndex(index)
+                }
+            }
         }
 
     }
@@ -230,12 +187,15 @@ class STVAlbumPhotosViewController: STVBaseViewController, UICollectionViewDataS
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let photoModel = list[indexPath.row]
         
-        if hasImageDisplaying == true{
-            removeDisplayedImage()
-        }else{
-            STVTracker.trackEvent("PhotoAlbumScreen", action: "DisplayImage", label: photoModel.remotePhotoUrl)
-            displayImageInScreen(photoModel.identifier!)
-        }
+    
+        STVTracker.trackEvent("PhotoAlbumScreen", action: "DisplayImage", label: photoModel.remotePhotoUrl)
+        
+        let photosVC = STVUtils.getStoryBoard().instantiateViewControllerWithIdentifier("STVPhotosPageViewController") as! STVPhotosPageViewController
+        photosVC.photosList = list
+        photosVC.currentPhotoEntity = photoModel
+        
+        self.presentViewController(photosVC, animated: true, completion: nil)
+    
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

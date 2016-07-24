@@ -21,4 +21,6 @@ class STVString : NSObject{
     static let PhotoAlbumsFavorite__FirstRun_Message = "PhotoAlbumsFavorite__FirstRun_Message"
     static let Favorites__FirstRun_Message = "Favorites__FirstRun_Message"
     
+    static let Photos_Title = "Photos_Title"
+    
 }

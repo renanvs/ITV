@@ -9,6 +9,19 @@
 import UIKit
 
 class STVUtils: NSObject {
+    class func existFavoriteInNavController() -> Bool{
+        if Utils.getRootController().isKindOfClass(STVTabBarController){
+            let tab = Utils.getRootController() as! STVTabBarController
+            for controller in tab.viewControllers!{
+                if controller.isKindOfClass(STVFavoritesViewController){
+                    return true
+                }
+            }
+        }
+        
+        return false
+    }
+    
     class func getStoryBoard() -> UIStoryboard{
         return UIStoryboard(name: "Main", bundle: nil)
     }
